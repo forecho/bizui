@@ -1,0 +1,566 @@
+2013/06/26 22:04:57 [error] [php] date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Hong_Kong' for 'HKT/8.0/no DST' instead (/Users/caicai/Sites/trackstar/protected/views/layouts/main.php:51)
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Users/caicai/Sites/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Users/caicai/Sites/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Users/caicai/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Users/caicai/Sites/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/
+in /Users/caicai/Sites/trackstar/protected/views/layouts/main.php (51)
+in /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php (6)
+in /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php (32)
+2013/06/26 22:04:59 [error] [php] date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Hong_Kong' for 'HKT/8.0/no DST' instead (/Users/caicai/Sites/trackstar/protected/views/layouts/main.php:51)
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Users/caicai/Sites/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Users/caicai/Sites/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Users/caicai/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Users/caicai/Sites/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/
+in /Users/caicai/Sites/trackstar/protected/views/layouts/main.php (51)
+in /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php (6)
+in /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php (32)
+2013/06/26 22:06:13 [error] [php] date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Hong_Kong' for 'HKT/8.0/no DST' instead (/Users/caicai/Sites/trackstar/protected/views/layouts/main.php:51)
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Users/caicai/Sites/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Users/caicai/Sites/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Users/caicai/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Users/caicai/Sites/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/
+in /Users/caicai/Sites/trackstar/protected/views/layouts/main.php (51)
+in /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php (6)
+in /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php (32)
+2013/06/26 22:06:16 [error] [php] date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Hong_Kong' for 'HKT/8.0/no DST' instead (/Users/caicai/Sites/trackstar/protected/views/layouts/main.php:51)
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Users/caicai/Sites/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Users/caicai/Sites/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Users/caicai/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Users/caicai/Sites/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/
+in /Users/caicai/Sites/trackstar/protected/views/layouts/main.php (51)
+in /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php (6)
+in /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php (32)
+2013/06/26 22:07:03 [error] [php] date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Hong_Kong' for 'HKT/8.0/no DST' instead (/Users/caicai/Sites/trackstar/protected/views/layouts/main.php:50)
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Users/caicai/Sites/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Users/caicai/Sites/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Users/caicai/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Users/caicai/Sites/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/
+in /Users/caicai/Sites/trackstar/protected/views/layouts/main.php (50)
+in /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php (6)
+in /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php (32)
+2013/06/26 22:07:31 [error] [php] date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Hong_Kong' for 'HKT/8.0/no DST' instead (/Users/caicai/Sites/trackstar/protected/views/layouts/main.php:50)
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Users/caicai/Sites/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Users/caicai/Sites/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Users/caicai/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Users/caicai/Sites/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/
+in /Users/caicai/Sites/trackstar/protected/views/layouts/main.php (50)
+in /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php (6)
+in /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php (32)
+2013/06/26 22:07:46 [error] [php] date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Hong_Kong' for 'HKT/8.0/no DST' instead (/Users/caicai/Sites/trackstar/protected/views/layouts/main.php:50)
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Users/caicai/Sites/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Users/caicai/Sites/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Users/caicai/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Users/caicai/Sites/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/
+in /Users/caicai/Sites/trackstar/protected/views/layouts/main.php (50)
+in /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php (6)
+in /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php (32)
+2013/06/26 22:09:49 [error] [php] date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Hong_Kong' for 'HKT/8.0/no DST' instead (/Users/caicai/Sites/trackstar/protected/views/layouts/main.php:50)
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Users/caicai/Sites/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Users/caicai/Sites/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Users/caicai/Sites/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Users/caicai/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Users/caicai/Sites/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/
+in /Users/caicai/Sites/trackstar/protected/views/layouts/main.php (50)
+in /Users/caicai/Sites/trackstar/protected/views/layouts/column1.php (6)
+in /Users/caicai/Sites/trackstar/protected/controllers/SiteController.php (32)
+2013/07/13 12:32:49 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `bz_user` `t` WHERE LOWER(username)=? LIMIT 1.
+in /Users/caicai/Sites/bizui/protected/components/UserIdentity.php (27)
+in /Users/caicai/Sites/bizui/protected/models/LoginForm.php (52)
+in /Users/caicai/Sites/bizui/protected/controllers/SiteController.php (94)
+2013/07/13 12:32:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `bz_user` `t` WHERE LOWER(username)=? LIMIT 1' in /Users/caicai/Sites/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/db/CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /Users/caicai/Sites/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryRow()
+#2 /Users/caicai/Sites/yii/framework/db/ar/CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#3 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(27): CActiveRecord->find('LOWER(username)...', Array)
+#4 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#5 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#8 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#9 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 14:46:06 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.bu_email" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(24): CComponent->__get('bu_email')
+#1 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:00:47 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.bz_email" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/web/helpers/CHtml.php(2255): CComponent->__get('bz_email')
+#1 /Users/caicai/Sites/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(LoginForm), 'bz_email')
+#2 /Users/caicai/Sites/yii/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(LoginForm), 'bz_email', Array)
+#3 /Users/caicai/Sites/yii/framework/web/widgets/CActiveForm.php(657): CHtml::activeTextField(Object(LoginForm), 'bz_email', Array)
+#4 /Users/caicai/Sites/bizui/protected/views/site/login.php(29): CActiveForm->textField(Object(LoginForm), 'bz_email')
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require('/Users/caicai/S...')
+#6 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/caicai/S...', Array, true)
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/caicai/S...', Array, true)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#9 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#10 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#11 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:06:41 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.bu_email" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(24): CComponent->__get('bu_email')
+#1 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bz_password', Array)
+#3 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bz_password')
+#4 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:07:23 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.bu_email" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(24): CComponent->__get('bu_email')
+#1 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bz_password', Array)
+#3 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bz_password')
+#4 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:08:59 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.bz_email" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(24): CComponent->__get('bz_email')
+#1 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bz_password', Array)
+#3 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bz_password')
+#4 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:09:38 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.bz_email" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(24): CComponent->__get('bz_email')
+#1 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bz_password', Array)
+#3 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bz_password')
+#4 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:12:34 [error] [exception.CException] exception 'CException' with message 'Property "User.rememberMe" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('rememberMe')
+#1 /Users/caicai/Sites/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('rememberMe')
+#2 /Users/caicai/Sites/yii/framework/web/helpers/CHtml.php(1506): CHtml::resolveValue(Object(User), 'rememberMe')
+#3 /Users/caicai/Sites/yii/framework/web/widgets/CActiveForm.php(747): CHtml::activeCheckBox(Object(User), 'rememberMe', Array)
+#4 /Users/caicai/Sites/bizui/protected/views/site/login.php(43): CActiveForm->checkBox(Object(User), 'rememberMe')
+#5 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require('/Users/caicai/S...')
+#6 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/caicai/S...', Array, true)
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/caicai/S...', Array, true)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#9 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#10 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#11 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#15 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:13:57 [warning] [application] Failed to set unsafe attribute "bz_email" of "LoginForm".
+in /Users/caicai/Sites/bizui/protected/controllers/SiteController.php (92)
+in /Users/caicai/Sites/bizui/index.php (13)
+2013/07/13 15:13:57 [warning] [application] Failed to set unsafe attribute "bz_password" of "LoginForm".
+in /Users/caicai/Sites/bizui/protected/controllers/SiteController.php (92)
+in /Users/caicai/Sites/bizui/index.php (13)
+2013/07/13 15:16:29 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.bu_email" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(24): CComponent->__get('bu_email')
+#1 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bu_password', Array)
+#3 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bu_password')
+#4 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:16:57 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.bu_email" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(24): CComponent->__get('bu_email')
+#1 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bu_password', Array)
+#3 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bu_password')
+#4 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:19:46 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.bu_email" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(24): CComponent->__get('bu_email')
+#1 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bu_password', Array)
+#3 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bu_password')
+#4 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:25:18 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.bu_password" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(31): CComponent->__get('bu_password')
+#1 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bu_password', Array)
+#3 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bu_password')
+#4 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:26:39 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /Users/caicai/Sites/bizui/protected/models/User.php(115): CActiveRecord->__get('password')
+#2 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(31): User->validatePassword('18loving')
+#3 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#4 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bu_password', Array)
+#5 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bu_password')
+#6 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#8 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:26:55 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /Users/caicai/Sites/bizui/protected/models/User.php(115): CActiveRecord->__get('password')
+#2 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(31): User->validatePassword('18loving')
+#3 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#4 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bu_password', Array)
+#5 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bu_password')
+#6 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#8 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 15:34:49 [error] [exception.CException] exception 'CException' with message 'Property "User.id" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('id')
+#1 /Users/caicai/Sites/bizui/protected/components/UserIdentity.php(40): CActiveRecord->__get('id')
+#2 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bu_password', Array)
+#4 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bu_password')
+#5 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#7 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 16:17:14 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/bizui/protected/models/LoginForm.php(51): CComponent->__get('username')
+#1 /Users/caicai/Sites/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bu_password', Array)
+#2 /Users/caicai/Sites/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bu_password')
+#3 /Users/caicai/Sites/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#4 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(94): CModel->validate()
+#5 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#6 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#10 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /Users/caicai/Sites/bizui/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/bizui/index.php?r=site/login
+HTTP_REFERER=http://sites/bizui/index.php?r=site/login
+---
+2013/07/13 17:40:15 [error] [exception.CException] exception 'CException' with message '属性 "CWebApplication.postCountOfTitleListPage" 未被定义.' in /Users/caicai/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/caicai/Sites/yii/framework/base/CModule.php(105): CComponent->__get('postCountOfTitl...')
+#1 /Users/caicai/Sites/bizui/protected/views/site/index.php(16): CModule->__get('postCountOfTitl...')
+#2 /Users/caicai/Sites/yii/framework/web/CBaseController.php(126): require('/Users/caicai/S...')
+#3 /Users/caicai/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/caicai/S...', NULL, true)
+#4 /Users/caicai/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/caicai/S...', NULL, true)
+#5 /Users/caicai/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#6 /Users/caicai/Sites/bizui/protected/controllers/SiteController.php(32): CController->render('index')
+#7 /Users/caicai/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /Users/caicai/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/caicai/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Users/caicai/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /Users/caicai/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#13 /Users/caicai/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Users/caicai/Sites/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/bizui/index.php?r=site/index
+HTTP_REFERER=http://sites/bizui/index.php?r=site/contact
+---
