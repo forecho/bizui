@@ -15,7 +15,10 @@
  * @property integer $bu_create_time
  */
 class Posts extends CActiveRecord
-{
+{	
+	//排序,new
+	public $order;
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -47,7 +50,7 @@ class Posts extends CActiveRecord
 			array('bp_score', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('bp_id, bu_id, bp_title, bp_url, bp_video_url, bp_content, bp_score, bp_like, bu_create_time', 'safe', 'on'=>'search'),
+			array('bp_id, bu_id, bp_title, bp_url, bp_video_url, bp_content, bp_score, bp_like, bu_create_time, order', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +62,7 @@ class Posts extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'user'=>array(self::BELONGS_TO, 'User', 'bu_id'),
 		);
 	}
 
@@ -76,7 +80,7 @@ class Posts extends CActiveRecord
 			'bp_content' => 'Bp Content',
 			'bp_score' => 'Bp Score',
 			'bp_like' => 'Bp Like',
-			'bu_create_time' => 'Bu Create Time',
+			'bp_create_time' => 'Bp Create Time',
 		);
 	}
 
@@ -99,8 +103,15 @@ class Posts extends CActiveRecord
 		$criteria->compare('bp_content',$this->bp_content,true);
 		$criteria->compare('bp_score',$this->bp_score,true);
 		$criteria->compare('bp_like',$this->bp_like);
-		$criteria->compare('bu_create_time',$this->bu_create_time);
+		$criteria->compare('bp_create_time',$this->bp_create_time);
 
+		//排序
+		if($this->order==''){
+			$criteria->order = 'bp_score DESC, bp_create_time DESC';
+		}elseif ($this->order=='new') {
+			$criteria->order = 'bp_create_time DESC';
+		}
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

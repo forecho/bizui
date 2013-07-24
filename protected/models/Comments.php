@@ -98,4 +98,13 @@ class Comments extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	/**
+	 * 某条文章评论总数
+	 */
+	public function PostCommentsCount($postid='')
+	{
+		$n = Comments::model()->count("bp_id=:id",array(":id"=>$postid));
+		return $n;  
+	}
 }
