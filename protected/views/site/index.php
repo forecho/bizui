@@ -4,6 +4,7 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
+<<<<<<< HEAD
 <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
 <p>Congratulations! You have successfully created your Yii application.</p>
@@ -27,3 +28,16 @@ for($i=0,$l=count($arr); $i<$l; $i++) {
 	echo $arr[$i];
 } 
 ?>
+=======
+<?php
+$this->widget('zii.widgets.CListView', array(
+    'dataProvider'=>$model->search(),
+    'itemView'=>'_post', 
+    'emptyText'=>'暂时没有数据',  
+   	'template'=>'{items}{pager}',
+    'htmlOptions'=>array('class'=>'box'),
+    'itemsTagName'=>'ol',
+    'itemsCssClass'=>'box-cell',
+));
+?>
+>>>>>>> 79fa264195feb5885d46e4db6b5009d833fbcd7d
