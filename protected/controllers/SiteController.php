@@ -2,6 +2,7 @@
 
 class SiteController extends Controller
 {
+	public $pageTitle='';
 	/**
 	 * Declares class-based actions.
 	 */
@@ -77,7 +78,7 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
-		$model=new LoginForm;
+		$model=new LoginForm('login');
 
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
@@ -98,6 +99,31 @@ class SiteController extends Controller
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
+
+	//注册
+ 	public function actionSignup()
+    {
+        if (!user()->getIsGuest()) {
+            // @todo 如果有了用户中心，这里应该跳转到用户中心
+			// $this->redirect(aurl('user/default'));
+            $this->redirect(aurl('site/index'));
+            exit(0);
+        }
+        
+        
+        $model = new LoginForm('signup');
+        if (request()->getIsPostRequest() && isset($_POST['LoginForm'])) {
+            $model->attributes = $_POST['LoginForm'];
+            if ($model->validate() && $model->signup())
+                ;
+            else
+                $model->captcha = '';
+        }
+        
+        $this->pageTitle = t('site_signup');
+        
+        $this->render('signup', array('model'=>$model));
+    }
 
 	/**
 	 * Logs out the current user and redirect to homepage.

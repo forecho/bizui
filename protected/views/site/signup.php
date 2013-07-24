@@ -5,17 +5,17 @@
 
 $this->pageTitle=Yii::app()->name . ' - ' . $this->pageTitle;
 $this->breadcrumbs=array(
-	'Login',
+	'Sign Up',
 );
 ?>
 
-<h1>Login</h1>
+<h1>注册</h1>
 
-<p>Please fill out the following form with your login credentials:</p>
+<p>Please fill out the following form with your signup credentials:</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
+	'id'=>'signup-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -31,16 +31,23 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'bu_name'); ?>
+		<?php echo $form->textField($model,'bu_name'); ?>
+		<?php echo $form->error($model,'bu_name'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'bu_password'); ?>
 		<?php echo $form->passwordField($model,'bu_password'); ?>
 		<?php echo $form->error($model,'bu_password'); ?>
 	</div>
 
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
+	<?php echo CHtml::activeCheckBox($model, 'agreement', array('id'=>'agreement', 'tabindex'=>5));?>
+	<label for="agreement">
+	<?php echo t('agreement', 'main', array('{policyurl}'=>aurl('static/policy')));?></label>
+    <?php if ($model->hasErrors('agreement')):?>
+    	<span class="beta-help-inline"><?php echo $form->getError('agreement');?></span>
+    <?php endif;?>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Login'); ?>

@@ -8,8 +8,11 @@
 class LoginForm extends CFormModel
 {
 	public $bu_email;
+	public $bu_name;
 	public $bu_password;
-	public $rememberMe;
+	public $rememberMe = 1;
+    public $agreement = 1;
+	public $returnUrl;
 	
 	private $_identity;
 
@@ -21,14 +24,43 @@ class LoginForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			// bu_email and bu_password are required
-			array('bu_email, bu_password', 'required'),
-			// rememberMe needs to be a boolean
-			array('rememberMe', 'boolean'),
-			// bu_password needs to be authenticated
-			array('bu_password', 'authenticate'),
+			array('bu_email', 'required', 'message'=>t('please_input_your_email', 'model')),
+			array('bu_email', 'unique', 'className'=>'User', 'attributeName'=>'bu_email', 'on'=>'signup', 'message'=>t('email_is_exist', 'model')),
+			array('bu_email', 'email'),
+
+			array('bu_name', 'required', 'message'=>t('please_input_your_nickname'), 'on'=>'signup'),
+            array('bu_name', 'unique', 'className'=>'User', 'attributeName'=>'bu_name', 'on'=>'signup', 'message'=>t('nickname_is_exist', 'model')),
+            array('bu_name', 'checkReserveWords'),
+			
+			array('bu_password', 'required', 'on'=>'signup', 'message'=>t('please_input_your_password', 'model')),
+			array('bu_password', 'authenticate', 'on'=>'login'),
+
+			array('bu_email, returnUrl', 'length', 'max'=>255),
+			array('agreement', 'compare', 'compareValue'=>true, 'on'=>'signup', 'message'=>t('please_agree_policy', 'model')),
+
+			array('rememberMe', 'boolean', 'on'=>'login'),
+            array('bu_name, bu_password', 'length', 'min'=>3, 'max'=>50),
+            array('bu_email, returnUrl', 'length', 'max'=>255),
+            array('agreement', 'compare', 'compareValue'=>true, 'on'=>'signup', 'message'=>t('please_agree_policy', 'model')),
+            array('rememberMe', 'in', 'range'=>array(0, 1)),
 		);
 	}
+
+	//检查用户名是否被注册
+ 	public function checkReserveWords($attribute, $params)
+    {
+        if ($this->hasErrors('bu_name')) return false;
+        foreach ((array)param('reservedWords') as $v) {
+            $pos = stripos($this->$attribute, $v);
+            if (false !== $pos) {
+                $this->addError($attribute, t('nickname_is_exist', 'model'));
+                break;
+            }
+        }
+        return true;
+    }
+
+
 
 	/**
 	 * Declares attribute labels.
@@ -36,7 +68,11 @@ class LoginForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'rememberMe'=>'Remember me next time',
+			'bu_email' => t('bu_email', 'model'),
+			'bu_name' => t('bu_name', 'model'),
+			'bu_password' => t('bu_password', 'model'),
+			'rememberMe'=>t('remember_me', 'model'),
+			'agreement' => t('agreement', 'model'),
 		);
 	}
 
@@ -50,7 +86,7 @@ class LoginForm extends CFormModel
 		{
 			$this->_identity=new UserIdentity($this->bu_email,$this->bu_password);
 			if(!$this->_identity->authenticate())
-				$this->addError('bu_password','Incorrect bu_email or bu_password.');
+				$this->addError('bu_password',t('email_or_password_error', 'model'));
 		}
 	}
 
@@ -74,4 +110,35 @@ class LoginForm extends CFormModel
 		else
 			return false;
 	}
+
+
+
+	public function afterValidate()
+    {
+        parent::afterValidate();
+        if ($this->hasErrors())
+            $this->incrementErrorLoginNums();
+        else
+            $this->clearErrorLoginNums();
+    }
+
+    public function afterLogin()
+    {
+        
+        $returnUrl = urldecode($this->returnUrl);
+        if (empty($returnUrl))
+            $returnUrl = strip_tags(trim($_GET['url']));
+        if (empty($returnUrl))
+                $returnUrl = aurl('user/default');
+        
+        request()->redirect($returnUrl);
+        exit(0);
+    }
+    
+    public function afterSignup($user)
+    {
+        user()->loginRequired();
+        exit(0);
+    }
+
 }

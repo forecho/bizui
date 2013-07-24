@@ -17,3 +17,13 @@ $this->pageTitle=Yii::app()->name;
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.
 Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p>
+<?php 
+$arr['laruence'] = 'huixinchen';
+$arr['yahoo']    = 2007;
+$arr['baidu']    = 2008;
+
+for($i=0,$l=count($arr); $i<$l; $i++) {
+ //这个时候,不能认为是顺序遍历(线性遍历)
+	echo $arr[$i];
+} 
+?>
