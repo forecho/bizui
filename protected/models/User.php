@@ -115,17 +115,14 @@ class User extends CActiveRecord
 		return $this->encrypt($password)===$this->password;
 	}
 
-	public function encrypt($pass)
-	{
-		return md5($pass);
-	}
-
-	// 添加的密码进行MD5加密
+	// 保存数据前自动处理
 	protected function beforeSave() {
 		if (parent::beforeSave()) {
-			//判断是否是新的密码
+			//判断是否是新的
 			if ($this->isNewRecord) {
-				$this->password = $this->encrypt($this->password);
+				$this->bu_status = 1;
+	    		$this->bu_create_time = time();
+	    		$this->bu_reg_ip = GetIP();
 			}
 			return true;
 		}else {

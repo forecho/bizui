@@ -112,7 +112,6 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				//$this->redirect('index');
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
@@ -121,22 +120,15 @@ class SiteController extends Controller
 
 	//注册
  	public function actionSignup()
-    {
-        if (!user()->getIsGuest()) {
-            // @todo 如果有了用户中心，这里应该跳转到用户中心
-			// $this->redirect(aurl('user/default'));
-            $this->redirect(aurl('site/index'));
-            exit(0);
-        }
-        
-        
+	{   
         $model = new LoginForm('signup');
-        if (request()->getIsPostRequest() && isset($_POST['LoginForm'])) {
-            $model->attributes = $_POST['LoginForm'];
-            if ($model->validate() && $model->signup())
-                ;
-            else
-                $model->captcha = '';
+        if (isset($_POST['LoginForm'])) {
+            $model->attributes=$_POST['LoginForm'];
+            if($model->validate()){
+            	if($model->signup()){ 
+				   $this->redirect(array('login'));
+				}
+            }
         }
         
         $this->pageTitle = t('site_signup');

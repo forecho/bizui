@@ -1913,3 +1913,532 @@ REQUEST_URI=/index.php?r=site/index
 HTTP_REFERER=http://bizui.com/index.php?r=site/index
 >>>>>>> 79fa264195feb5885d46e4db6b5009d833fbcd7d
 ---
+2013/07/25 11:00:55 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "incrementErrorLoginNums".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/models/LoginForm.php(120): CComponent->__call('incrementErrorL...', Array)
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(120): LoginForm->incrementErrorLoginNums()
+#2 /home/forecho/www/yii/framework/base/CModel.php(160): LoginForm->afterValidate()
+#3 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): CModel->validate()
+#4 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#5 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#9 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#10 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 11:01:52 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "incrementErrorLoginNums".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/models/LoginForm.php(120): CComponent->__call('incrementErrorL...', Array)
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(120): LoginForm->incrementErrorLoginNums()
+#2 /home/forecho/www/yii/framework/base/CModel.php(160): LoginForm->afterValidate()
+#3 /home/forecho/www/bizui/protected/controllers/SiteController.php(128): CModel->validate()
+#4 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#5 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#9 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#10 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 11:06:13 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "incrementErrorLoginNums".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/models/LoginForm.php(120): CComponent->__call('incrementErrorL...', Array)
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(120): LoginForm->incrementErrorLoginNums()
+#2 /home/forecho/www/yii/framework/base/CModel.php(160): LoginForm->afterValidate()
+#3 /home/forecho/www/bizui/protected/controllers/SiteController.php(128): CModel->validate()
+#4 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#5 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#9 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#10 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 11:06:16 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "incrementErrorLoginNums".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/models/LoginForm.php(120): CComponent->__call('incrementErrorL...', Array)
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(120): LoginForm->incrementErrorLoginNums()
+#2 /home/forecho/www/yii/framework/base/CModel.php(160): LoginForm->afterValidate()
+#3 /home/forecho/www/bizui/protected/controllers/SiteController.php(128): CModel->validate()
+#4 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#5 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#9 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#10 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 11:09:18 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "incrementErrorLoginNums".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/models/LoginForm.php(120): CComponent->__call('incrementErrorL...', Array)
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(120): LoginForm->incrementErrorLoginNums()
+#2 /home/forecho/www/yii/framework/base/CModel.php(160): LoginForm->afterValidate()
+#3 /home/forecho/www/bizui/protected/controllers/SiteController.php(128): CModel->validate()
+#4 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#5 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#9 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#10 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 11:09:22 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "incrementErrorLoginNums".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/models/LoginForm.php(120): CComponent->__call('incrementErrorL...', Array)
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(120): LoginForm->incrementErrorLoginNums()
+#2 /home/forecho/www/yii/framework/base/CModel.php(160): LoginForm->afterValidate()
+#3 /home/forecho/www/bizui/protected/controllers/SiteController.php(128): CModel->validate()
+#4 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#5 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#9 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#10 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:03:14 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "Login".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): CComponent->__call('Login', Array)
+#1 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): SiteController->Login()
+#2 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#3 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#7 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#8 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:04:59 [warning] [application] Failed to set unsafe attribute "agreement" of "LoginForm".
+in /home/forecho/www/bizui/protected/controllers/SiteController.php (112)
+in /home/forecho/www/bizui/protected/controllers/SiteController.php (129)
+in /home/forecho/www/bizui/index.php (16)
+2013/07/25 14:04:59 [error] [php] Cannot modify header information - headers already sent by (output started at /home/forecho/www/yii/framework/web/CController.php:793) (/home/forecho/www/yii/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /home/forecho/www/bizui/protected/controllers/SiteController.php(130): SiteController->redirect()
+#1 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#2 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/forecho/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#4 /home/forecho/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /home/forecho/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /home/forecho/www/bizui/index.php(16): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/signup
+in /home/forecho/www/bizui/protected/controllers/SiteController.php (130)
+in /home/forecho/www/bizui/index.php (16)
+2013/07/25 14:08:47 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "save".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): CComponent->__call('save', Array)
+#1 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): LoginForm->save()
+#2 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#3 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#7 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#8 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:12:20 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "signup".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): CComponent->__call('signup', Array)
+#1 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): LoginForm->signup()
+#2 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#3 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#7 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#8 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:12:23 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "signup".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): CComponent->__call('signup', Array)
+#1 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): LoginForm->signup()
+#2 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#3 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#7 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#8 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:13:39 [error] [exception.CException] exception 'CException' with message '属性 "LoginForm.email" 未被定义.' in /home/forecho/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/forecho/www/bizui/protected/models/LoginForm.php(120): CComponent->__get('email')
+#1 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): LoginForm->signup()
+#2 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#3 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#7 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#8 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:14:55 [error] [exception.CException] exception 'CException' with message '属性 "User.email" 未被定义.' in /home/forecho/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/forecho/www/yii/framework/db/ar/CActiveRecord.php(159): CComponent->__set('email', 'czh314494687@qq...')
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(120): CActiveRecord->__set('email', 'czh314494687@qq...')
+#2 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): LoginForm->signup()
+#3 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#4 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#9 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:14:58 [error] [exception.CException] exception 'CException' with message '属性 "User.email" 未被定义.' in /home/forecho/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/forecho/www/yii/framework/db/ar/CActiveRecord.php(159): CComponent->__set('email', 'czh314494687@qq...')
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(120): CActiveRecord->__set('email', 'czh314494687@qq...')
+#2 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): LoginForm->signup()
+#3 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#4 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#9 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:16:24 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "encryptPassword".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('encryptPassword', Array)
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(124): CActiveRecord->__call('encryptPassword', Array)
+#2 /home/forecho/www/bizui/protected/models/LoginForm.php(124): User->encryptPassword()
+#3 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): LoginForm->signup()
+#4 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#5 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#9 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#10 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:36:39 [error] [exception.CException] exception 'CException' with message '属性 "User.password" 未被定义.' in /home/forecho/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/forecho/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /home/forecho/www/bizui/protected/models/User.php(128): CActiveRecord->__get('password')
+#2 /home/forecho/www/yii/framework/db/ar/CActiveRecord.php(1017): User->beforeSave()
+#3 /home/forecho/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#4 /home/forecho/www/bizui/protected/models/LoginForm.php(127): CActiveRecord->save()
+#5 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): LoginForm->signup()
+#6 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#7 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#12 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 14:36:42 [error] [exception.CException] exception 'CException' with message '属性 "User.password" 未被定义.' in /home/forecho/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/forecho/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /home/forecho/www/bizui/protected/models/User.php(128): CActiveRecord->__get('password')
+#2 /home/forecho/www/yii/framework/db/ar/CActiveRecord.php(1017): User->beforeSave()
+#3 /home/forecho/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#4 /home/forecho/www/bizui/protected/models/LoginForm.php(127): CActiveRecord->save()
+#5 /home/forecho/www/bizui/protected/controllers/SiteController.php(129): LoginForm->signup()
+#6 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#7 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#12 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 15:21:07 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "user".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/models/LoginForm.php(107): CComponent->__call('user', Array)
+#1 /home/forecho/www/bizui/protected/models/LoginForm.php(107): CWebApplication->user()
+#2 /home/forecho/www/bizui/protected/controllers/SiteController.php(114): LoginForm->login()
+#3 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/07/25 16:04:30 [error] [exception.CException] exception 'CException' with message '属性 "LoginForm.email" 未被定义.' in /home/forecho/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/forecho/www/bizui/protected/models/LoginForm.php(87): CComponent->__get('email')
+#1 /home/forecho/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('bu_password', Array)
+#2 /home/forecho/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'bu_password')
+#3 /home/forecho/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#4 /home/forecho/www/bizui/protected/controllers/SiteController.php(114): CModel->validate()
+#5 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#6 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#10 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/07/25 16:38:12 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "getError".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/views/site/signup.php(49): CComponent->__call('getError', Array)
+#1 /home/forecho/www/bizui/protected/views/site/signup.php(49): CActiveForm->getError('agreement')
+#2 /home/forecho/www/yii/framework/web/CBaseController.php(126): require('/home/forecho/w...')
+#3 /home/forecho/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/forecho/w...', Array, true)
+#4 /home/forecho/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/forecho/w...', Array, true)
+#5 /home/forecho/www/yii/framework/web/CController.php(782): CController->renderPartial('signup', Array, true)
+#6 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): CController->render('signup', Array)
+#7 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 16:39:08 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "getError".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/views/site/signup.php(49): CComponent->__call('getError', Array)
+#1 /home/forecho/www/bizui/protected/views/site/signup.php(49): CActiveForm->getError('agreement')
+#2 /home/forecho/www/yii/framework/web/CBaseController.php(126): require('/home/forecho/w...')
+#3 /home/forecho/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/forecho/w...', Array, true)
+#4 /home/forecho/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/forecho/w...', Array, true)
+#5 /home/forecho/www/yii/framework/web/CController.php(782): CController->renderPartial('signup', Array, true)
+#6 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): CController->render('signup', Array)
+#7 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 16:39:31 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "getError".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/views/site/signup.php(49): CComponent->__call('getError', Array)
+#1 /home/forecho/www/bizui/protected/views/site/signup.php(49): CActiveForm->getError('agreement')
+#2 /home/forecho/www/yii/framework/web/CBaseController.php(126): require('/home/forecho/w...')
+#3 /home/forecho/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/forecho/w...', Array, true)
+#4 /home/forecho/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/forecho/w...', Array, true)
+#5 /home/forecho/www/yii/framework/web/CController.php(782): CController->renderPartial('signup', Array, true)
+#6 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): CController->render('signup', Array)
+#7 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 16:42:01 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "getError".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/views/site/signup.php(49): CComponent->__call('getError', Array)
+#1 /home/forecho/www/bizui/protected/views/site/signup.php(49): CActiveForm->getError('agreement')
+#2 /home/forecho/www/yii/framework/web/CBaseController.php(126): require('/home/forecho/w...')
+#3 /home/forecho/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/forecho/w...', Array, true)
+#4 /home/forecho/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/forecho/w...', Array, true)
+#5 /home/forecho/www/yii/framework/web/CController.php(782): CController->renderPartial('signup', Array, true)
+#6 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): CController->render('signup', Array)
+#7 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 16:49:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "static/policy"。' in /home/forecho/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('static/policy')
+#1 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=static/policy
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 16:50:08 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "getError".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/views/site/signup.php(49): CComponent->__call('getError', Array)
+#1 /home/forecho/www/bizui/protected/views/site/signup.php(49): CActiveForm->getError('agreement')
+#2 /home/forecho/www/yii/framework/web/CBaseController.php(126): require('/home/forecho/w...')
+#3 /home/forecho/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/forecho/w...', Array, true)
+#4 /home/forecho/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/forecho/w...', Array, true)
+#5 /home/forecho/www/yii/framework/web/CController.php(782): CController->renderPartial('signup', Array, true)
+#6 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): CController->render('signup', Array)
+#7 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 16:51:41 [error] [php] Missing argument 2 for CActiveForm::error(), called in /home/forecho/www/bizui/protected/views/site/signup.php on line 49 and defined (/home/forecho/www/yii/framework/web/widgets/CActiveForm.php:414)
+Stack trace:
+#0 /home/forecho/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/forecho/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/forecho/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): SiteController->render()
+#4 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#5 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/forecho/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/forecho/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/forecho/www/bizui/index.php(16): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/signup
+in /home/forecho/www/bizui/protected/views/site/signup.php (49)
+in /home/forecho/www/bizui/protected/controllers/SiteController.php (136)
+in /home/forecho/www/bizui/index.php (16)
+2013/07/25 16:58:12 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "hasErrors".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/views/site/signup.php(47): CComponent->__call('hasErrors', Array)
+#1 /home/forecho/www/bizui/protected/views/site/signup.php(47): CActiveForm->hasErrors('agreement')
+#2 /home/forecho/www/yii/framework/web/CBaseController.php(126): require('/home/forecho/w...')
+#3 /home/forecho/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/forecho/w...', Array, true)
+#4 /home/forecho/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/forecho/w...', Array, true)
+#5 /home/forecho/www/yii/framework/web/CController.php(782): CController->renderPartial('signup', Array, true)
+#6 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): CController->render('signup', Array)
+#7 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 16:58:15 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "hasErrors".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/views/site/signup.php(47): CComponent->__call('hasErrors', Array)
+#1 /home/forecho/www/bizui/protected/views/site/signup.php(47): CActiveForm->hasErrors('agreement')
+#2 /home/forecho/www/yii/framework/web/CBaseController.php(126): require('/home/forecho/w...')
+#3 /home/forecho/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/forecho/w...', Array, true)
+#4 /home/forecho/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/forecho/w...', Array, true)
+#5 /home/forecho/www/yii/framework/web/CController.php(782): CController->renderPartial('signup', Array, true)
+#6 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): CController->render('signup', Array)
+#7 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/07/25 17:04:38 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "getError".' in /home/forecho/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/forecho/www/bizui/protected/views/site/signup.php(48): CComponent->__call('getError', Array)
+#1 /home/forecho/www/bizui/protected/views/site/signup.php(48): CActiveForm->getError('agreement')
+#2 /home/forecho/www/yii/framework/web/CBaseController.php(126): require('/home/forecho/w...')
+#3 /home/forecho/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/forecho/w...', Array, true)
+#4 /home/forecho/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/forecho/w...', Array, true)
+#5 /home/forecho/www/yii/framework/web/CController.php(782): CController->renderPartial('signup', Array, true)
+#6 /home/forecho/www/bizui/protected/controllers/SiteController.php(136): CController->render('signup', Array)
+#7 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/forecho/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/signup
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---

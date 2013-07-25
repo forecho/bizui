@@ -25,15 +25,15 @@ $this->breadcrumbs=array(
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'bu_email'); ?>
-		<?php echo $form->textField($model,'bu_email'); ?>
-		<?php echo $form->error($model,'bu_email'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'bu_name'); ?>
 		<?php echo $form->textField($model,'bu_name'); ?>
 		<?php echo $form->error($model,'bu_name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'bu_email'); ?>
+		<?php echo $form->textField($model,'bu_email'); ?>
+		<?php echo $form->error($model,'bu_email'); ?>
 	</div>
 
 	<div class="row">
@@ -43,11 +43,8 @@ $this->breadcrumbs=array(
 	</div>
 
 	<?php echo CHtml::activeCheckBox($model, 'agreement', array('id'=>'agreement', 'tabindex'=>5));?>
-	<label for="agreement">
-	<?php echo t('agreement', 'main', array('{policyurl}'=>aurl('static/policy')));?></label>
-    <?php if ($model->hasErrors('agreement')):?>
-    	<span class="beta-help-inline"><?php echo $form->getError('agreement');?></span>
-    <?php endif;?>
+	<?php echo t('agreement', 'model', array('{policyurl}'=>aurl('static/policy')));?>
+    <?php echo $form->error($model,'agreement');?>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Login'); ?>

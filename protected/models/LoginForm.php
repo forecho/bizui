@@ -28,11 +28,11 @@ class LoginForm extends CFormModel
 			array('bu_email', 'unique', 'className'=>'User', 'attributeName'=>'bu_email', 'on'=>'signup', 'message'=>t('email_is_exist', 'model')),
 			array('bu_email', 'email'),
 
-			array('bu_name', 'required', 'message'=>t('please_input_your_nickname'), 'on'=>'signup'),
+			array('bu_name', 'required', 'message'=>t('please_input_your_nickname', 'model'), 'on'=>'signup'),
             array('bu_name', 'unique', 'className'=>'User', 'attributeName'=>'bu_name', 'on'=>'signup', 'message'=>t('nickname_is_exist', 'model')),
             array('bu_name', 'checkReserveWords'),
 			
-			array('bu_password', 'required', 'on'=>'signup', 'message'=>t('please_input_your_password', 'model')),
+			array('bu_password', 'required', 'message'=>t('please_input_your_password', 'model')),
 			array('bu_password', 'authenticate', 'on'=>'login'),
 
 			array('bu_email, returnUrl', 'length', 'max'=>255),
@@ -41,7 +41,6 @@ class LoginForm extends CFormModel
 			array('rememberMe', 'boolean', 'on'=>'login'),
             array('bu_name, bu_password', 'length', 'min'=>3, 'max'=>50),
             array('bu_email, returnUrl', 'length', 'max'=>255),
-            array('agreement', 'compare', 'compareValue'=>true, 'on'=>'signup', 'message'=>t('please_agree_policy', 'model')),
             array('rememberMe', 'in', 'range'=>array(0, 1)),
 		);
 	}
@@ -85,8 +84,9 @@ class LoginForm extends CFormModel
 		if(!$this->hasErrors())
 		{
 			$this->_identity=new UserIdentity($this->bu_email,$this->bu_password);
-			if(!$this->_identity->authenticate())
-				$this->addError('bu_password',t('email_or_password_error', 'model'));
+			if(!$this->_identity->authenticate()){
+				$this->addError($attribute, t('email_or_password_error', 'model'));
+			}
 		}
 	}
 
@@ -105,22 +105,32 @@ class LoginForm extends CFormModel
 		{
 			$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
 			Yii::app()->user->login($this->_identity,$duration);
+			//登录成功更新时间和IP
+			User::model()->updateByPk(Yii::app()->user->id,array('bu_last_time'=>time(), 'bu_last_ip'=>GetIP())); 
 			return true;
 		}
 		else
 			return false;
 	}
 
-
-
-	public function afterValidate()
+	/**
+     * 创建新账号
+     */
+    public function signup()
     {
-        parent::afterValidate();
-        if ($this->hasErrors())
-            $this->incrementErrorLoginNums();
-        else
-            $this->clearErrorLoginNums();
+        $user = new User();
+	    $user->bu_email = $this->bu_email;
+	    $user->bu_name = $this->bu_name;
+	    $user->bu_password = md5($this->bu_password);
+
+	    if ($user->save()) {
+	        $this->afterSignup($user);
+	        return true;
+	    }
+	    else
+	        return false;
     }
+
 
     public function afterLogin()
     {

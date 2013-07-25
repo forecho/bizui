@@ -27,7 +27,35 @@
 			"file": "protected/controllers/SiteController.php",
 			"settings":
 			{
-				"buffer_size": 3788,
+				"buffer_size": 3530,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n/*\nsublime-imfix.c\nUse LD_PRELOAD to interpose some function to fix sublime input method support for linux.\nBy Cjacker Huang <jianzhong.huang at i-soft.com.cn>\n\ngcc -shared -o libsublime-imfix.so sublime_imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC\nLD_PRELOAD=./libsublime-imfix.so sublime_text\n*/\n#include <gtk/gtk.h>\n#include <gdk/gdkx.h>\ntypedef GdkSegment GdkRegionBox;\n\nstruct _GdkRegion\n{\n  long size;\n  long numRects;\n  GdkRegionBox *rects;\n  GdkRegionBox extents;\n};\n\nGtkIMContext *local_context;\n\nvoid\ngdk_region_get_clipbox (const GdkRegion *region,\n            GdkRectangle    *rectangle)\n{\n  g_return_if_fail (region != NULL);\n  g_return_if_fail (rectangle != NULL);\n\n  rectangle->x = region->extents.x1;\n  rectangle->y = region->extents.y1;\n  rectangle->width = region->extents.x2 - region->extents.x1;\n  rectangle->height = region->extents.y2 - region->extents.y1;\n  GdkRectangle rect;\n  rect.x = rectangle->x;\n  rect.y = rectangle->y;\n  rect.width = 0;\n  rect.height = rectangle->height; \n  //The caret width is 2; \n  //Maybe sometimes we will make a mistake, but for most of the time, it should be the caret.\n  if(rectangle->width == 2 && GTK_IS_IM_CONTEXT(local_context)) {\n        gtk_im_context_set_cursor_location(local_context, rectangle);\n  }\n}\n\n//this is needed, for example, if you input something in file dialog and return back the edit area\n//context will lost, so here we set it again.\n\nstatic GdkFilterReturn event_filter (GdkXEvent *xevent, GdkEvent *event, gpointer im_context)\n{\n    XEvent *xev = (XEvent *)xevent;\n    if(xev->type == KeyRelease && GTK_IS_IM_CONTEXT(im_context)) {\n       GdkWindow * win = g_object_get_data(G_OBJECT(im_context),\"window\");\n       if(GDK_IS_WINDOW(win))\n         gtk_im_context_set_client_window(im_context, win);\n    }\n    return GDK_FILTER_CONTINUE;\n}\n\nvoid gtk_im_context_set_client_window (GtkIMContext *context,\n          GdkWindow    *window)\n{\n  GtkIMContextClass *klass;\n  g_return_if_fail (GTK_IS_IM_CONTEXT (context));\n  klass = GTK_IM_CONTEXT_GET_CLASS (context);\n  if (klass->set_client_window)\n    klass->set_client_window (context, window);\n\n  if(!GDK_IS_WINDOW (window))\n    return;\n  g_object_set_data(G_OBJECT(context),\"window\",window);\n  int width = gdk_window_get_width(window);\n  int height = gdk_window_get_height(window);\n  if(width != 0 && height !=0) {\n    gtk_im_context_focus_in(context);\n    local_context = context;\n  }\n  gdk_window_add_filter (window, event_filter, context); \n}\n",
+			"file": "/home/forecho/sublime_imfix.c",
+			"file_size": 2480,
+			"file_write_time": 130191981583408476,
+			"settings":
+			{
+				"buffer_size": 2481,
+				"line_ending": "Unix",
+				"name": "sublime_imfix.c"
+			}
+		},
+		{
+			"file": "protected/models/User.php",
+			"settings":
+			{
+				"buffer_size": 3613,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "protected/models/LoginForm.php",
+			"settings":
+			{
+				"buffer_size": 3954,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,7 +63,7 @@
 			"file": "protected/views/site/index.php",
 			"settings":
 			{
-				"buffer_size": 1255,
+				"buffer_size": 365,
 				"line_ending": "Unix"
 			}
 		},
@@ -44,6 +72,14 @@
 			"settings":
 			{
 				"buffer_size": 520,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "protected/views/site/signup.php",
+			"settings":
+			{
+				"buffer_size": 1616,
 				"line_ending": "Unix"
 			}
 		},
@@ -64,26 +100,10 @@
 			}
 		},
 		{
-			"file": "protected/globals.php",
-			"settings":
-			{
-				"buffer_size": 6341,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "css/style.css",
 			"settings":
 			{
 				"buffer_size": 489,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/site/signup.php",
-			"settings":
-			{
-				"buffer_size": 1616,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,15 +119,15 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 327.0,
+		"height": 138.0,
 		"selected_items":
 		[
 			[
-				"stall",
+				"insta",
 				"Package Control: Install Package"
 			],
 			[
-				"insta",
+				"stall",
 				"Package Control: Install Package"
 			]
 		],
@@ -132,6 +152,7 @@
 	},
 	"file_history":
 	[
+		"/home/forecho/www/bizui/protected/globals.php",
 		"/home/forecho/桌面/config.txt",
 		"/home/forecho/www/bizui/css/style.css",
 		"/home/forecho/www/bizui/protected/views/site/signup.php",
@@ -198,6 +219,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"incrementErrorLoginNums",
 			"order",
 			"),\n",
 			"phpmyadmin",
@@ -248,15 +270,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3788,
+						"buffer_size": 3530,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								892,
-								892
+								3217,
+								3217
 							]
 						],
 						"settings":
@@ -265,26 +287,82 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 357.0,
+						"translation.y": 1606.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "protected/views/site/index.php",
+					"file": "/home/forecho/sublime_imfix.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1255,
+						"buffer_size": 2481,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1206,
-								1206
+								2481,
+								2481
+							]
+						],
+						"settings":
+						{
+							"auto_name": "sublime_imfix.c",
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 842.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "protected/models/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3339,
+								3339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "protected/models/LoginForm.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3768,
+								3768
 							]
 						],
 						"settings":
@@ -292,13 +370,40 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 255.0,
+						"translation.y": 1721.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
+					"file": "protected/views/site/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								365,
+								365
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "protected/views/site/_post.php",
 					"semi_transient": false,
 					"settings":
@@ -310,22 +415,50 @@
 						"selection":
 						[
 							[
-								501,
-								501
+								520,
+								520
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
-						"translation.x": 145.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 6,
+					"file": "protected/views/site/signup.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								738,
+								738
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "protected/models/Comments.php",
 					"semi_transient": false,
 					"settings":
@@ -353,7 +486,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 8,
 					"file": "protected/models/Posts.php",
 					"semi_transient": false,
 					"settings":
@@ -381,36 +514,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "protected/globals.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6341,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6268,
-								6268
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4020.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
@@ -437,35 +541,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "protected/views/site/signup.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1616,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								580,
-								580
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "protected/views/layouts/main.php",
 					"semi_transient": false,
 					"settings":
@@ -497,7 +573,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 34.0
 	},
 	"input":
 	{
