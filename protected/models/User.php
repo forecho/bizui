@@ -71,7 +71,7 @@ class User extends CActiveRecord
 	{
 		return array(
 			'bu_id' => 'Bu',
-			'bu_email' => 'Bu Email',
+			'bu_email' => t('bu_email', 'model'),
 			'bu_name' => 'Bu Name',
 			'bu_password' => 'Bu Password',
 			'bu_reg_ip' => 'Bu Reg Ip',

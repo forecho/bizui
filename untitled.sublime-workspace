@@ -27,7 +27,7 @@
 			"file": "protected/controllers/SiteController.php",
 			"settings":
 			{
-				"buffer_size": 3052,
+				"buffer_size": 3788,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,15 +35,7 @@
 			"file": "protected/views/site/index.php",
 			"settings":
 			{
-				"buffer_size": 364,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/layouts/column2.php",
-			"settings":
-			{
-				"buffer_size": 530,
+				"buffer_size": 1255,
 				"line_ending": "Unix"
 			}
 		},
@@ -84,6 +76,14 @@
 			"settings":
 			{
 				"buffer_size": 489,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "protected/views/site/signup.php",
+			"settings":
+			{
+				"buffer_size": 1616,
 				"line_ending": "Unix"
 			}
 		},
@@ -239,7 +239,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -248,7 +248,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3052,
+						"buffer_size": 3788,
 						"regions":
 						{
 						},
@@ -276,15 +276,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 364,
+						"buffer_size": 1255,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1206,
+								1206
 							]
 						],
 						"settings":
@@ -292,41 +292,13 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 255.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "protected/views/layouts/column2.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 530,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "protected/views/site/_post.php",
 					"semi_transient": false,
 					"settings":
@@ -353,7 +325,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "protected/models/Comments.php",
 					"semi_transient": false,
 					"settings":
@@ -381,7 +353,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "protected/models/Posts.php",
 					"semi_transient": false,
 					"settings":
@@ -409,7 +381,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "protected/globals.php",
 					"semi_transient": false,
 					"settings":
@@ -438,7 +410,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
@@ -457,6 +429,34 @@
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "protected/views/site/signup.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								580,
+								580
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
