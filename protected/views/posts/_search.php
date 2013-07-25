@@ -52,8 +52,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'bu_create_time'); ?>
-		<?php echo $form->textField($model,'bu_create_time'); ?>
+		<?php echo $form->label($model,'bp_create_time'); ?>
+		<?php echo $form->textField($model,'bp_create_time'); ?>
 	</div>
 
 	<div class="row buttons">

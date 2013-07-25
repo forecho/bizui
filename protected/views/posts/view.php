@@ -29,6 +29,6 @@ $this->menu=array(
 		'bp_content',
 		'bp_score',
 		'bp_like',
-		'bu_create_time',
+		'bp_create_time',
 	),
 )); ?>

@@ -12,7 +12,7 @@
  * @property string $bp_content
  * @property string $bp_score
  * @property integer $bp_like
- * @property integer $bu_create_time
+ * @property integer $bp_create_time
  */
 class Posts extends CActiveRecord
 {	
@@ -45,12 +45,12 @@ class Posts extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('bu_id, bp_like, bu_create_time', 'numerical', 'integerOnly'=>true),
+			array('bu_id, bp_like, bp_create_time', 'numerical', 'integerOnly'=>true),
 			array('bp_title, bp_url, bp_video_url, bp_content', 'length', 'max'=>255),
 			array('bp_score', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('bp_id, bu_id, bp_title, bp_url, bp_video_url, bp_content, bp_score, bp_like, bu_create_time, order', 'safe', 'on'=>'search'),
+			array('bp_id, bu_id, bp_title, bp_url, bp_video_url, bp_content, bp_score, bp_like, bp_create_time, order', 'safe', 'on'=>'search'),
 		);
 	}
 

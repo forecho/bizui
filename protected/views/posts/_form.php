@@ -58,9 +58,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'bu_create_time'); ?>
-		<?php echo $form->textField($model,'bu_create_time'); ?>
-		<?php echo $form->error($model,'bu_create_time'); ?>
+		<?php echo $form->labelEx($model,'bp_create_time'); ?>
+		<?php echo $form->textField($model,'bp_create_time'); ?>
+		<?php echo $form->error($model,'bp_create_time'); ?>
 	</div>
 
 	<div class="row buttons">

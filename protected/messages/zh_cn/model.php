@@ -10,7 +10,7 @@ return array(
 	'bu_reg_ip' => 'Bu Reg Ip',
 	'bu_last_ip' => 'Bu Last Ip',
 	'bu_last_time' => 'Bu Last Time',
-	'bu_create_time' => 'Bu Create Time',
+	'bp_create_time' => 'Bp Create Time',
 	'bu_status' => 'Bu Status',
 
 	/* form model LoginForm */

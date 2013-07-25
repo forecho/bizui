@@ -54,7 +54,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		/*
 		'bp_score',
 		'bp_like',
-		'bu_create_time',
+		'bp_create_time',
 		*/
 		array(
 			'class'=>'CButtonColumn',

@@ -33,15 +33,6 @@
 	<?php echo CHtml::encode($data->bp_score); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('bp_like')); ?>:</b>
-	<?php echo CHtml::encode($data->bp_like); ?>
-	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('bu_create_time')); ?>:</b>
-	<?php echo CHtml::encode($data->bu_create_time); ?>
-	<br />
-
-	*/ ?>
 
 </div>
