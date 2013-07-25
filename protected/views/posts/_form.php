@@ -13,14 +13,6 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'bu_id'); ?>
-		<?php echo $form->textField($model,'bu_id'); ?>
-		<?php echo $form->error($model,'bu_id'); ?>
-	</div>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'bp_title'); ?>
 		<?php echo $form->textField($model,'bp_title',array('size'=>60,'maxlength'=>255)); ?>
@@ -34,33 +26,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'bp_video_url'); ?>
-		<?php echo $form->textField($model,'bp_video_url',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'bp_video_url'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'bp_content'); ?>
-		<?php echo $form->textField($model,'bp_content',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textArea($model,'bp_content',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'bp_content'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'bp_score'); ?>
-		<?php echo $form->textField($model,'bp_score',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'bp_score'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'bp_like'); ?>
-		<?php echo $form->textField($model,'bp_like'); ?>
-		<?php echo $form->error($model,'bp_like'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'bp_create_time'); ?>
-		<?php echo $form->textField($model,'bp_create_time'); ?>
-		<?php echo $form->error($model,'bp_create_time'); ?>
 	</div>
 
 	<div class="row buttons">

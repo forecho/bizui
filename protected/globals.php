@@ -273,6 +273,23 @@ function GetDomain($url){
     return $domain;
 }
 
+/**
+ * 获取META信息
+ */
+function GetSiteMeta($url) {
+    
+    $data = file_get_contents($url);
+         
+    $meta = array();
+    if (!empty($data)) {
+        #Title
+        preg_match('/<TITLE>([\w\W]*?)<\/TITLE>/si', $data, $matches);
+        if (!empty($matches[1])) {
+            $meta['title'] = $matches[1];
+        }
+    }
+    return $meta['title'];
+}
 
 /**
  * 时间轴函数

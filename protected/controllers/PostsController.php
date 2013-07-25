@@ -69,7 +69,15 @@ class PostsController extends Controller
 
 		if(isset($_POST['Posts']))
 		{
+			$model->bu_id=Yii::app()->user->id;
+			$model->bp_create_time=time();
+			$model->bp_like='1';
 			$model->attributes=$_POST['Posts'];
+			//如果没有title 就自动抓取
+			if ($_POST['Posts']['bp_title']=='' && $_POST['Posts']['bp_url']) {
+				$model->bp_title=GetSiteMeta($_POST['Posts']['bp_url']);
+			}
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->bp_id));
 		}
