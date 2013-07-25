@@ -259,6 +259,20 @@ function GetIP() {
     return $ip;
 }
 
+/**
+ * 正则匹配获取URL中的域名
+ */
+function GetDomain($url){
+    // 从 URL 中取得主机名 
+    preg_match("/^(http:\/\/)?([^\/]+)/i", $url, $matches); 
+    $host = $matches[2]; 
+    // 从主机名中取得后面两段 
+    preg_match("/[^\.\/]+\.[^\.\/]+$/", $host, $matches); 
+    //echo "domain name is: {$matches[0]}\n"; 
+    $domain = $matches[0];
+    return $domain;
+}
+
 
 /**
  * 时间轴函数
