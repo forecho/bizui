@@ -45,9 +45,11 @@ class Posts extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('bp_url', 'required'),
 			array('bu_id, bp_like, bp_create_time', 'numerical', 'integerOnly'=>true),
 			array('bp_title, bp_url, bp_video_url, bp_content', 'length', 'max'=>255),
 			array('bp_score', 'length', 'max'=>20),
+			array('bp_url', 'url'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('bp_id, bu_id, bp_title, bp_url, bp_video_url, bp_content, bp_score, bp_like, bp_create_time, order', 'safe', 'on'=>'search'),
@@ -74,10 +76,10 @@ class Posts extends CActiveRecord
 		return array(
 			'bp_id' => 'Bp',
 			'bu_id' => 'Bu',
-			'bp_title' => 'Bp Title',
-			'bp_url' => 'Bp Url',
+			'bp_title' => '标题',
+			'bp_url' => '网页地址',
 			'bp_video_url' => 'Bp Video Url',
-			'bp_content' => 'Bp Content',
+			'bp_content' => '简介',
 			'bp_score' => 'Bp Score',
 			'bp_like' => 'Bp Like',
 			'bp_create_time' => 'Bp Create Time',
@@ -111,7 +113,7 @@ class Posts extends CActiveRecord
 		}elseif ($this->order=='new') {
 			$criteria->order = 'bp_create_time DESC';
 		}
-		
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
