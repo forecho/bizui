@@ -28,11 +28,11 @@
 }
 
 .box-item p a{
-	color: #555;
+	color: #828282;
 	text-decoration:none;
 }
 .box-item p a:hover{
-	color: #555;
+	color: #555555;
 	text-decoration:underline;
 }
 
