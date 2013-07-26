@@ -17,11 +17,16 @@ $this->widget('zii.widgets.CListView', array(
 ?>
 <script>
 //赞
-function getScore(id){
+function getScore(id,that){
 	$.ajax({
         type:"POST",
         url: "<?php echo Yii::app()->createUrl('/posts/ajaxGetScore/') ?>",
         data:"id="+id,
-    })
+        success: function(msg){
+        	$(that).parent().next().children('span').html(msg);
+        	$(that).removeAttr("onclick");
+        	$(that).children('img').attr('src','/images/s.gif');
+		}
+    });
 }
 </script>

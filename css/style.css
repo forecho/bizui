@@ -15,14 +15,27 @@
 	border-bottom: 1px solid #e2e2e2;
 }
 
-a.post-title {
+.box-item p a.post-title:link{
 	font-size: 16px;
 	line-height: 30px;
 	font-weight: normal;
-	color: #222;
+	color: #000000;
 	text-shadow: 0 1px 0 #fefefe;
 }
 
 .topic-list {
 	clear: both;
+}
+
+.box-item p a{
+	color: #555;
+	text-decoration:none;
+}
+.box-item p a:hover{
+	color: #555;
+	text-decoration:underline;
+}
+
+.box-item p a:visited {
+	color: #828282;
 }

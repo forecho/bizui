@@ -200,6 +200,7 @@ class PostsController extends Controller
 		//详细算法
 		$score = ($vote - 1) / pow(($hourDiffCreated + 2), RANK_G);
 		Posts::model()->updateByPk($id, array('bp_score'=>$score, 'bp_like'=>$posts->bp_like+1));
+		echo $posts->bp_like+1;
 	}
 
 }
