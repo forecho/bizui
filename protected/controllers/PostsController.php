@@ -201,7 +201,7 @@ class PostsController extends Controller
 		$score = ($vote - 1) / pow(($hourDiffCreated + 2), RANK_G);
 		Posts::model()->updateByPk($id, array('bp_score'=>$score, 'bp_like'=>$posts->bp_like+1));
 
-		//用户赞同 添加记录
+		//用户赞同 添加收藏
 		$saveCount = Save::model()->countByAttributes(array('bp_id'=>$id, 'bu_id'=>Yii::app()->user->id));
 		if ($saveCount == 0) {
 			$save = new Save;
