@@ -15,3 +15,13 @@ $this->widget('zii.widgets.CListView', array(
     'itemsCssClass'=>'box-cell',
 ));
 ?>
+<script>
+//赞
+function getScore(id){
+	$.ajax({
+        type:"POST",
+        url: "<?php echo Yii::app()->createUrl('/posts/ajaxGetScore/') ?>",
+        data:"id="+id,
+    })
+}
+</script>

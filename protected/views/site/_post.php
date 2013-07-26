@@ -4,6 +4,7 @@
 ?>
 
 <li class="box-item">
+	<span onclick="getScore('<?php echo $data->bp_id; ?>')">Like</span>
 	<p>
 		<?php echo CHtml::link($data->bp_title, $data->bp_url, array('target'=>'_blank', 'class'=>'post-title'));?>
 		<span>(<?php echo GetDomain($data->bp_url); ?>)</span>
