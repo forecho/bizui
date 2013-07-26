@@ -25,7 +25,7 @@ function getScore(id,that){
         success: function(msg){
         	$(that).parent().next().children('span').html(msg);
         	$(that).removeAttr("onclick");
-        	$(that).children('img').attr('src','/images/s.gif');
+        	$(that).children('img').attr('src','<?php echo bu();?>/images/s.gif');
 		}
     });
 }

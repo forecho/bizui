@@ -5,7 +5,7 @@
 
 <li class="box-item">
 	<p>
-		<span onclick="getScore('<?php echo $data->bp_id; ?>',this)"><img src="/images/grayarrow.png" width="12"></span>
+		<span onclick="getScore('<?php echo $data->bp_id; ?>',this)"><img src="<?php echo bu();?>/images/grayarrow.png" width="12"></span>
 		<?php echo CHtml::link($data->bp_title, $data->bp_url, array('target'=>'_blank', 'class'=>'post-title'));?>
 		<span>(<?php echo GetDomain($data->bp_url); ?>)</span>
 	</p>
