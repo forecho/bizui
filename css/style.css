@@ -39,3 +39,7 @@
 .box-item p a:visited {
 	color: #828282;
 }
+
+.box-item span img{
+	cursor: pointer;
+}

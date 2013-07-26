@@ -5,7 +5,22 @@
 
 <li class="box-item">
 	<p>
-		<span onclick="getScore('<?php echo $data->bp_id; ?>',this)"><img src="<?php echo bu();?>/images/grayarrow.png" width="12"></span>
+		<?php if (Yii::app()->user->id) {
+			$saveCount = Save::model()->countByAttributes(array('bp_id'=>$data->bp_id, 'bu_id'=>Yii::app()->user->id));
+			if ($saveCount==1) {
+		?>
+			<span><img src="<?php echo bu();?>/images/s.gif" width="12"></span>
+		<?php
+			}else{
+		?>
+			<span onclick="getScore('<?php echo $data->bp_id; ?>',this)"><img src="<?php echo bu();?>/images/grayarrow.png" width="12" title="赞"></span>
+		<?php
+			}
+		}else{
+		?>
+			<span onclick="getScore('<?php echo $data->bp_id; ?>',this)"><img src="<?php echo bu();?>/images/grayarrow.png" width="12" title="赞"></span>
+		<?php } ?>
+		
 		<?php echo CHtml::link($data->bp_title, $data->bp_url, array('target'=>'_blank', 'class'=>'post-title'));?>
 		<span>(<?php echo GetDomain($data->bp_url); ?>)</span>
 	</p>

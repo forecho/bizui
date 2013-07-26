@@ -17,6 +17,7 @@ $this->widget('zii.widgets.CListView', array(
 ?>
 <script>
 //赞
+<?php  if (Yii::app()->user->id){ ?>
 function getScore(id,that){
 	$.ajax({
         type:"POST",
@@ -28,5 +29,10 @@ function getScore(id,that){
         	$(that).children('img').attr('src','<?php echo bu();?>/images/s.gif');
 		}
     });
-}
+};
+<?php } else{?>
+function getScore(id,that){
+	location.href = "<?php echo Yii::app()->createUrl('/site/login') ?>";
+};
+<?php } ?>
 </script>
