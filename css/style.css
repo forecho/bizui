@@ -7,6 +7,12 @@
 	border-bottom: 2px solid #e2e2e9;
 }
 
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+	background-color: #eeeeee;
+	border-color: #ddd;
+	cursor: not-allowed;
+}
+
 .box-cell {
 	padding: 10px;
 	font-size: 12px;

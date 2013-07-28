@@ -14,6 +14,7 @@
  * @property integer $bu_create_time
  * @property integer $bu_status
  * @property integer $bu_reputation
+ * @property string $bu_about
  */
 class User extends CActiveRecord
 {
@@ -44,13 +45,14 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('bu_email', 'required'),
-			array('bu_last_time, bu_create_time, bu_status', 'numerical', 'integerOnly'=>true),
+			array('bu_last_time, bu_create_time, bu_status, bu_reputation', 'numerical', 'integerOnly'=>true),
 			array('bu_email', 'length', 'max'=>255),
 			array('bu_name, bu_reg_ip, bu_last_ip', 'length', 'max'=>25),
 			array('bu_password', 'length', 'max'=>100),
+			array('bu_about','safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('bu_id, bu_email, bu_name, bu_password, bu_reg_ip, bu_last_ip, bu_last_time, bu_create_time, bu_status, bu_reputation', 'safe', 'on'=>'search'),
+			array('bu_id, bu_email, bu_name, bu_password, bu_reg_ip, bu_last_ip, bu_last_time, bu_create_time, bu_status, bu_reputation, bu_about', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,14 +75,15 @@ class User extends CActiveRecord
 		return array(
 			'bu_id' => 'Bu',
 			'bu_email' => t('bu_email', 'model'),
-			'bu_name' => 'Bu Name',
+			'bu_name' => t('bu_name', 'model'),
 			'bu_password' => 'Bu Password',
 			'bu_reg_ip' => 'Bu Reg Ip',
 			'bu_last_ip' => 'Bu Last Ip',
 			'bu_last_time' => 'Bu Last Time',
 			'bu_create_time' => 'Bu Create Time',
 			'bu_status' => 'Bu Status',
-			'bu_reputation' => 'Bu Reputation',
+			'bu_reputation' => t('bu_reputation', 'model'),
+			'bu_about' => t('bu_about', 'model'),
 		);
 	}
 
@@ -104,7 +107,6 @@ class User extends CActiveRecord
 		$criteria->compare('bu_last_time',$this->bu_last_time);
 		$criteria->compare('bu_create_time',$this->bu_create_time);
 		$criteria->compare('bu_status',$this->bu_status);
-		$criteria->compare('bu_reputation',$this->bu_reputation);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

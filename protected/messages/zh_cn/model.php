@@ -11,7 +11,16 @@ return array(
 	'bu_last_ip' => 'Bu Last Ip',
 	'bu_last_time' => 'Bu Last Time',
 	'bp_create_time' => 'Bp Create Time',
-	'bu_status' => 'Bu Status',
+    'bu_status' => 'Bu Status',
+    'bu_create_time' => '加入时间',
+    'bu_reputation' => '声望',
+    'bu_about' => '个人简介',
+
+    //菜单
+    'update_user' => '资料设置',
+	'manage_user' => '用户管理',
+
+
 
 	/* form model LoginForm */
     'remember_me' => '下次自动登录',

@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.11)
 # Database: bizui
-# Generation Time: 2013-07-28 02:46:13 +0000
+# Generation Time: 2013-07-28 14:11:01 +0000
 # ************************************************************
 
 
@@ -74,7 +74,7 @@ LOCK TABLES `bz_posts` WRITE;
 
 INSERT INTO `bz_posts` (`bp_id`, `bu_id`, `bp_title`, `bp_url`, `bp_video_url`, `bp_content`, `bp_score`, `bp_like`, `bp_create_time`)
 VALUES
-	(14,2,'你丫闭嘴-好好看视频。','http://www.niyabizui.com/',NULL,'','0.76443975970498',8,1374847591),
+	(14,2,'你丫闭嘴','http://www.niyabizui.com/',NULL,'','0.76443975970498',8,1374847591),
 	(13,2,'程序员与写作 | MacTalk-池建强的随想录 ','http://macshuo.com/?p=638',NULL,'','0.032976118989423',13,1374764004),
 	(10,2,'终极 Shell | MacTalk-池建强的随想录 ','http://macshuo.com/?p=676',NULL,'','0.0030229543836031',2,1374763637),
 	(11,2,'大师微电影之新年头老日子—在线播放—《美好2013:大师微电影》—电影—优酷网，视频高清在线观看','http://v.youku.com/v_show/id_XNTg2OTI3NTA4_ev_1.html',NULL,'','0.0086328716939672',4,1374763833),
@@ -128,16 +128,17 @@ CREATE TABLE `bz_user` (
   `bu_create_time` int(10) DEFAULT NULL COMMENT '注册时间',
   `bu_status` tinyint(1) DEFAULT '1' COMMENT '是否冻结 1否 2是',
   `bu_reputation` int(10) DEFAULT NULL COMMENT '声望',
+  `bu_about` text COMMENT '个人简介',
   PRIMARY KEY (`bu_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 LOCK TABLES `bz_user` WRITE;
 /*!40000 ALTER TABLE `bz_user` DISABLE KEYS */;
 
-INSERT INTO `bz_user` (`bu_id`, `bu_email`, `bu_name`, `bu_password`, `bu_reg_ip`, `bu_last_ip`, `bu_last_time`, `bu_create_time`, `bu_status`, `bu_reputation`)
+INSERT INTO `bz_user` (`bu_id`, `bu_email`, `bu_name`, `bu_password`, `bu_reg_ip`, `bu_last_ip`, `bu_last_time`, `bu_create_time`, `bu_status`, `bu_reputation`, `bu_about`)
 VALUES
-	(1,'caizhenghai@gmail.com','forecho','0aab5cf0b063e6e5984787bfa4950d28',NULL,'127.0.0.1',1374851433,NULL,1,NULL),
-	(2,'407329758@qq.com','jackeyjiang','1bbd886460827015e5d605ed44252251','127.0.0.1','127.0.0.1',1374756222,1374756191,1,NULL);
+	(1,'caizhenghai@gmail.com','forecho','0aab5cf0b063e6e5984787bfa4950d28',NULL,'127.0.0.1',1374980371,1328187732,3,2,'wwww\r\ns'),
+	(2,'407329758@qq.com','jackeyjiang','1bbd886460827015e5d605ed44252251','127.0.0.1','127.0.0.1',1374756222,1374756191,1,NULL,NULL);
 
 /*!40000 ALTER TABLE `bz_user` ENABLE KEYS */;
 UNLOCK TABLES;
