@@ -50,6 +50,7 @@ class Posts extends CActiveRecord
 			array('bp_title, bp_url, bp_video_url, bp_content', 'length', 'max'=>255),
 			array('bp_score', 'length', 'max'=>20),
 			array('bp_url', 'url'),
+			array('bp_url', 'unique'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('bp_id, bu_id, bp_title, bp_url, bp_video_url, bp_content, bp_score, bp_like, bp_create_time, order', 'safe', 'on'=>'search'),

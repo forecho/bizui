@@ -13,6 +13,7 @@
  * @property integer $bu_last_time
  * @property integer $bu_create_time
  * @property integer $bu_status
+ * @property integer $bu_reputation
  */
 class User extends CActiveRecord
 {
@@ -49,7 +50,7 @@ class User extends CActiveRecord
 			array('bu_password', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('bu_id, bu_email, bu_name, bu_password, bu_reg_ip, bu_last_ip, bu_last_time, bu_create_time, bu_status', 'safe', 'on'=>'search'),
+			array('bu_id, bu_email, bu_name, bu_password, bu_reg_ip, bu_last_ip, bu_last_time, bu_create_time, bu_status, bu_reputation', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,6 +80,7 @@ class User extends CActiveRecord
 			'bu_last_time' => 'Bu Last Time',
 			'bu_create_time' => 'Bu Create Time',
 			'bu_status' => 'Bu Status',
+			'bu_reputation' => 'Bu Reputation',
 		);
 	}
 
@@ -102,6 +104,7 @@ class User extends CActiveRecord
 		$criteria->compare('bu_last_time',$this->bu_last_time);
 		$criteria->compare('bu_create_time',$this->bu_create_time);
 		$criteria->compare('bu_status',$this->bu_status);
+		$criteria->compare('bu_reputation',$this->bu_reputation);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

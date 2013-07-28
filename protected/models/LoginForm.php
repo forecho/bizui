@@ -30,7 +30,7 @@ class LoginForm extends CFormModel
 
 			array('bu_name', 'required', 'message'=>t('please_input_your_nickname', 'model'), 'on'=>'signup'),
             array('bu_name', 'unique', 'className'=>'User', 'attributeName'=>'bu_name', 'on'=>'signup', 'message'=>t('nickname_is_exist', 'model')),
-            array('bu_name', 'checkReserveWords'),
+       
 			
 			array('bu_password', 'required', 'message'=>t('please_input_your_password', 'model')),
 			array('bu_password', 'authenticate', 'on'=>'login'),
@@ -44,21 +44,6 @@ class LoginForm extends CFormModel
             array('rememberMe', 'in', 'range'=>array(0, 1)),
 		);
 	}
-
-	//检查用户名是否被注册
- 	public function checkReserveWords($attribute, $params)
-    {
-        if ($this->hasErrors('bu_name')) return false;
-        foreach ((array)param('reservedWords') as $v) {
-            $pos = stripos($this->$attribute, $v);
-            if (false !== $pos) {
-                $this->addError($attribute, t('nickname_is_exist', 'model'));
-                break;
-            }
-        }
-        return true;
-    }
-
 
 
 	/**

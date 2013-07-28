@@ -122,6 +122,12 @@ class SiteController extends Controller
  	public function actionSignup()
 	{   
         $model = new LoginForm('signup');
+        // 开启Ajax验证
+        if(isset($_POST['ajax']) && $_POST['ajax']==='signup-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
         if (isset($_POST['LoginForm'])) {
             $model->attributes=$_POST['LoginForm'];
             if($model->validate()){
