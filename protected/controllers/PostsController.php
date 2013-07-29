@@ -80,6 +80,7 @@ class PostsController extends Controller
 			
 			if($model->save()){
 				if ($_POST['Posts']['bp_url']) {
+					//发一个链接有5点声望
 					$record = User::model()->findByPk(Yii::app()->user->id);
 					$record->saveCounters(array('bu_reputation'=>5));
 				}
