@@ -91,8 +91,17 @@ class LoginForm extends CFormModel
 		{
 			$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
 			Yii::app()->user->login($this->_identity,$duration);
+			
+			//登录一次加5点
+			$user=User::model()->findByPk(Yii::app()->user->id);
+			if (date('Ymd', $user->bu_last_time) != date('Ymd', time())) {
+				$user->bu_reputation = $user->bu_reputation+'5';
+			}
 			//登录成功更新时间和IP
-			User::model()->updateByPk(Yii::app()->user->id,array('bu_last_time'=>time(), 'bu_last_ip'=>GetIP())); 
+			$user->bu_last_time = time();
+			$user->bu_last_ip = GetIP();
+			$user->save(); // 将更改保存到数据库
+			
 			return true;
 		}
 		else
