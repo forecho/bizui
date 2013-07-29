@@ -15,6 +15,7 @@ $this->menu=array(
 	array('label'=>t('manage_user', 'model'), 'url'=>array('admin')),
 );
 ?>
+
 <h3><?php echo $model->bu_name; ?> #第 <?php echo $model->bu_id; ?> 位会员</h3>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
@@ -26,7 +27,6 @@ $this->menu=array(
             'value'=>date('Y-m-d H:i',$model->bu_create_time),
         ),
 		'bu_reputation',
-		'bu_about',
 		array(
             'name'=>t('bu_about', 'model'),
             'type'=>'ntext',
