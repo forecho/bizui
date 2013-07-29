@@ -80,10 +80,8 @@ class PostsController extends Controller
 			
 			if($model->save()){
 				if ($_POST['Posts']['bp_url']) {
-					//发一个链接有5点声望
-					$user=User::model()->findByPk(Yii::app()->user->id);
-					$user->bu_reputation=$user->bu_reputation+'5';
-					$user->save(); // 将更改保存到数据库
+					$record = User::model()->findByPk(Yii::app()->user->id);
+					$record->saveCounters(array('bu_reputation'=>5));
 				}
 				$this->redirect(array('view','id'=>$model->bp_id));
 			}
