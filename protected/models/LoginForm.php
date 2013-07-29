@@ -29,6 +29,7 @@ class LoginForm extends CFormModel
 			array('bu_email', 'email'),
 
 			array('bu_name', 'required', 'message'=>t('please_input_your_nickname', 'model'), 'on'=>'signup'),
+			array('bu_name', 'match', 'pattern'=>'/^[0-9a-zA-Z_]{1,}$/', 'message'=>t('please_input_your_right_nickname', 'model'), 'on'=>'signup'),
             array('bu_name', 'unique', 'className'=>'User', 'attributeName'=>'bu_name', 'on'=>'signup', 'message'=>t('nickname_is_exist', 'model')),
        
 			

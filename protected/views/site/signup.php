@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 
 <h1>注册</h1>
 
-<p>Please fill out the following form with your signup credentials:</p>
+<p><?php echo t('signup_message', 'model'); ?></p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
