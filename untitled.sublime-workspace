@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"wid",
+				"width"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"bp_",
+				"bp_id"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"sc",
+				"socre"
+			],
+			[
 				"do",
 				"domain"
 			],
@@ -36,74 +56,10 @@
 	"buffers":
 	[
 		{
-			"file": "protected/controllers/SiteController.php",
-			"settings":
-			{
-				"buffer_size": 3502,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/models/LoginForm.php",
-			"settings":
-			{
-				"buffer_size": 4297,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/messages/zh_cn/model.php",
-			"settings":
-			{
-				"buffer_size": 750,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/models/User.php",
-			"settings":
-			{
-				"buffer_size": 3593,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "protected/globals.php",
 			"settings":
 			{
-				"buffer_size": 7276,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/site/index.php",
-			"settings":
-			{
-				"buffer_size": 365,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/site/_post.php",
-			"settings":
-			{
-				"buffer_size": 582,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/site/signup.php",
-			"settings":
-			{
-				"buffer_size": 1481,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/models/Comments.php",
-			"settings":
-			{
-				"buffer_size": 2907,
+				"buffer_size": 7631,
 				"line_ending": "Unix"
 			}
 		},
@@ -111,23 +67,7 @@
 			"file": "protected/models/Posts.php",
 			"settings":
 			{
-				"buffer_size": 3313,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/style.css",
-			"settings":
-			{
-				"buffer_size": 489,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/layouts/main.php",
-			"settings":
-			{
-				"buffer_size": 2447,
+				"buffer_size": 3354,
 				"line_ending": "Unix"
 			}
 		}
@@ -172,12 +112,25 @@
 	},
 	"file_history":
 	[
+		"/home/forecho/www/bizui/protected/controllers/SiteController.php",
+		"/home/forecho/www/bizui/protected/models/LoginForm.php",
+		"/home/forecho/www/bizui/protected/messages/zh_cn/model.php",
+		"/home/forecho/www/bizui/protected/models/User.php",
+		"/home/forecho/www/bizui/protected/globals.php",
+		"/home/forecho/www/bizui/protected/views/site/index.php",
+		"/home/forecho/www/bizui/protected/views/site/_post.php",
+		"/home/forecho/www/bizui/protected/views/site/signup.php",
+		"/home/forecho/www/bizui/protected/models/Comments.php",
+		"/home/forecho/www/bizui/protected/models/Posts.php",
+		"/home/forecho/www/bizui/protected/controllers/PostsController.php",
+		"/home/forecho/www/bizui/css/style.css",
+		"/home/forecho/www/bizui/css/main.css",
+		"/home/forecho/www/bizui/protected/views/layouts/main.php",
+		"/usr/share/phpmyadmin/libraries/config.default.php",
+		"/home/forecho/桌面/config.txt",
+		"/home/forecho/www/active/index.html",
 		"/home/forecho/sublime_imfix.c",
 		"/opt/sublime_text/sublime_imfix.c",
-		"/home/forecho/www/bizui/protected/globals.php",
-		"/home/forecho/桌面/config.txt",
-		"/home/forecho/www/bizui/css/style.css",
-		"/home/forecho/www/bizui/protected/views/site/signup.php",
 		"/home/forecho/nginx.conf",
 		"/home/forecho/www/bizui/README.md",
 		"/home/forecho/桌面/nginx (复件).conf",
@@ -185,7 +138,6 @@
 		"/home/forecho/www/demo/fileUpload.php",
 		"/home/forecho/www/demo/index.php",
 		"/home/forecho/www/demo/index.html",
-		"/home/forecho/www/active/index.html",
 		"/home/forecho/www/active/links.html",
 		"/home/forecho/www/active/posts.html",
 		"/home/forecho/www/active/comments.html",
@@ -241,6 +193,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"none",
+			"bu_create_time",
+			"ajaxGetScore",
+			">';\n",
 			"authenticate",
 			"ip",
 			"incrementErrorLoginNums",
@@ -285,24 +241,53 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "protected/controllers/SiteController.php",
+					"file": "protected/globals.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3502,
+						"buffer_size": 7631,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2791,
-								2791
+								2513,
+								2513
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1275.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "protected/models/Posts.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3354,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1318,
+								1318
 							]
 						],
 						"settings":
@@ -312,312 +297,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 612.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "protected/models/LoginForm.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1346,
-								1346
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 408.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "protected/messages/zh_cn/model.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 750,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								483,
-								483
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "protected/models/User.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3593,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1071,
-								1071
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1071.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "protected/globals.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6392,
-								6392
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4139.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "protected/views/site/index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 365,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								364,
-								364
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "protected/views/site/_post.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 582,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								251,
-								251
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "protected/views/site/signup.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1481,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1345,
-								1345
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 374.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "protected/models/Comments.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2907,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2835,
-								2835
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1326.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "protected/models/Posts.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3313,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3059,
-								3059
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1453.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 489,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								425,
-								425
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "protected/views/layouts/main.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2447,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1513,
-								1513
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 306.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

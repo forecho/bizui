@@ -2881,3 +2881,59 @@ Stack trace:
 REQUEST_URI=/index.php?r=posts/create
 HTTP_REFERER=http://bizui.com/index.php?r=posts/create
 ---
+2013/07/26 18:46:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "new" 动作.' in /home/forecho/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/forecho/www/yii/framework/web/CController.php(270): CController->missingAction('new')
+#1 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('new')
+#2 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/new')
+#3 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=posts/new
+---
+2013/07/26 18:46:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您未被授权执行这个动作' in /home/forecho/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /home/forecho/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 /home/forecho/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/forecho/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/forecho/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/forecho/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/forecho/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/admin')
+#9 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=posts/admin
+HTTP_REFERER=http://bizui.com/index.php?r=posts/create
+---
+2013/07/29 09:51:44 [error] [exception.CException] exception 'CException' with message '未知类型 "pre"。' in /home/forecho/www/yii/framework/utils/CFormatter.php:126
+Stack trace:
+#0 /home/forecho/www/yii/framework/zii/widgets/CDetailView.php(215): CFormatter->format('wwww??s', 'pre')
+#1 /home/forecho/www/yii/framework/web/CBaseController.php(173): CDetailView->run()
+#2 /home/forecho/www/bizui/protected/views/user/view.php(37): CBaseController->widget('zii.widgets.CDe...', Array)
+#3 /home/forecho/www/yii/framework/web/CBaseController.php(126): require('/home/forecho/w...')
+#4 /home/forecho/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/forecho/w...', Array, true)
+#5 /home/forecho/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/forecho/w...', Array, true)
+#6 /home/forecho/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /home/forecho/www/bizui/protected/controllers/UserController.php(56): CController->render('view', Array)
+#8 [internal function]: UserController->actionView('1')
+#9 /home/forecho/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#10 /home/forecho/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#11 /home/forecho/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/forecho/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/forecho/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/forecho/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/forecho/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/forecho/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/forecho/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/forecho/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/forecho/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/forecho/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/view')
+#21 /home/forecho/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /home/forecho/www/bizui/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=user/view&id=1
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---
