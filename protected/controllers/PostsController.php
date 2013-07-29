@@ -216,6 +216,13 @@ class PostsController extends Controller
 			$save->save();
 		}
 
+		//被人赞一次加一分
+		$record = User::model()->findByPk($posts->bu_id);
+		$record->saveCounters(array('bu_reputation'=>1));
+		//赞别人一次减一分
+		$userRecord=User::model()->findByPk(Yii::app()->user->id);
+		$userRecord->saveCounters(array('bu_reputation'=>-1));
+
 		echo $posts->bp_like+1;
 	}
 
