@@ -6,8 +6,15 @@
 <li class="box-item">
 	<p>
 		<?php if (Yii::app()->user->id) {
+			$postCount = Posts::model()->countByAttributes(array('bp_id'=>$data->bp_id, 'bu_id'=>Yii::app()->user->id));
 			$saveCount = Save::model()->countByAttributes(array('bp_id'=>$data->bp_id, 'bu_id'=>Yii::app()->user->id));
-			if ($saveCount==1) {
+			//判断是否是自己发布的
+			if ($postCount==1) {
+		?>
+			<span style="width:12px; color:red;">*</span>
+		<?php
+			//判断是否是已经收藏的
+			}elseif ($saveCount==1) {
 		?>
 			<span><img src="<?php echo bu();?>/images/s.gif" width="12"></span>
 		<?php

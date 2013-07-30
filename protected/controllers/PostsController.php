@@ -78,8 +78,19 @@ class PostsController extends Controller
 				$model->bp_title=GetSiteMeta($_POST['Posts']['bp_url']);
 			}
 			
-			if($model->save())
+			if($model->save()){
+				if ($_POST['Posts']['bp_url']) {
+					//发一个链接有5点声望
+					$record = User::model()->findByPk(Yii::app()->user->id);
+					$record->saveCounters(array('bu_reputation'=>5));
+					//添加到收藏
+					$save = new Save;
+					$save->bp_id = $model->bp_id;
+					$save->bu_id = Yii::app()->user->id;
+					$save->save();
+				}
 				$this->redirect(array('view','id'=>$model->bp_id));
+			}
 		}
 
 		$this->render('create',array(
@@ -209,6 +220,13 @@ class PostsController extends Controller
 			$save->bu_id = Yii::app()->user->id;
 			$save->save();
 		}
+
+		//被人赞一次加一分
+		$record = User::model()->findByPk($posts->bu_id);
+		$record->saveCounters(array('bu_reputation'=>1));
+		//赞别人一次减一分
+		$userRecord=User::model()->findByPk(Yii::app()->user->id);
+		$userRecord->saveCounters(array('bu_reputation'=>-1));
 
 		echo $posts->bp_like+1;
 	}
