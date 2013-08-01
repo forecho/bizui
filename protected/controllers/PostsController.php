@@ -64,8 +64,12 @@ class PostsController extends Controller
 	{
 		$model=new Posts;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		// 开启Ajax验证
+	    if(isset($_POST['ajax']) && $_POST['ajax']==='posts-form')
+	    {
+	        echo CActiveForm::validate($model);
+	        Yii::app()->end();
+	    }
 
 		if(isset($_POST['Posts']))
 		{

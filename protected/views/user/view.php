@@ -11,6 +11,7 @@ $this->menu=array(
 	array('label'=>'List User', 'url'=>array('index')),
 	array('label'=>'Create User', 'url'=>array('create')),
 	array('label'=>t('update_user', 'model'), 'url'=>array('update')),
+	array('label'=>t('change_password', 'model'), 'url'=>array('changepwd')),
 	array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->bu_id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>t('manage_user', 'model'), 'url'=>array('admin')),
 );

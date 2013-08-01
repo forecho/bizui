@@ -6,8 +6,13 @@ return array(
     */
 	'bu_email' => '邮箱',
 	'bu_name' => '用户名',
-	'bu_password' => '密码',
-	'bu_reg_ip' => 'Bu Reg Ip',
+    'bu_password' => '密码',
+
+    'password_current' => '当前密码',
+    'password' => '新密码',
+	'password_again' => '再次输入新密码',
+	
+    'bu_reg_ip' => 'Bu Reg Ip',
 	'bu_last_ip' => 'Bu Last Ip',
 	'bu_last_time' => 'Bu Last Time',
 	'bp_create_time' => 'Bp Create Time',
@@ -18,7 +23,8 @@ return array(
 
     //菜单
     'update_user' => '资料设置',
-	'manage_user' => '用户管理',
+    'manage_user' => '用户管理',
+	'change_password' => '修改密码',
 
 
 
@@ -26,6 +32,8 @@ return array(
     'remember_me' => '下次自动登录',
     'agreement' => '我已经认真阅读并同意《<a href="{policyurl}" target="_blank">使用协议</a>》。',
     'please_input_your_email' => '请输入您的email',
+    'password_no_repeat' => '两次输入的新密码不一致',
+    'password_current_is_error' => '当前密码输入错误，密码修改不成功',
     'email_is_exist' => '该email已经被已经',
     'nickname_is_exist'=> '该名字已被人抢了，请换一个吧',
     'please_input_your_password' => '请输入您的密码',

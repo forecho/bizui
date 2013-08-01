@@ -3667,3 +3667,168 @@ Stack trace:
 REQUEST_URI=/index.php?r=site/about
 HTTP_REFERER=http://bizui.com/index.php?r=site/page&view=about
 ---
+2013/08/01 10:15:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您未被授权执行这个动作' in /home/linux/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /home/linux/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 /home/linux/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/linux/www/bizui/index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=user/admin
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---
+2013/08/01 10:30:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您未被授权执行这个动作' in /home/linux/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /home/linux/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 /home/linux/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('changepwd')
+#8 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/changepwd')
+#9 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/linux/www/bizui/index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=user/changepwd
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---
+2013/08/01 10:38:09 [error] [php] unserialize() expects exactly 1 parameter, 0 given (/home/linux/www/bizui/protected/controllers/UserController.php:181)
+Stack trace:
+#0 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#1 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#4 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/linux/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#7 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/linux/www/yii/framework/web/CController.php(265): UserController->runActionWithFilters()
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(282): UserController->run()
+#11 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/linux/www/bizui/index.php(16): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/changepwd
+in /home/linux/www/bizui/protected/controllers/UserController.php (181)
+in /home/linux/www/bizui/index.php (16)
+2013/08/01 10:52:59 [warning] [application] Failed to set unsafe attribute "bu_id" of "User".
+in /home/linux/www/bizui/protected/controllers/UserController.php (183)
+in /home/linux/www/bizui/index.php (16)
+2013/08/01 10:53:00 [warning] [application] Failed to set unsafe attribute "bu_id" of "User".
+in /home/linux/www/bizui/protected/controllers/UserController.php (183)
+in /home/linux/www/bizui/index.php (16)
+2013/08/01 11:08:34 [error] [exception.CException] exception 'CException' with message '属性 "User.password" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /home/linux/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('password')
+#2 /home/linux/www/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(User), 'password')
+#3 /home/linux/www/yii/framework/web/helpers/CHtml.php(1391): CHtml::activeInputField('password', Object(User), 'password', Array)
+#4 /home/linux/www/yii/framework/web/widgets/CActiveForm.php(687): CHtml::activePasswordField(Object(User), 'password', Array)
+#5 /home/linux/www/bizui/protected/views/user/changepwd.php(37): CActiveForm->passwordField(Object(User), 'password', Array)
+#6 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#7 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#8 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#9 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('changepwd', Array, true)
+#10 /home/linux/www/bizui/protected/controllers/UserController.php(191): CController->render('changepwd', Array)
+#11 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): UserController->actionChangepwd()
+#12 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('changepwd')
+#21 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/changepwd')
+#22 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /home/linux/www/bizui/index.php(16): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php?r=user/changepwd
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---
+2013/08/01 11:08:35 [error] [exception.CException] exception 'CException' with message '属性 "User.password" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /home/linux/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('password')
+#2 /home/linux/www/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(User), 'password')
+#3 /home/linux/www/yii/framework/web/helpers/CHtml.php(1391): CHtml::activeInputField('password', Object(User), 'password', Array)
+#4 /home/linux/www/yii/framework/web/widgets/CActiveForm.php(687): CHtml::activePasswordField(Object(User), 'password', Array)
+#5 /home/linux/www/bizui/protected/views/user/changepwd.php(37): CActiveForm->passwordField(Object(User), 'password', Array)
+#6 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#7 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#8 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#9 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('changepwd', Array, true)
+#10 /home/linux/www/bizui/protected/controllers/UserController.php(191): CController->render('changepwd', Array)
+#11 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): UserController->actionChangepwd()
+#12 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('changepwd')
+#21 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/changepwd')
+#22 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /home/linux/www/bizui/index.php(16): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php?r=user/changepwd
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---
+2013/08/01 11:10:32 [warning] [application] Failed to set unsafe attribute "password_current" of "User".
+in /home/linux/www/bizui/protected/controllers/UserController.php (184)
+in /home/linux/www/bizui/index.php (16)
+2013/08/01 11:10:32 [warning] [application] Failed to set unsafe attribute "password" of "User".
+in /home/linux/www/bizui/protected/controllers/UserController.php (184)
+in /home/linux/www/bizui/index.php (16)
+2013/08/01 11:17:11 [error] [php] file_get_contents(): php_network_getaddresses: getaddrinfo failed: System error (/home/linux/www/bizui/protected/globals.php:281)
+Stack trace:
+#0 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): PostsController->actionCreate()
+#1 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): PostsController->runAction()
+#3 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/linux/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): PostsController->filterAccessControl()
+#6 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/linux/www/yii/framework/web/CController.php(265): PostsController->runActionWithFilters()
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): PostsController->run()
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CWebApplication->run()
+REQUEST_URI=/index.php?r=posts/create
+in /home/linux/www/bizui/protected/globals.php (281)
+in /home/linux/www/bizui/protected/controllers/PostsController.php (78)
+in /home/linux/www/bizui/index.php (16)
+2013/08/01 11:51:29 [error] [exception.CException] exception 'CException' with message 'UserController and its behaviors do not have a method or closure named "addError".' in /home/linux/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/linux/www/bizui/protected/controllers/UserController.php(185): CComponent->__call('addError', Array)
+#1 /home/linux/www/bizui/protected/controllers/UserController.php(185): UserController->addError(NULL, NULL)
+#2 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): UserController->actionChangepwd()
+#3 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('changepwd')
+#12 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/changepwd')
+#13 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/linux/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=user/changepwd
+HTTP_REFERER=http://bizui.com/index.php?r=user/changepwd
+---

@@ -32,7 +32,7 @@ class UserController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','changepwd'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -169,5 +169,31 @@ class UserController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	/**
+	 * 修改密码
+	 */
+	public function actionChangepwd()
+	{
+		$model=new User('changepwd');
+
+		if(isset($_POST['User']))
+		{	
+			$model=$this->loadModel(Yii::app()->user->id);
+			if ($_POST['User']['password_current'] != $model->bu_password) {
+				Yii::app()->user->setFlash('error', t('password_current_is_error', 'model'));  
+            	$this->refresh();
+			}else{
+				$model->bu_password=md5($_POST['User']['password']);
+				if($model->save())
+					$this->redirect(array('view','id'=>$model->bu_id));
+			}
+		}
+
+		$this->render('changepwd',array(
+			'model'=>$model,
+		));
+
 	}
 }

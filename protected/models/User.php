@@ -18,6 +18,9 @@
  */
 class User extends CActiveRecord
 {
+	public $password;
+	public $password_again;
+	public $password_current;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -45,9 +48,12 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('bu_email', 'required'),
+			array('password, password_current, password_again', 'required', 'on'=>'changepwd'),
+			array('password_again','compare', 'compareAttribute'=>'password', 'on'=>'changepwd', 'message'=>t('password_no_repeat', 'model')),
 			array('bu_last_time, bu_create_time, bu_status, bu_reputation', 'numerical', 'integerOnly'=>true),
 			array('bu_email', 'length', 'max'=>255),
 			array('bu_name, bu_reg_ip, bu_last_ip', 'length', 'max'=>25),
+			array('password, password_again', 'length', 'min'=>6, 'max'=>50),
 			array('bu_password', 'length', 'max'=>100),
 			array('bu_about','safe'),
 			// The following rule is used by search().
@@ -76,7 +82,10 @@ class User extends CActiveRecord
 			'bu_id' => 'Bu',
 			'bu_email' => t('bu_email', 'model'),
 			'bu_name' => t('bu_name', 'model'),
-			'bu_password' => 'Bu Password',
+			'bu_password' => t('bu_password', 'model'),
+			'password' => t('password', 'model'),
+			'password_current' => t('password_current', 'model'),
+			'password_again' => t('password_again', 'model'),
 			'bu_reg_ip' => 'Bu Reg Ip',
 			'bu_last_ip' => 'Bu Last Ip',
 			'bu_last_time' => 'Bu Last Time',

@@ -40,7 +40,7 @@ class LoginForm extends CFormModel
 			array('agreement', 'compare', 'compareValue'=>true, 'on'=>'signup', 'message'=>t('please_agree_policy', 'model')),
 
 			array('rememberMe', 'boolean', 'on'=>'login'),
-            array('bu_name, bu_password', 'length', 'min'=>3, 'max'=>50),
+            array('bu_name, bu_password', 'length', 'min'=>6, 'max'=>50),
             array('bu_email, returnUrl', 'length', 'max'=>255),
             array('rememberMe', 'in', 'range'=>array(0, 1)),
 		);
