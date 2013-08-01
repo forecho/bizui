@@ -181,13 +181,15 @@ class UserController extends Controller
 		if(isset($_POST['User']))
 		{	
 			$model=$this->loadModel(Yii::app()->user->id);
-			if ($_POST['User']['password_current'] != $model->bu_password) {
+			if (md5($_POST['User']['password_current']) != $model->bu_password) {
 				Yii::app()->user->setFlash('error', t('password_current_is_error', 'model'));  
             	$this->refresh();
 			}else{
 				$model->bu_password=md5($_POST['User']['password']);
-				if($model->save())
-					$this->redirect(array('view','id'=>$model->bu_id));
+				if($model->save()){
+					Yii::app()->user->setFlash('success', t('password_change_success', 'model'));  
+            		$this->refresh();
+            	}
 			}
 		}
 

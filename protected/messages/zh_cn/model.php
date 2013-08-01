@@ -34,6 +34,7 @@ return array(
     'please_input_your_email' => '请输入您的email',
     'password_no_repeat' => '两次输入的新密码不一致',
     'password_current_is_error' => '当前密码输入错误，密码修改不成功',
+    'password_change_success' => '密码修改成功',
     'email_is_exist' => '该email已经被已经',
     'nickname_is_exist'=> '该名字已被人抢了，请换一个吧',
     'please_input_your_password' => '请输入您的密码',
