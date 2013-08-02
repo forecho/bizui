@@ -51,8 +51,11 @@ class PostsController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$comments = Comments::model()->findAllByAttributes(array('bp_id'=>$id));
+
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'comments'=>$comments,
 		));
 	}
 

@@ -10,6 +10,7 @@
  * @property string $bc_text
  * @property integer $bc_status
  * @property integer $bc_parent
+ * @property integer $bc_like
  * @property integer $bc_create_time
  */
 class Comments extends CActiveRecord
@@ -41,10 +42,10 @@ class Comments extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('bp_id, bu_id, bc_text, bc_parent, bc_create_time', 'required'),
-			array('bp_id, bu_id, bc_status, bc_parent, bc_create_time', 'numerical', 'integerOnly'=>true),
+			array('bp_id, bu_id, bc_status, bc_parent, bc_like, bc_create_time', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('bc_id, bp_id, bu_id, bc_text, bc_status, bc_parent, bc_create_time', 'safe', 'on'=>'search'),
+			array('bc_id, bp_id, bu_id, bc_text, bc_status, bc_parent, bc_like, bc_create_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,6 +57,7 @@ class Comments extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'user'=>array(self::BELONGS_TO, 'User', 'bu_id'),
 		);
 	}
 
@@ -71,6 +73,7 @@ class Comments extends CActiveRecord
 			'bc_text' => 'Bc Text',
 			'bc_status' => 'Bc Status',
 			'bc_parent' => 'Bc Parent',
+			'bc_like' => 'Bc Like',
 			'bc_create_time' => 'Bc Create Time',
 		);
 	}
@@ -92,6 +95,7 @@ class Comments extends CActiveRecord
 		$criteria->compare('bc_text',$this->bc_text,true);
 		$criteria->compare('bc_status',$this->bc_status);
 		$criteria->compare('bc_parent',$this->bc_parent);
+		$criteria->compare('bc_like',$this->bc_like);
 		$criteria->compare('bc_create_time',$this->bc_create_time);
 
 		return new CActiveDataProvider($this, array(

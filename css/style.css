@@ -13,12 +13,20 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 	cursor: not-allowed;
 }
 
+ul {
+	list-style-type: none;
+}
+
+.fn_b {
+	color: #000000;
+}
+
 .box-cell {
 	padding: 10px;
 	font-size: 12px;
 	line-height: 120%;
 	text-align: left;
-	border-bottom: 1px solid #e2e2e2;
+	/*border-bottom: 1px solid #e2e2e2;*/
 }
 
 .box-item p a.post-title:link{
@@ -27,6 +35,14 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 	font-weight: normal;
 	color: #000000;
 	text-shadow: 0 1px 0 #fefefe;
+}
+
+.box-item p {
+	margin: 0 0	0.5em;
+}
+
+.box-item {
+	margin: 0 0 1.5em;
 }
 
 .topic-list {

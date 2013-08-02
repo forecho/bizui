@@ -15,7 +15,7 @@ $this->widget('zii.widgets.CListView', array(
     'itemsCssClass'=>'box-cell',
 ));
 ?>
-<script>
+<script type="text/javascript">
 //赞
 <?php  if (Yii::app()->user->id){ ?>
 function getScore(id,that){
@@ -26,7 +26,7 @@ function getScore(id,that){
         success: function(msg){
         	$(that).parent().next().children('span').html(msg);
         	$(that).removeAttr("onclick");
-        	$(that).children('img').attr('src','<?php echo bu();?>/images/s.gif');
+        	$(that).children('img').attr('src','<?php echo tbu();?>images/s.gif');
 		}
     });
 };
