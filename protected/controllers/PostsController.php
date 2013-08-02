@@ -57,6 +57,12 @@ class PostsController extends Controller
 
 		if(isset($_POST['Comments']))
 		{
+			//评论没有登录 跳转登录
+			if (!isset(Yii::app()->user->id)) {
+				$this->redirect(array('site/login'));
+				Yii::app()->end();
+			}
+
 			$model->attributes=$_POST['Comments'];
 			$model->bu_id=Yii::app()->user->id;
 			$model->bp_id=$id;
