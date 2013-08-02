@@ -4317,3 +4317,342 @@ Stack trace:
 REQUEST_URI=/index.php?r=posts/view&id=14
 HTTP_REFERER=http://bizui.com/index.php?r=site/index
 ---
+2013/08/02 11:49:26 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=.
+in /home/linux/www/bizui/protected/views/posts/view.php (39)
+in /home/linux/www/bizui/protected/controllers/PostsController.php (68)
+in /home/linux/www/bizui/index.php (16)
+2013/08/02 11:49:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=' in /home/linux/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/linux/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /home/linux/www/bizui/protected/views/posts/view.php(39): CActiveRecord->count('bp_id=')
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /home/linux/www/bizui/protected/controllers/PostsController.php(68): CController->render('view', Array)
+#8 [internal function]: PostsController->actionView('14')
+#9 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#11 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#21 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /home/linux/www/bizui/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=posts/view&id=14
+HTTP_REFERER=http://bizui.com/index.php?r=site/index
+---
+2013/08/02 11:50:02 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=.
+in /home/linux/www/bizui/protected/views/posts/view.php (39)
+in /home/linux/www/bizui/protected/controllers/PostsController.php (68)
+in /home/linux/www/bizui/index.php (16)
+2013/08/02 11:50:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=' in /home/linux/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/linux/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /home/linux/www/bizui/protected/views/posts/view.php(39): CActiveRecord->count('bp_id=')
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /home/linux/www/bizui/protected/controllers/PostsController.php(68): CController->render('view', Array)
+#8 [internal function]: PostsController->actionView('14')
+#9 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#11 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#21 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /home/linux/www/bizui/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=posts/view&id=14
+HTTP_REFERER=http://bizui.com/index.php?r=site/index
+---
+2013/08/02 11:53:05 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=.
+in /home/linux/www/bizui/protected/views/posts/view.php (39)
+in /home/linux/www/bizui/protected/controllers/PostsController.php (68)
+in /home/linux/www/bizui/index.php (16)
+2013/08/02 11:53:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=' in /home/linux/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/linux/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /home/linux/www/bizui/protected/views/posts/view.php(39): CActiveRecord->count('bp_id=')
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /home/linux/www/bizui/protected/controllers/PostsController.php(68): CController->render('view', Array)
+#8 [internal function]: PostsController->actionView('14')
+#9 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#11 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#21 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /home/linux/www/bizui/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=posts/view&id=14
+HTTP_REFERER=http://bizui.com/index.php?r=site/index
+---
+2013/08/02 11:53:06 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=.
+in /home/linux/www/bizui/protected/views/posts/view.php (39)
+in /home/linux/www/bizui/protected/controllers/PostsController.php (68)
+in /home/linux/www/bizui/index.php (16)
+2013/08/02 11:53:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=' in /home/linux/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/linux/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /home/linux/www/bizui/protected/views/posts/view.php(39): CActiveRecord->count('bp_id=')
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /home/linux/www/bizui/protected/controllers/PostsController.php(68): CController->render('view', Array)
+#8 [internal function]: PostsController->actionView('14')
+#9 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#11 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#21 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /home/linux/www/bizui/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=posts/view&id=14
+HTTP_REFERER=http://bizui.com/index.php?r=site/index
+---
+2013/08/02 11:53:07 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=.
+in /home/linux/www/bizui/protected/views/posts/view.php (39)
+in /home/linux/www/bizui/protected/controllers/PostsController.php (68)
+in /home/linux/www/bizui/index.php (16)
+2013/08/02 11:53:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=' in /home/linux/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/linux/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /home/linux/www/bizui/protected/views/posts/view.php(39): CActiveRecord->count('bp_id=')
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /home/linux/www/bizui/protected/controllers/PostsController.php(68): CController->render('view', Array)
+#8 [internal function]: PostsController->actionView('14')
+#9 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#11 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#21 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /home/linux/www/bizui/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=posts/view&id=14
+HTTP_REFERER=http://bizui.com/index.php?r=site/index
+---
+2013/08/02 11:53:07 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=.
+in /home/linux/www/bizui/protected/views/posts/view.php (39)
+in /home/linux/www/bizui/protected/controllers/PostsController.php (68)
+in /home/linux/www/bizui/index.php (16)
+2013/08/02 11:53:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=' in /home/linux/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/linux/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /home/linux/www/bizui/protected/views/posts/view.php(39): CActiveRecord->count('bp_id=')
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /home/linux/www/bizui/protected/controllers/PostsController.php(68): CController->render('view', Array)
+#8 [internal function]: PostsController->actionView('14')
+#9 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#11 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#21 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /home/linux/www/bizui/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=posts/view&id=14
+HTTP_REFERER=http://bizui.com/index.php?r=site/index
+---
+2013/08/02 11:53:08 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=.
+in /home/linux/www/bizui/protected/views/posts/view.php (39)
+in /home/linux/www/bizui/protected/controllers/PostsController.php (68)
+in /home/linux/www/bizui/index.php (16)
+2013/08/02 11:53:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=' in /home/linux/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/linux/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /home/linux/www/bizui/protected/views/posts/view.php(39): CActiveRecord->count('bp_id=')
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /home/linux/www/bizui/protected/controllers/PostsController.php(68): CController->render('view', Array)
+#8 [internal function]: PostsController->actionView('14')
+#9 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#11 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#21 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /home/linux/www/bizui/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=posts/view&id=14
+HTTP_REFERER=http://bizui.com/index.php?r=site/index
+---
+2013/08/02 11:53:08 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=.
+in /home/linux/www/bizui/protected/views/posts/view.php (39)
+in /home/linux/www/bizui/protected/controllers/PostsController.php (68)
+in /home/linux/www/bizui/index.php (16)
+2013/08/02 11:53:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `bz_comments` `t` WHERE bp_id=' in /home/linux/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/linux/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /home/linux/www/bizui/protected/views/posts/view.php(39): CActiveRecord->count('bp_id=')
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /home/linux/www/bizui/protected/controllers/PostsController.php(68): CController->render('view', Array)
+#8 [internal function]: PostsController->actionView('14')
+#9 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#11 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#21 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /home/linux/www/bizui/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=posts/view&id=14
+HTTP_REFERER=http://bizui.com/index.php?r=site/index
+---
+2013/08/02 11:56:00 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bp_content" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bp_content')
+#1 /home/linux/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('bp_content')
+#2 /home/linux/www/yii/framework/web/helpers/CHtml.php(1417): CHtml::resolveValue(Object(Comments), 'bp_content')
+#3 /home/linux/www/yii/framework/web/widgets/CActiveForm.php(702): CHtml::activeTextArea(Object(Comments), 'bp_content', Array)
+#4 /home/linux/www/bizui/protected/views/posts/view.php(52): CActiveForm->textArea(Object(Comments), 'bp_content', Array)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#6 /home/linux/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#8 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#9 /home/linux/www/bizui/protected/controllers/PostsController.php(69): CController->render('view', Array)
+#10 [internal function]: PostsController->actionView('14')
+#11 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#12 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#13 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#22 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#23 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /home/linux/www/bizui/index.php(16): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php?r=posts/view&id=14
+HTTP_REFERER=http://bizui.com/index.php?r=site/index
+---
+2013/08/02 12:14:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/linux/www/bizui/protected/controllers/PostsController.php:193
+Stack trace:
+#0 /home/linux/www/bizui/protected/controllers/PostsController.php(66): PostsController->loadModel('2')
+#1 [internal function]: PostsController->actionView('2')
+#2 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#3 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#4 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#14 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/linux/www/bizui/index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=posts/view&id=2
+HTTP_REFERER=http://bizui.com/index.php?r=posts/view&id=14
+---
+2013/08/02 12:14:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/linux/www/bizui/protected/controllers/PostsController.php:193
+Stack trace:
+#0 /home/linux/www/bizui/protected/controllers/PostsController.php(66): PostsController->loadModel('3')
+#1 [internal function]: PostsController->actionView('3')
+#2 /home/linux/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#3 /home/linux/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostsController), Object(ReflectionMethod), Array)
+#4 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/view')
+#14 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/linux/www/bizui/index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=posts/view&id=3
+HTTP_REFERER=http://bizui.com/index.php?r=posts/view&id=14
+---

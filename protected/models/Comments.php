@@ -41,7 +41,7 @@ class Comments extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('bp_id, bu_id, bc_text, bc_parent, bc_create_time', 'required'),
+			array('bc_text', 'required'),
 			array('bp_id, bu_id, bc_status, bc_parent, bc_like, bc_create_time', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -70,7 +70,7 @@ class Comments extends CActiveRecord
 			'bc_id' => 'Bc',
 			'bp_id' => 'Bp',
 			'bu_id' => 'Bu',
-			'bc_text' => 'Bc Text',
+			'bc_text' => t('bc_text', 'model'),
 			'bc_status' => 'Bc Status',
 			'bc_parent' => 'Bc Parent',
 			'bc_like' => 'Bc Like',

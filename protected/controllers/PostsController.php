@@ -53,9 +53,23 @@ class PostsController extends Controller
 	{
 		$comments = Comments::model()->findAllByAttributes(array('bp_id'=>$id));
 
+		$model=new Comments;
+
+		if(isset($_POST['Comments']))
+		{
+			$model->attributes=$_POST['Comments'];
+			$model->bu_id=Yii::app()->user->id;
+			$model->bp_id=$id;
+			$model->bc_create_time=time();
+
+			if($model->save())
+				$this->redirect(array('view','id'=>$id));
+		}
+
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'row'=>$this->loadModel($id),
 			'comments'=>$comments,
+			'model'=>$model,
 		));
 	}
 

@@ -21,6 +21,8 @@ return array(
     'bu_reputation' => '声望',
     'bu_about' => '个人简介',
 
+    'bc_text' => '评论',
+
     //菜单
     'update_user' => '资料设置',
     'manage_user' => '用户管理',
