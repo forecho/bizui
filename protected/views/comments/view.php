@@ -7,10 +7,9 @@
 	<li class="box-item">
 		<p>
 			<?php if (Yii::app()->user->id) {
-				$postCount = Comments::model()->countByAttributes(array('bc_id'=>$row->bp_id, 'bu_id'=>Yii::app()->user->id));
-				$saveCount = Save::model()->countByAttributes(array('bp_id'=>$row->bp_id, 'bu_id'=>Yii::app()->user->id, 'type'=>'2'));
+				$saveCount = Save::model()->countByAttributes(array('bp_id'=>$row->bc_id, 'bu_id'=>Yii::app()->user->id, 'type'=>'2'));
 				//判断是否是自己发布的
-				if ($postCount==1) {
+				if ($data->bu_id==Yii::app()->user->id) {
 			?>
 				<span style="width:12px; color:red;">*</span>
 			<?php
@@ -21,14 +20,14 @@
 			<?php
 				}else{
 			?>
-				<span onclick="getScore('<?php echo $row->bp_id; ?>',this)"><img src="<?php echo tbu();?>images/grayarrow.png" width="12" title="赞"></span>
+				<span><span onclick="getScore('<?php echo $row->bc_id; ?>',this,'2')"><img src="<?php echo tbu();?>images/grayarrow.png" width="12" title="赞"></span></span>
 			<?php
 				}
 			}else{
 			?>
-				<span onclick="getScore('<?php echo $row->bp_id; ?>',this)"><img src="<?php echo tbu();?>images/grayarrow.png" width="12" title="赞"></span>
+				<span><span onclick="getScore('<?php echo $row->bc_id; ?>',this,'2')"><img src="<?php echo tbu();?>images/grayarrow.png" width="12" title="赞"></span></span>
 			<?php } ?>
-		<span><?php echo $row->bc_like; ?></span>个赞
+		<span><span><?php echo $row->bc_like; ?></span></span>个赞
 		来自 <?php echo CHtml::link($row->user->bu_name, array('/user/view', 'id'=>$row->bu_id)); ?>
 		<?php echo tranTime($row->bc_create_time); ?>
 		|	<?php echo CHtml::link('返回', array('/posts/view', 'id'=>$row->bp_id)); ?>
@@ -62,4 +61,26 @@
 	<?php } ?>
 
 </ul>
+<script type="text/javascript">
+//赞
+<?php  if (Yii::app()->user->id){ ?>
+function getScore(id,that,type){
+	type=type||'1';
+	$.ajax({
+        type:"POST",
+        url: "<?php echo Yii::app()->createUrl('/posts/ajaxGetScore/') ?>",
+        data:"id="+id+"&type="+type,
+        success: function(msg){
+        	$(that).parent().next().children('span').html(msg);
+        	$(that).removeAttr("onclick");
+        	$(that).children('img').attr('src','<?php echo tbu();?>images/s.gif');
+		}
+    });
+};
+<?php } else{?>
+function getScore(id,that){
+	location.href = "<?php echo Yii::app()->createUrl('/site/login') ?>";
+};
+<?php } ?>
+</script>
 
