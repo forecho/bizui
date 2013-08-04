@@ -242,10 +242,11 @@ class PostsController extends Controller
 		Posts::model()->updateByPk($id, array('bp_score'=>$score, 'bp_like'=>$posts->bp_like+1));
 
 		//用户赞同 添加收藏
-		$saveCount = Save::model()->countByAttributes(array('bp_id'=>$id, 'bu_id'=>Yii::app()->user->id));
+		$saveCount = Save::model()->countByAttributes(array('bp_id'=>$id, 'bu_id'=>Yii::app()->user->id, 'type'=>1));
 		if ($saveCount == 0) {
 			$save = new Save;
 			$save->bp_id = $id;
+			$save->type = '1';
 			$save->bu_id = Yii::app()->user->id;
 			$save->save();
 		}
