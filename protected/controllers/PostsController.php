@@ -227,38 +227,47 @@ class PostsController extends Controller
 	public function actionAjaxGetScore()
 	{
 		$id = (int)Yii::app()->request->getParam('id',0);
-		$posts = Posts::model()->findByPk($id);
-		//将排名下拉的重力因子
-		//该因子决定了post 的下降速度, 值越高排名下降越快, 时效性的参数之一
-		define('RANK_G', 1.8);
-		//获得的投票
-		$vote = $posts->bp_like+1;
-		//数据创建时间
-		$created = $posts->bp_create_time;
-		//距离创建时间的小时数, 时效性的参数之二
-		$hourDiffCreated = (time() - $created) / 3600;
-		//详细算法
-		$score = ($vote - 1) / pow(($hourDiffCreated + 2), RANK_G);
-		Posts::model()->updateByPk($id, array('bp_score'=>$score, 'bp_like'=>$posts->bp_like+1));
+		$type = (int)Yii::app()->request->getParam('type',1);
 
 		//用户赞同 添加收藏
 		$saveCount = Save::model()->countByAttributes(array('bp_id'=>$id, 'bu_id'=>Yii::app()->user->id, 'type'=>1));
 		if ($saveCount == 0) {
 			$save = new Save;
 			$save->bp_id = $id;
-			$save->type = '1';
+			$save->type = $type;
 			$save->bu_id = Yii::app()->user->id;
 			$save->save();
 		}
 
-		//被人赞一次加一分
-		$record = User::model()->findByPk($posts->bu_id);
-		$record->saveCounters(array('bu_reputation'=>1));
-		//赞别人一次减一分
-		$userRecord=User::model()->findByPk(Yii::app()->user->id);
-		$userRecord->saveCounters(array('bu_reputation'=>-1));
+		if ($type==1) {
+			$posts = Posts::model()->findByPk($id);
+			//将排名下拉的重力因子
+			//该因子决定了post 的下降速度, 值越高排名下降越快, 时效性的参数之一
+			define('RANK_G', 1.8);
+			//获得的投票
+			$vote = $posts->bp_like+1;
+			//数据创建时间
+			$created = $posts->bp_create_time;
+			//距离创建时间的小时数, 时效性的参数之二
+			$hourDiffCreated = (time() - $created) / 3600;
+			//详细算法
+			$score = ($vote - 1) / pow(($hourDiffCreated + 2), RANK_G);
+			Posts::model()->updateByPk($id, array('bp_score'=>$score, 'bp_like'=>$posts->bp_like+1));
 
-		echo $posts->bp_like+1;
+			//被人赞一次加一分
+			$record = User::model()->findByPk($posts->bu_id);
+			$record->saveCounters(array('bu_reputation'=>1));
+			//赞别人一次减一分
+			$userRecord=User::model()->findByPk(Yii::app()->user->id);
+			$userRecord->saveCounters(array('bu_reputation'=>-1));
+
+			echo $posts->bp_like+1;
+		}else{
+			$postRecord=Comments::model()->findByPk($id);
+			$postRecord->saveCounters(array('bc_like'=>1));
+			echo $postRecord->bc_like;
+		}
+		
 	}
 
 }
