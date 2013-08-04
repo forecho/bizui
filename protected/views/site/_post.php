@@ -6,10 +6,9 @@
 <li class="box-item <?php echo ($index==0)?'':'mt20'; ?>">
 	<p>
 		<?php if (Yii::app()->user->id) {
-			$postCount = Posts::model()->countByAttributes(array('bp_id'=>$data->bp_id, 'bu_id'=>Yii::app()->user->id));
 			$saveCount = Save::model()->countByAttributes(array('bp_id'=>$data->bp_id, 'bu_id'=>Yii::app()->user->id));
 			//判断是否是自己发布的
-			if ($postCount==1) {
+			if ($data->bu_id==Yii::app()->user->id) {
 		?>
 			<span style="width:12px; color:red;">*</span>
 		<?php
