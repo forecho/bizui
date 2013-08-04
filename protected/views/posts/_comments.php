@@ -1,5 +1,8 @@
-<?php foreach ($comments as $key => $data) { ?>
-<li class="box-item">
+<?php 
+	foreach ($comments as $key => $data) {
+	$count = count(explode('-',$data->bc_path));
+?>
+<li class="box-item mt20 <?php echo ($count!=1)?'ml'.('30'*$count-30):''; ?>">
 	<p>
 		<?php if (Yii::app()->user->id) {
 			$postCount = Posts::model()->countByAttributes(array('bp_id'=>$data->bp_id, 'bu_id'=>Yii::app()->user->id));
@@ -29,7 +32,7 @@
 		|
 		<?php echo CHtml::link('查看', array('/comments/view', 'id'=>$data->bc_id), array('class'=>'fn_b')); ?>
 	</p>
-	<p class="fn_b"><?php echo $data->bc_text; ?></p>
+	<p class="fn_b"><?php echo nl2br($data->bc_text); //保留换行?></p>
 	<?php echo CHtml::link('回复', array('/comments/view', 'id'=>$data->bc_id), array('class'=>'fn_b')); ?>
 </li>
 <?php }?>

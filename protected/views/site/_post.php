@@ -3,7 +3,7 @@
 /* @var $data Posts */
 ?>
 
-<li class="box-item">
+<li class="box-item <?php echo ($index==0)?'':'mt20'; ?>">
 	<p>
 		<?php if (Yii::app()->user->id) {
 			$postCount = Posts::model()->countByAttributes(array('bp_id'=>$data->bp_id, 'bu_id'=>Yii::app()->user->id));

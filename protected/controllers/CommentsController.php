@@ -51,8 +51,29 @@ class CommentsController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model=new Comments;
+
+		if(isset($_POST['Comments']))
+		{
+			//评论没有登录 跳转登录
+			if (!isset(Yii::app()->user->id)) {
+				$this->redirect(array('site/login'));
+				Yii::app()->end();
+			}
+
+			$model->attributes=$_POST['Comments'];
+			$model->bu_id=Yii::app()->user->id;
+			$model->bc_parent=$id;
+			$model->bc_path=$_POST['Comments']['bc_path'].'-'.$id;
+			$model->bc_create_time=time();
+
+			if($model->save())
+				$this->redirect(array('/posts/view','id'=>$_POST['Comments']['bp_id']));
+		}
+
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'row'=>$this->loadModel($id),
+			'model'=>$model,
 		));
 	}
 

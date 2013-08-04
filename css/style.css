@@ -16,6 +16,13 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 ul {
 	list-style-type: none;
 }
+.ml5{ margin-left: 5px; }
+.ml30{ margin-left: 30px; }
+.ml60{ margin-left: 60px; }
+.ml90{ margin-left: 90px; }
+.ml120{ margin-left: 120px; }
+.mt20{ margin-top: 20px; }
+.mb20{ margin-bottom: 20px; }
 
 .fn_b {
 	color: #000000;
@@ -41,9 +48,6 @@ ul {
 	margin: 0 0	0.5em;
 }
 
-.box-item {
-	margin: 0 0 1.5em;
-}
 
 .topic-list {
 	clear: both;

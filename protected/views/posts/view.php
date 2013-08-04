@@ -63,9 +63,9 @@
 
 
 <!-- 加载评论 -->
-<ol>
+<ul>
 	<?php  $this->renderPartial('_comments', array('comments'=>$comments));?>
-</ol>
+</ul>
 
 
 <script type="text/javascript">

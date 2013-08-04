@@ -12,6 +12,7 @@
  * @property integer $bc_parent
  * @property integer $bc_like
  * @property integer $bc_create_time
+ * @property string $bc_path
  */
 class Comments extends CActiveRecord
 {
@@ -43,6 +44,7 @@ class Comments extends CActiveRecord
 		return array(
 			array('bc_text', 'required'),
 			array('bp_id, bu_id, bc_status, bc_parent, bc_like, bc_create_time', 'numerical', 'integerOnly'=>true),
+			array('bc_path', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('bc_id, bp_id, bu_id, bc_text, bc_status, bc_parent, bc_like, bc_create_time', 'safe', 'on'=>'search'),
@@ -75,6 +77,7 @@ class Comments extends CActiveRecord
 			'bc_parent' => 'Bc Parent',
 			'bc_like' => 'Bc Like',
 			'bc_create_time' => 'Bc Create Time',
+			'bc_path' => 'Bc Path',
 		);
 	}
 
@@ -97,6 +100,7 @@ class Comments extends CActiveRecord
 		$criteria->compare('bc_parent',$this->bc_parent);
 		$criteria->compare('bc_like',$this->bc_like);
 		$criteria->compare('bc_create_time',$this->bc_create_time);
+		$criteria->compare('bc_path',$this->bc_path);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -51,7 +51,8 @@ class PostsController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$comments = Comments::model()->findAllByAttributes(array('bp_id'=>$id));
+
+		$comments = Comments::model()->findAllBySql("SELECT *, CONCAT( bc_path,  '-', bc_id ) AS bpath FROM  {{comments}} WHERE bp_id=$id ORDER BY bpath, bc_create_time");
 
 		$model=new Comments;
 
@@ -66,6 +67,7 @@ class PostsController extends Controller
 			$model->attributes=$_POST['Comments'];
 			$model->bu_id=Yii::app()->user->id;
 			$model->bp_id=$id;
+			$model->bc_parent='0';
 			$model->bc_create_time=time();
 
 			if($model->save())
