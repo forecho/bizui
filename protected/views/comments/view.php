@@ -38,6 +38,7 @@
 	</li>
 
 	<!-- 评论 -->
+	<?php if ($row->bu_id!=Yii::app()->user->id) {?>
 	<div class="form">
 		<?php $form=$this->beginWidget('CActiveForm', array(
 			'id'=>'comments-form',
@@ -58,6 +59,7 @@
 			</div>
 		<?php $this->endWidget(); ?>
 	</div>
+	<?php } ?>
 
 </ul>
 
