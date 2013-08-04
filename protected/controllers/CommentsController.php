@@ -143,7 +143,14 @@ class CommentsController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Comments');
+		$dataProvider=new CActiveDataProvider('Comments', array(
+			    'criteria'=>array(
+			        'order'=>'bc_create_time DESC',
+			    ),
+			    'pagination'=>array(
+			        'pageSize'=>20,
+			    ),
+			));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
