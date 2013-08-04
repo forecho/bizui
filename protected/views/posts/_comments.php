@@ -33,6 +33,6 @@
 		<?php echo CHtml::link('查看', array('/comments/view', 'id'=>$data->bc_id), array('class'=>'fn_b')); ?>
 	</p>
 	<p class="fn_b"><?php echo nl2br($data->bc_text); //保留换行?></p>
-	<?php echo CHtml::link('回复', array('/comments/view', 'id'=>$data->bc_id), array('class'=>'fn_b')); ?>
+	<?php echo ($data->bu_id==Yii::app()->user->id)?' ':CHtml::link('回复', array('/comments/view', 'id'=>$data->bc_id), array('class'=>'fn_b')); ?>
 </li>
 <?php }?>
