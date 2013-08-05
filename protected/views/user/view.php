@@ -2,11 +2,6 @@
 /* @var $this UserController */
 /* @var $model User */
 
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->bu_id,
-);
-
 $this->menu=array(
 	array('label'=>t('update_user', 'model'), 'url'=>array('update')),
 	array('label'=>t('change_password', 'model'), 'url'=>array('changepwd')),
