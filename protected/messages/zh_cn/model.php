@@ -20,6 +20,10 @@ return array(
     'bu_create_time' => '加入时间',
     'bu_reputation' => '声望',
     'bu_about' => '个人简介',
+    'my_posts' => '我发布的文章',
+    'my_comments' => '我发布的评论',
+    'my_like_posts' => '我赞过的文章',
+    'my_like_comments' => '我赞过的评论',
 
     'bc_text' => '评论',
 

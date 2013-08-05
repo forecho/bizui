@@ -32,7 +32,7 @@ class CommentsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','mycomments','likecomments'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -143,16 +143,10 @@ class CommentsController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Comments', array(
-			    'criteria'=>array(
-			        'order'=>'bc_create_time DESC',
-			    ),
-			    'pagination'=>array(
-			        'pageSize'=>20,
-			    ),
-			));
+		$model=new Comments;
+
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 
@@ -198,4 +192,31 @@ class CommentsController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	//我发布的评论
+	public function actionMycomments()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$model = new Comments;
+		$model->bu_id = Yii::app()->user->id;
+
+		$this->render('index', array(
+				'model'=>$model,
+			));
+	}
+
+	//我赞的评论
+	public function actionLikecomments()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$model = new Comments;
+		$model->bu_id = Yii::app()->user->id;
+
+		$this->render('index', array(
+				'model'=>$model,
+			));
+	}
+
 }

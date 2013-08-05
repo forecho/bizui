@@ -10,8 +10,10 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>t('update_user', 'model'), 'url'=>array('update')),
 	array('label'=>t('change_password', 'model'), 'url'=>array('changepwd')),
-	array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->bu_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>t('manage_user', 'model'), 'url'=>array('admin')),
+	array('label'=>t('my_posts', 'model'), 'url'=>array('/site/myposts')),
+	array('label'=>t('my_comments', 'model'), 'url'=>array('/comments/mycomments')),
+	array('label'=>t('my_like_posts', 'model'), 'url'=>array('/site/likeposts')),
+	array('label'=>t('my_like_comments', 'model'), 'url'=>array('/comments/likecomments')),
 );
 ?>
 

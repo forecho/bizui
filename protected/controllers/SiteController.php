@@ -31,6 +31,7 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$model = new Posts;
+		$model->order = 'bp_score DESC, bp_create_time DESC';
 
 		$this->render('index', array(
 				'model'=>$model,
@@ -45,7 +46,7 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$model = new Posts;
-		$model->order = 'new';
+		$model->order = 'bp_create_time DESC';
 
 		$this->render('index', array(
 				'model'=>$model,
@@ -150,4 +151,32 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+
+	//我的文章
+	public function actionMyposts()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$model = new Posts;
+		$model->bu_id = Yii::app()->user->id;
+
+		$this->render('index', array(
+				'model'=>$model,
+			));
+	}
+
+	//我的文章
+	public function actionLikeposts()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$model = new Posts;
+		$model->bu_id = Yii::app()->user->id;
+
+		$this->render('index', array(
+				'model'=>$model,
+			));
+	}
+
 }

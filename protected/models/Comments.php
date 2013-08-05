@@ -99,9 +99,11 @@ class Comments extends CActiveRecord
 		$criteria->compare('bc_text',$this->bc_text,true);
 		$criteria->compare('bc_status',$this->bc_status);
 		$criteria->compare('bc_parent',$this->bc_parent);
-		$criteria->compare('bc_like',$this->bc_like);
+		//$criteria->compare('bc_like',$this->bc_like);
 		$criteria->compare('bc_create_time',$this->bc_create_time);
 		$criteria->compare('bc_path',$this->bc_path);
+
+		$criteria->order = 'bc_create_time DESC';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

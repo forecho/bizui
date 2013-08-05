@@ -108,13 +108,6 @@ class Posts extends CActiveRecord
 		$criteria->compare('bp_like',$this->bp_like);
 		$criteria->compare('bp_create_time',$this->bp_create_time);
 
-		//排序
-		if($this->order==''){
-			$criteria->order = 'bp_score DESC, bp_create_time DESC';
-		}elseif ($this->order=='new') {
-			$criteria->order = 'bp_create_time DESC';
-		}
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

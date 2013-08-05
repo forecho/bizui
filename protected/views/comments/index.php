@@ -4,7 +4,7 @@
 ?>
 
 <?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
+	'dataProvider'=>$model->search(),
 	'itemView'=>'_view',
 	'emptyText'=>'暂时没有数据',  
    	'template'=>'{items}{pager}',
