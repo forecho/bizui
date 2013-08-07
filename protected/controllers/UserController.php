@@ -28,7 +28,7 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','newpwd'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -194,6 +194,36 @@ class UserController extends Controller
 		}
 
 		$this->render('changepwd',array(
+			'model'=>$model,
+		));
+
+	}
+
+	/**
+	 * 忘记密码 新密码
+	 */
+	public function actionNewpwd($decdata)
+	{
+		$model=new User('newpwd');
+		//解密
+		$decdata = decryptParamsForUrl($decdata);
+		if (time()>$decdata['lasttime']) {
+			Yii::app()->user->setFlash('error', t('time_out', 'model'));  
+        	$this->refresh();
+        	exit();
+		}
+		if(isset($_POST['User']))
+		{	
+			$model=User::model()->findByAttributes(array('bu_email'=>$decdata['mail']));
+			$model->bu_password=md5($_POST['User']['password']);
+			if($model->save()){
+				Yii::app()->user->setFlash('success', t('password_change_success', 'model'));  
+        		$this->refresh();
+        	}
+			
+		}
+
+		$this->render('newpwd',array(
 			'model'=>$model,
 		));
 

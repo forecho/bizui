@@ -197,12 +197,12 @@ class SiteController extends Controller
 	            	exit();
 				}
 				
-				$encdata = Yii::app()->securityManager->encrypt($address);//加密
+				$encdata = encryptParamsForUrl(array('mail'=>$address, 'lasttime'=>time()+60*60*2));//加密
 				$mailer = Yii::app()->phpMailer->_mailer;
 		        $mailer->Subject = '找回密码';
 		        $mailer->Body = '<p>Hi,</p>
-					<p>我们的系统在'.date('Y-m-d H:i:m',time()).'收到一个请求，说你希望通过电子邮件重新设置你在 你丫闭嘴 的密码。你可以点击下面的链接开始重设密码：</p>
-					<p><a href="'.Yii::app()->homeUrl.$this->createUrl('site/reset', array('mail'=>$encdata)).'">'.Yii::app()->homeUrl.$this->createUrl('site/reset', array('mail'=>$encdata)).'</a></p>
+					<p>我们的系统在'.date('Y-m-d H:i:m',time()).'收到一个请求，说你希望通过电子邮件重新设置你在 你丫闭嘴 的密码。你可以在2个小时之内点击下面的链接开始重设密码：</p>
+					<p><a href="'.Yii::app()->homeUrl.$this->createUrl('user/newpwd', array('decdata'=>$encdata)).'">'.Yii::app()->homeUrl.$this->createUrl('user/newpwd', array('decdata'=>$encdata)).'</a></p>
 					<p>如果这个请求不是由你发起的，那没问题，你不用担心，你可以安全地忽略这封邮件。</p>
 					<p>如果你有任何疑问，可以回复这封邮件向我们提问。</p>
 					--你丫闭嘴';

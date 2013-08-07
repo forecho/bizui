@@ -49,7 +49,8 @@ class User extends CActiveRecord
 		return array(
 			array('bu_email', 'required'),
 			array('password, password_current, password_again', 'required', 'on'=>'changepwd'),
-			array('password_again','compare', 'compareAttribute'=>'password', 'on'=>'changepwd', 'message'=>t('password_no_repeat', 'model')),
+			array('password, password_again', 'required', 'on'=>'newpwd'),
+			array('password_again','compare', 'compareAttribute'=>'password', 'on'=>'changepwd,newpwd', 'message'=>t('password_no_repeat', 'model')),
 			array('bu_last_time, bu_create_time, bu_status, bu_reputation', 'numerical', 'integerOnly'=>true),
 			array('bu_email', 'length', 'max'=>255),
 			array('bu_name, bu_reg_ip, bu_last_ip', 'length', 'max'=>25),

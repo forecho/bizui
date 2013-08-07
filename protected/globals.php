@@ -292,6 +292,42 @@ function GetSiteMeta($url) {
 }
 
 /**
+ *  把数组加密为URL可传递的字符串，只支持一维数组
+ * @param array $params
+ * @return string 
+ */
+function encryptParamsForUrl($params){
+    if(is_array($params)){
+        $keys = array_keys($params);
+        $values = array_values($params);
+        $keystr = implode('}^{',$keys);
+        $valuestr = implode('}^{',$values);
+        $hashstr = $keystr.'{)^.^(}'.$valuestr;
+        $hash = Yii::app()->securityManager->encrypt($hashstr);
+        return urlencode($hash);
+    }
+}
+
+/**
+ *  把URL加密串解密，返回数组
+ * @param string $hash
+ * @return array
+ */
+function decryptParamsForUrl($hash){
+    if(is_string($hash)){
+        $hash = Yii::app()->securityManager->decrypt(urldecode($hash));
+        $arrays = explode('{)^.^(}',$hash);
+        $keyarray = explode('}^{',$arrays[0]);
+        $valuearray = explode('}^{',$arrays[1]);
+        $array = array();
+        foreach ($keyarray as $key=>$value){
+            $array[$value] = $valuearray[$key];
+        }
+        return $array;
+    }
+}
+
+/**
  * 时间轴函数
  */
 function tranTime($time) { 

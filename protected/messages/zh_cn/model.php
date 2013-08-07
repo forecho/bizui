@@ -55,5 +55,7 @@ return array(
     'email_send_success' => '邮件发送成功，请查收。',
     'email_is_error' => '邮件发送失败，请检查您输入的邮箱。',
     'email_not' => '邮箱不存在，请检查您输入的邮箱。',
+    
+    'time_out' => '2个小时已经过了，链接已经超时，请重新申请',
 
 );
