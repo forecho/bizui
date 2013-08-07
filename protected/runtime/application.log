@@ -4656,3 +4656,525 @@ Stack trace:
 REQUEST_URI=/index.php?r=posts/view&id=3
 HTTP_REFERER=http://bizui.com/index.php?r=posts/view&id=14
 ---
+2013/08/06 09:49:25 [error] [exception.CException] exception 'CException' with message 'Asset文件 "/home/linux/www/bizui/protected/extensions/yii-debug-toolbar/assets" 不存在.' in /home/linux/www/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbar.php(81): CAssetManager->publish('/home/linux/www...', false, -1, true)
+#1 /home/linux/www/yii/framework/base/CComponent.php(111): YiiDebugToolbar->getAssetsUrl()
+#2 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbar.php(139): CComponent->__get('assetsUrl')
+#3 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbar.php(112): YiiDebugToolbar->registerClientScripts()
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbarRoute.php(133): YiiDebugToolbar->init()
+#5 /home/linux/www/yii/framework/base/CComponent.php(558): YiiDebugToolbarRoute->onBeginRequest(Object(CEvent))
+#6 /home/linux/www/yii/framework/base/CApplication.php(196): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#7 /home/linux/www/yii/framework/base/CApplication.php(167): CApplication->onBeginRequest(Object(CEvent))
+#8 /home/linux/www/bizui/index.php(16): CApplication->run()
+#9 {main}
+REQUEST_URI=/
+---
+2013/08/06 09:49:30 [error] [exception.CException] exception 'CException' with message 'Asset文件 "/home/linux/www/bizui/protected/extensions/yii-debug-toolbar/assets" 不存在.' in /home/linux/www/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbar.php(81): CAssetManager->publish('/home/linux/www...', false, -1, true)
+#1 /home/linux/www/yii/framework/base/CComponent.php(111): YiiDebugToolbar->getAssetsUrl()
+#2 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbar.php(139): CComponent->__get('assetsUrl')
+#3 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbar.php(112): YiiDebugToolbar->registerClientScripts()
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbarRoute.php(133): YiiDebugToolbar->init()
+#5 /home/linux/www/yii/framework/base/CComponent.php(558): YiiDebugToolbarRoute->onBeginRequest(Object(CEvent))
+#6 /home/linux/www/yii/framework/base/CApplication.php(196): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#7 /home/linux/www/yii/framework/base/CApplication.php(167): CApplication->onBeginRequest(Object(CEvent))
+#8 /home/linux/www/bizui/index.php(16): CApplication->run()
+#9 {main}
+REQUEST_URI=/
+---
+2013/08/06 09:49:35 [error] [exception.CException] exception 'CException' with message 'Asset文件 "/home/linux/www/bizui/protected/extensions/yii-debug-toolbar/assets" 不存在.' in /home/linux/www/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbar.php(81): CAssetManager->publish('/home/linux/www...', false, -1, true)
+#1 /home/linux/www/yii/framework/base/CComponent.php(111): YiiDebugToolbar->getAssetsUrl()
+#2 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbar.php(139): CComponent->__get('assetsUrl')
+#3 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbar.php(112): YiiDebugToolbar->registerClientScripts()
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/YiiDebugToolbarRoute.php(133): YiiDebugToolbar->init()
+#5 /home/linux/www/yii/framework/base/CComponent.php(558): YiiDebugToolbarRoute->onBeginRequest(Object(CEvent))
+#6 /home/linux/www/yii/framework/base/CApplication.php(196): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#7 /home/linux/www/yii/framework/base/CApplication.php(167): CApplication->onBeginRequest(Object(CEvent))
+#8 /home/linux/www/bizui/index.php(16): CApplication->run()
+#9 {main}
+REQUEST_URI=/
+---
+2013/08/06 09:50:58 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 09:51:07 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 09:56:57 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 09:58:01 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 09:58:59 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 09:59:00 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 09:59:00 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 09:59:00 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 09:59:00 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 09:59:08 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 10:03:13 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 10:04:48 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/08/06 10:05:18 [error] [exception.CDbException] exception 'CDbException' with message 'Table "bz_save" 没有名为 "type" 的栏位.' in /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php:591
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1569): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /home/linux/www/bizui/protected/views/site/_post.php(9): CActiveRecord->countByAttributes(Array)
+#2 /home/linux/www/yii/framework/web/CBaseController.php(130): require('/home/linux/www...')
+#3 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, false)
+#4 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SiteController), '/home/linux/www...', Array, false)
+#5 /home/linux/www/yii/framework/zii/widgets/CListView.php(281): CBaseController->renderFile('/home/linux/www...', Array)
+#6 /home/linux/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#7 [internal function]: CBaseListView->renderSection(Array)
+#8 /home/linux/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#9 /home/linux/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#10 /home/linux/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#11 /home/linux/www/bizui/protected/views/site/index.php(16): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#13 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#14 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SiteController), '/home/linux/www...', Array, true)
+#15 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#16 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#17 /home/linux/www/bizui/protected/controllers/SiteController.php(166): CController->render('index', Array)
+#18 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionMyposts()
+#19 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#21 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('myposts')
+#23 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/myposts')
+#24 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#25 /home/linux/www/bizui/index.php(16): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=site/myposts
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---
+2013/08/06 10:05:29 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---
+2013/08/06 10:05:30 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---
+2013/08/06 10:05:30 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---
+2013/08/06 10:05:46 [error] [exception.CException] exception 'CException' with message '属性 "Comments.bc_path" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('bc_path')
+#1 /home/linux/www/bizui/protected/models/Comments.php(104): CActiveRecord->__get('bc_path')
+#2 /home/linux/www/bizui/protected/views/comments/index.php(7): Comments->search()
+#3 /home/linux/www/yii/framework/web/CBaseController.php(126): require('/home/linux/www...')
+#4 /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/linux/www...', Array, true)
+#5 /home/linux/www/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(CommentsController), '/home/linux/www...', Array, true)
+#6 /home/linux/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/linux/www...', Array, true)
+#7 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /home/linux/www/bizui/protected/controllers/CommentsController.php(150): CController->render('index', Array)
+#9 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): CommentsController->actionIndex()
+#10 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#20 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /home/linux/www/bizui/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=user/view&id=1
+---

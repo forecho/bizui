@@ -47,7 +47,7 @@ class Comments extends CActiveRecord
 			array('bc_path', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('bc_id, bp_id, bu_id, bc_text, bc_status, bc_parent, bc_like, bc_create_time', 'safe', 'on'=>'search'),
+			array('bc_id, bp_id, bu_id, bc_text, bc_status, bc_parent, bc_like, bc_create_time,bc_path', 'safe', 'on'=>'search'),
 		);
 	}
 
