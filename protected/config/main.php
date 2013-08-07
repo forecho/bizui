@@ -96,6 +96,16 @@ return array(
 				*/
 			),
 		),
+
+		'phpMailer'=>array(
+            'class'=>'application.extensions.yiimailer.CPhpMailer',
+            'host' => 'smtp.qq.com',
+            'port' => 25,
+            'from' => 'forecho@foxmail.com',
+            'fromName' => '你丫闭嘴',
+            'user' => 'forecho@foxmail.com',
+            'pass' => 'wcxq4219.',
+        ),
 	),
 
 	// application-level parameters that can be accessed

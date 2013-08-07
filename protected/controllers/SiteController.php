@@ -179,4 +179,14 @@ class SiteController extends Controller
 			));
 	}
 
+	//发邮件
+	public function actionSendEmail()
+	{
+		$mailer = Yii::app()->phpMailer->_mailer;
+        $mailer->Subject = '人类已经阻止不了我发送邮件了';
+        $mailer->Body = '<font color="red">hello, 我是葫芦娃</font>';
+        $mailer->AddAddress('314494687@qq.com');
+        //$mailer->AddAddress('xxx@gmail.com');
+        $mailer->send();
+	}
 }
