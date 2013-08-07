@@ -40,13 +40,12 @@ $this->breadcrumbs=array(
 			<?php echo $form->error($model,'bu_email'); ?>
 		</div>
 
-		<?php if(CCaptcha::checkRequirements()&& Yii::app()->user->isGuest):?>
-		    
-	        <?php echo CHtml::activeLabelEx($model, 'verifyCode')?>
-	        <?php echo CHtml::activeTextField($model, 'verifyCode')?>
-	        <?php echo CHtml::error($model, 'verifyCode')?>
-	    	<p class="ml120"><?php $this->widget('CCaptcha')?></p>
-		<?php endif?>
+		<?php if(CCaptcha::checkRequirements()): ?>
+			<?php echo $form->labelEx($model,'verifyCode'); ?>
+			<?php echo $form->textField($model,'verifyCode'); ?>
+			<?php echo $form->error($model,'verifyCode'); ?>
+			<p class="ml120"><?php $this->widget('CCaptcha')?></p>
+		<?php endif; ?>
 
 		<div class="buttons ml120">
 			<?php echo CHtml::submitButton('Send'); ?>
