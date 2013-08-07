@@ -34,14 +34,14 @@ class LoginForm extends CFormModel
             array('bu_name', 'unique', 'className'=>'User', 'attributeName'=>'bu_name', 'on'=>'signup', 'message'=>t('nickname_is_exist', 'model')),
        
 			
-			array('bu_password', 'required', 'message'=>t('please_input_your_password', 'model')),
+			array('bu_password', 'required', 'message'=>t('please_input_your_password', 'model'), 'on'=>'login,signup'),
 			array('bu_password', 'authenticate', 'on'=>'login'),
 
 			array('bu_email, returnUrl', 'length', 'max'=>255),
 			array('agreement', 'compare', 'compareValue'=>true, 'on'=>'signup', 'message'=>t('please_agree_policy', 'model')),
 
-			array('verifyCode', 'required', 'message'=>t('please_input_your_verifyCode', 'model'),'on'=>'signup'),
-			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(),'on'=>'signup'),
+			array('verifyCode', 'required', 'message'=>t('please_input_your_verifyCode', 'model'),'on'=>'signup,reset'),
+			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(),'on'=>'signup,reset'),
 
 			array('rememberMe', 'boolean', 'on'=>'login'),
             array('bu_name, bu_password', 'length', 'min'=>3, 'max'=>50),

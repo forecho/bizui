@@ -36,13 +36,14 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'bu_password'); ?>
 	</div>
 
-	<div class="row rememberMe">
+	<div class="ml120 rememberMe">
 		<?php echo $form->checkBox($model,'rememberMe'); ?>
 		<?php echo $form->label($model,'rememberMe'); ?>
 		<?php echo $form->error($model,'rememberMe'); ?>
+		<?php echo CHtml::link(t('forgot_password', 'model'), array('reset'), array('class'=>'ml10')) ?>
 	</div>
-
-	<div class="row buttons">
+	
+	<div class="ml120 buttons ">
 		<?php echo CHtml::submitButton('Login'); ?>
 	</div>
 

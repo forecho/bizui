@@ -48,16 +48,17 @@ $this->breadcrumbs=array(
         <?php echo CHtml::activeLabelEx($model, 'verifyCode')?>
         <?php echo CHtml::activeTextField($model, 'verifyCode')?>
         <?php echo CHtml::error($model, 'verifyCode')?>
-    	<p style="margin-left: 120px;"><?php $this->widget('CCaptcha')?></p>
+    	<p class="ml120"><?php $this->widget('CCaptcha')?></p>
 	<?php endif?>
-	<p style="margin-left: 120px;">
+
+	<p class="ml120">
 		<?php echo CHtml::activeCheckBox($model, 'agreement', array('id'=>'agreement', 'tabindex'=>5));?>
 		<?php echo t('agreement', 'model', array('{policyurl}'=>aurl('static/policy')));?>
 	    <?php echo $form->error($model,'agreement');?>
     </p>
 
 
-	<div class="row buttons">
+	<div class="buttons ml120">
 		<?php echo CHtml::submitButton('Login'); ?>
 	</div>
 
