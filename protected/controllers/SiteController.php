@@ -180,13 +180,18 @@ class SiteController extends Controller
 	}
 
 	//发邮件
-	public function actionSendEmail()
+	public function actionSendEmail($address)
 	{
+		$encdata = Yii::app()->securityManager->encrypt($address);//加密
 		$mailer = Yii::app()->phpMailer->_mailer;
-        $mailer->Subject = '人类已经阻止不了我发送邮件了';
-        $mailer->Body = '<font color="red">hello, 我是葫芦娃</font>';
-        $mailer->AddAddress('314494687@qq.com');
-        //$mailer->AddAddress('xxx@gmail.com');
+        $mailer->Subject = '找回密码';
+        $mailer->Body = 'Hi,</br>
+我们的系统在'.date('Y-m-d H:i:m',time()).'收到一个请求，说你希望通过电子邮件重新设置你在 你丫闭嘴 的密码。你可以点击下面的链接开始重设密码：</br>
+<a href="'.Yii::app()->homeUrl.$this->createUrl('site/reset', array('mail'=>$encdata)).'">'.Yii::app()->homeUrl.$this->createUrl('site/reset', array('mail'=>$encdata)).'</a></br>
+如果这个请求不是由你发起的，那没问题，你不用担心，你可以安全地忽略这封邮件。</br>
+如果你有任何疑问，可以回复这封邮件向我们提问。</br>
+--你丫闭嘴';
+        $mailer->AddAddress($address);
         $mailer->send();
 	}
 }

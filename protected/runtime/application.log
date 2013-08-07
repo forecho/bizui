@@ -5250,3 +5250,14 @@ REQUEST_URI=/index.php?r=site/sendEmail0
 in /home/linux/www/bizui/protected/extensions/yiimailer/CPhpMailer.php (2)
 in /home/linux/www/bizui/protected/extensions/yiimailer/CPhpMailer.php (2)
 in /home/linux/www/bizui/protected/controllers/SiteController.php (208)
+2013/08/07 15:32:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "reset" 动作.' in /home/linux/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(270): CController->missingAction('reset')
+#1 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('reset')
+#2 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/reset')
+#3 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/linux/www/bizui/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=//index.php?r=site/reset&mail=%086c%F1%3A3%E1%CC%BF%F7%A9H%5C%A2%B00i%25%DB%3E%98-%A2hB%E3%C4%9B%CB%E4%0Fm
+HTTP_REFERER=http://mail.qq.com/cgi-bin/mail_spam?action=check_link&url=http://bizui.com//index.php?r=site/reset%26mail=%25086c%25F1%253A3%25E1%25CC%25BF%25F7%25A9H%255C%25A2%25B00i%2525%25DB%253E%2598-%25A2hB%25E3%25C4%259B%25CB%25E4%250Fm&mailid=ZC1707-f6BKVZtsVOrrQ1EDOxdgH38&spam=0
+---

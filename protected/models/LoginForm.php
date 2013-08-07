@@ -13,6 +13,7 @@ class LoginForm extends CFormModel
 	public $rememberMe = 1;
     public $agreement = 1;
 	public $returnUrl;
+	public $verifyCode;
 	
 	private $_identity;
 
@@ -39,8 +40,11 @@ class LoginForm extends CFormModel
 			array('bu_email, returnUrl', 'length', 'max'=>255),
 			array('agreement', 'compare', 'compareValue'=>true, 'on'=>'signup', 'message'=>t('please_agree_policy', 'model')),
 
+			array('verifyCode', 'required', 'message'=>t('please_input_your_verifyCode', 'model'),'on'=>'signup'),
+			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(),'on'=>'signup'),
+
 			array('rememberMe', 'boolean', 'on'=>'login'),
-            array('bu_name, bu_password', 'length', 'min'=>6, 'max'=>50),
+            array('bu_name, bu_password', 'length', 'min'=>3, 'max'=>50),
             array('bu_email, returnUrl', 'length', 'max'=>255),
             array('rememberMe', 'in', 'range'=>array(0, 1)),
 		);
@@ -58,6 +62,7 @@ class LoginForm extends CFormModel
 			'bu_password' => t('bu_password', 'model'),
 			'rememberMe'=>t('remember_me', 'model'),
 			'agreement' => t('agreement', 'model'),
+			'verifyCode' => t('verifyCode', 'model'),
 		);
 	}
 

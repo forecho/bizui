@@ -24,6 +24,7 @@ return array(
     'my_comments' => '我发布的评论',
     'my_like_posts' => '我赞过的文章',
     'my_like_comments' => '我赞过的评论',
+    'verifyCode' => '验证码',
 
     'bc_text' => '评论',
 
@@ -46,6 +47,7 @@ return array(
     'please_input_your_password' => '请输入您的密码',
     'please_agree_policy' => '请同意服务条款和协议',
     'please_input_your_nickname' => '请输入您的大名',
+    'please_input_your_verifyCode' => '请输入您的验证码',
     'please_input_your_right_nickname' => '名字只能由数字、26个英文字母或者下划线组成',
     'email_or_password_error' => '邮箱或密码错误',
     'signup_message' => "注册时名字只能由数字、26个英文字母或者下划线组成，并且不能修改。</br></br>邮箱用于找回密码，请使用你最常用的邮箱地址。"

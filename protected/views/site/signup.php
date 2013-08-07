@@ -42,10 +42,22 @@ $this->breadcrumbs=array(
 		<?php echo $form->passwordField($model,'bu_password'); ?>
 		<?php echo $form->error($model,'bu_password'); ?>
 	</div>
+	
+	<?php if(CCaptcha::checkRequirements()&& Yii::app()->user->isGuest):?>
+	    <p>
+	        <?php echo CHtml::activeLabelEx($model, 'verifyCode')?>
+	        <?php $this->widget('CCaptcha')?>
+	    </p>
+	    <p>
+	        <?php echo CHtml::activeTextField($model, 'verifyCode')?>
+	        <?php echo CHtml::error($model, 'verifyCode')?>
+	    </p>
+	<?php endif?>
 
 	<?php echo CHtml::activeCheckBox($model, 'agreement', array('id'=>'agreement', 'tabindex'=>5));?>
 	<?php echo t('agreement', 'model', array('{policyurl}'=>aurl('static/policy')));?>
     <?php echo $form->error($model,'agreement');?>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Login'); ?>
