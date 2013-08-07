@@ -42,21 +42,19 @@ $this->breadcrumbs=array(
 		<?php echo $form->passwordField($model,'bu_password'); ?>
 		<?php echo $form->error($model,'bu_password'); ?>
 	</div>
-	
-	<?php if(CCaptcha::checkRequirements()&& Yii::app()->user->isGuest):?>
-	    <p>
-	        <?php echo CHtml::activeLabelEx($model, 'verifyCode')?>
-	        <?php $this->widget('CCaptcha')?>
-	    </p>
-	    <p>
-	        <?php echo CHtml::activeTextField($model, 'verifyCode')?>
-	        <?php echo CHtml::error($model, 'verifyCode')?>
-	    </p>
-	<?php endif?>
 
-	<?php echo CHtml::activeCheckBox($model, 'agreement', array('id'=>'agreement', 'tabindex'=>5));?>
-	<?php echo t('agreement', 'model', array('{policyurl}'=>aurl('static/policy')));?>
-    <?php echo $form->error($model,'agreement');?>
+	<?php if(CCaptcha::checkRequirements()&& Yii::app()->user->isGuest):?>
+	    
+        <?php echo CHtml::activeLabelEx($model, 'verifyCode')?>
+        <?php echo CHtml::activeTextField($model, 'verifyCode')?>
+        <?php echo CHtml::error($model, 'verifyCode')?>
+    	<p style="margin-left: 120px;"><?php $this->widget('CCaptcha')?></p>
+	<?php endif?>
+	<p style="margin-left: 120px;">
+		<?php echo CHtml::activeCheckBox($model, 'agreement', array('id'=>'agreement', 'tabindex'=>5));?>
+		<?php echo t('agreement', 'model', array('{policyurl}'=>aurl('static/policy')));?>
+	    <?php echo $form->error($model,'agreement');?>
+    </p>
 
 
 	<div class="row buttons">
