@@ -113,10 +113,10 @@ class PostsController extends Controller
 					$record = User::model()->findByPk(Yii::app()->user->id);
 					$record->saveCounters(array('bu_reputation'=>5));
 					//添加到收藏
-					$save = new Save;
-					$save->bp_id = $model->bp_id;
-					$save->bu_id = Yii::app()->user->id;
-					$save->save();
+					// $save = new Save;
+					// $save->bp_id = $model->bp_id;
+					// $save->bu_id = Yii::app()->user->id;
+					// $save->save();
 				}
 				$this->redirect(array('view','id'=>$model->bp_id));
 			}
