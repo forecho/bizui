@@ -77,6 +77,17 @@ class CommentsController extends Controller
 		));
 	}
 
+ 	/**
+    * Lists all models.
+   	*/
+	public function actionIndex()
+	{
+		$model=new Comments;
+
+		$this->render('index',array(
+		  'model'=>$model,
+		));
+	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

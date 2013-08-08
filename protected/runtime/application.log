@@ -5924,3 +5924,142 @@ Stack trace:
 REQUEST_URI=/index.php?r=comments/update
 HTTP_REFERER=http://bizui.com/index.php?r=site/login
 ---
+2013/08/08 10:05:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in /home/linux/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#3 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/linux/www/bizui/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=posts/view&id=13
+---
+2013/08/08 10:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in /home/linux/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#3 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/linux/www/bizui/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=comments/index
+---
+2013/08/08 10:05:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in /home/linux/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#3 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/linux/www/bizui/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=comments/index
+---
+2013/08/08 10:05:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in /home/linux/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#3 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/linux/www/bizui/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=comments/index
+---
+2013/08/08 10:05:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in /home/linux/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comments/index')
+#3 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/linux/www/bizui/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=comments/index
+HTTP_REFERER=http://bizui.com/index.php?r=comments/index
+---
+2013/08/08 10:07:29 [error] [exception.CException] exception 'CException' with message 'PostsController 无法找到请求的视图 "create".' in /home/linux/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /home/linux/www/bizui/protected/controllers/PostsController.php(127): CController->render('create', Array)
+#2 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): PostsController->actionCreate()
+#3 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/create')
+#13 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/linux/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=posts/create
+HTTP_REFERER=http://bizui.com/index.php?r=comments/index
+---
+2013/08/08 10:07:35 [error] [exception.CException] exception 'CException' with message 'PostsController 无法找到请求的视图 "create".' in /home/linux/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /home/linux/www/bizui/protected/controllers/PostsController.php(127): CController->render('create', Array)
+#2 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): PostsController->actionCreate()
+#3 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/create')
+#13 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/linux/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=posts/create
+HTTP_REFERER=http://bizui.com/index.php?r=comments/index
+---
+2013/08/08 10:08:12 [error] [exception.CException] exception 'CException' with message 'PostsController 无法找到请求的视图 "create".' in /home/linux/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /home/linux/www/bizui/protected/controllers/PostsController.php(127): CController->render('create', Array)
+#2 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): PostsController->actionCreate()
+#3 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/create')
+#13 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/linux/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=posts/create
+HTTP_REFERER=http://bizui.com/index.php?r=comments/index
+---
+2013/08/08 10:08:16 [error] [exception.CException] exception 'CException' with message 'PostsController 无法找到请求的视图 "create".' in /home/linux/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /home/linux/www/bizui/protected/controllers/PostsController.php(127): CController->render('create', Array)
+#2 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): PostsController->actionCreate()
+#3 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('posts/create')
+#13 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/linux/www/bizui/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=posts/create
+HTTP_REFERER=http://bizui.com/index.php?r=comments/index
+---
