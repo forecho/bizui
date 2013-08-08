@@ -56,28 +56,6 @@ class UserController extends Controller
 		));
 	}
 
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionCreate()
-	{
-		$model=new User;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['User']))
-		{
-			$model->attributes=$_POST['User'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->bu_id));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
 
 	/**
 	 * Updates a particular model.
@@ -103,45 +81,6 @@ class UserController extends Controller
 		));
 	}
 
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-	}
-
-	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('User');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
-
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
-		$model=new User('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['User']))
-			$model->attributes=$_GET['User'];
-
-		$this->render('admin',array(
-			'model'=>$model,
-		));
-	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
