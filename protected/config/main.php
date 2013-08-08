@@ -14,7 +14,7 @@ return array(
 	'homeUrl' => 'http://bizui.com',//网站地址
 	// preloading 'log' component
 	'preload'=>array('log'),
-    //'theme' => 'classic',
+    'theme' => 'bootstrap',
 	'timeZone' => 'Asia/Shanghai',
 
 	// autoloading model and component classes

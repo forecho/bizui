@@ -1,0 +1,22 @@
+body {
+	position: relative;
+	padding-top: 80px;
+}
+
+.bs-docs-nav {
+	background-color: #563d7c;
+}
+
+.bs-docs-nav .navbar-nav > .active > a, .bs-docs-nav .navbar-nav > .active > a:hover {
+	color: #fff;
+	background-color: #463265;
+}
+
+ol {
+	-webkit-padding-start: 0px;
+}
+ul.pagination .first,
+ul.pagination .last
+{
+    display:none; // delete this line!!
+}
