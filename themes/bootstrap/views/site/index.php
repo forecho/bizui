@@ -10,8 +10,10 @@ $this->widget('zii.widgets.CListView', array(
     'itemView'=>'_post', 
     'emptyText'=>'暂时没有数据',  
    	'template'=>'{items}{pager}',
+    
     'pager' => array(
             'header'=>false,
+            'cssFile'=>false, 
             'htmlOptions'=>array('class'=>'pagination'),
         ),
     'htmlOptions'=>array('class'=>'list-group'),

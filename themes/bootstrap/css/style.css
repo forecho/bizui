@@ -15,8 +15,3 @@ body {
 ol {
 	-webkit-padding-start: 0px;
 }
-ul.pagination .first,
-ul.pagination .last
-{
-    display:none; // delete this line!!
-}
