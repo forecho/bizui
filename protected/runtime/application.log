@@ -6110,3 +6110,36 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/index.php?r=posts/admin
 ---
+2013/08/08 10:15:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您未被授权执行这个动作' in /home/linux/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /home/linux/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 /home/linux/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('save/admin')
+#9 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/linux/www/bizui/index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=save/admin
+---
+2013/08/08 10:15:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message '您的请求无效。' in /home/linux/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/linux/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/linux/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/linux/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/linux/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/linux/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/linux/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('save/update')
+#10 /home/linux/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/linux/www/bizui/index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=save/update
+---
