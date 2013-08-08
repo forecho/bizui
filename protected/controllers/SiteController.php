@@ -126,19 +126,6 @@ class SiteController extends Controller
 			));
 	}
 
-	//我的文章
-	public function actionLikeposts()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$model = new Posts;
-		$model->bu_id = Yii::app()->user->id;
-
-		$this->render('index', array(
-				'model'=>$model,
-			));
-	}
-
 	//发邮件
 	public function actionReset()
 	{

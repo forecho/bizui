@@ -32,7 +32,7 @@ class PostsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','likeposts'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -194,6 +194,20 @@ class PostsController extends Controller
 		}
 	}
 
+
+	//我喜欢的文章
+	public function actionLikeposts()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$model = new Save;
+		$model->bu_id = Yii::app()->user->id;
+		$model->type = '1';
+
+		$this->render('likeposts', array(
+				'model'=>$model,
+			));
+	}
 
 
 	/**

@@ -7,7 +7,7 @@ $this->menu=array(
 	array('label'=>t('change_password', 'model'), 'url'=>array('changepwd')),
 	array('label'=>t('my_posts', 'model'), 'url'=>array('/site/myposts')),
 	array('label'=>t('my_comments', 'model'), 'url'=>array('/comments/mycomments')),
-	array('label'=>t('my_like_posts', 'model'), 'url'=>array('/site/likeposts')),
+	array('label'=>t('my_like_posts', 'model'), 'url'=>array('/posts/likeposts')),
 	array('label'=>t('my_like_comments', 'model'), 'url'=>array('/comments/likecomments')),
 );
 ?>
