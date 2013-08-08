@@ -36,6 +36,7 @@
 		<?php echo tranTime($row->bp_create_time); ?>
 		|
 		<?php echo CHtml::link(Comments::model()->Count('bp_id='.$row->bp_id).'条评论', array('/posts/view', 'id'=>$row->bp_id)); ?></p>
+		<pre><?php echo $row->bp_content; ?></pre>
 	</li>
 
 	<!-- 评论 -->
