@@ -7,6 +7,7 @@
  * @property string $id
  * @property integer $bu_id
  * @property integer $bp_id
+ * @property integer $type
  */
 class Save extends CActiveRecord
 {
@@ -36,10 +37,10 @@ class Save extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('bu_id, bp_id', 'numerical', 'integerOnly'=>true),
+			array('bu_id, bp_id, type', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, bu_id, bp_id', 'safe', 'on'=>'search'),
+			array('id, bu_id, bp_id, type', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,6 +54,7 @@ class Save extends CActiveRecord
 		return array(
 			'user'=>array(self::BELONGS_TO, 'User', 'bu_id'),
 			'posts'=>array(self::BELONGS_TO, 'Posts', 'bp_id'),
+			'comments'=>array(self::BELONGS_TO, 'Comments', 'bp_id'),
 		);
 	}
 
@@ -65,6 +67,7 @@ class Save extends CActiveRecord
 			'id' => 'ID',
 			'bu_id' => 'Bu',
 			'bp_id' => 'Bp',
+			'type' => 'Type',
 		);
 	}
 
@@ -82,6 +85,7 @@ class Save extends CActiveRecord
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('bu_id',$this->bu_id);
 		$criteria->compare('bp_id',$this->bp_id);
+		$criteria->compare('type',$this->type);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

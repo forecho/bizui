@@ -135,10 +135,11 @@ class CommentsController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$model = new Comments;
+		$model = new Save;
 		$model->bu_id = Yii::app()->user->id;
+		$model->type = '2';
 
-		$this->render('index', array(
+		$this->render('likecomments', array(
 				'model'=>$model,
 			));
 	}
