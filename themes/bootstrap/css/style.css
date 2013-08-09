@@ -19,3 +19,11 @@ ol {
 .bs-docs-nav .navbar-brand {
 	color: #fff;
 }
+
+span.required, .errorMessage{
+	color: red;
+}
+
+.ml10 {
+	margin-left: 10px;
+}
