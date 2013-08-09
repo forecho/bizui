@@ -5,4 +5,5 @@ return array(
 	'Send' => '发送',
 
 	'find_password' => '找回密码',
+	'create_posts' => '提交分享',
 );

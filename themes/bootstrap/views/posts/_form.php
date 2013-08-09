@@ -13,30 +13,39 @@
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
+	'htmlOptions'=>array(
+		'class'=>'form-horizontal',
+	)
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'bp_title'); ?>
-		<?php echo $form->textField($model,'bp_title',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'bp_title'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'bp_title', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-4">
+			<?php echo $form->textField($model,'bp_title', array('class'=>'form-control')); ?>
+			<?php echo $form->error($model,'bp_title'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'bp_url'); ?>
-		<?php echo $form->textField($model,'bp_url',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'bp_url'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'bp_url', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-8">
+			<?php echo $form->textField($model,'bp_url', array('class'=>'form-control')); ?>
+			<?php echo $form->error($model,'bp_url'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'bp_content'); ?>
-		<?php echo $form->textArea($model,'bp_content',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'bp_content'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'bp_content', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-8">
+			<?php echo $form->textArea($model,'bp_content',array('rows'=>6,'class'=>'form-control')); ?>
+			<?php echo $form->error($model,'bp_content'); ?>
+		</div>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-group">
+		<div class="col-lg-offset-2 col-lg-10">
+			<?php echo CHtml::submitButton(t('create_posts','main'), array('class'=>'btn btn-default')); ?>
+		</div>
 	</div>
 
 <?php $this->endWidget(); ?>

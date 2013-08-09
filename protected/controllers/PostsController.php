@@ -122,6 +122,7 @@ class PostsController extends Controller
 			}
 		}
 
+		$this->pageTitle = t('create_posts','main');
 		$this->render('create',array(
 			'model'=>$model,
 		));
