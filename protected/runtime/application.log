@@ -8439,3 +8439,21 @@ Stack trace:
 REQUEST_URI=/index.php?r=site/login
 HTTP_REFERER=http://bizui.com/
 ---
+2013/08/09 16:14:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "static/policy"。' in /home/linux/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('static/policy')
+#1 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/linux/www/bizui/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=static/policy
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---
+2013/08/09 16:14:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "static/policy"。' in /home/linux/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('static/policy')
+#1 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/linux/www/bizui/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=static/policy
+HTTP_REFERER=http://bizui.com/index.php?r=site/signup
+---

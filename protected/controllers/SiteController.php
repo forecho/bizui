@@ -168,6 +168,8 @@ class SiteController extends Controller
 		    } 
 		}
 
+		$this->pageTitle = t('find_password','main');
+
 		$this->render('reset', array(
 				'model'=>$model,
 			));
