@@ -8387,3 +8387,31 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/
 ---
+2013/08/09 14:12:26 [error] [php] Undefined index: HTTP_X_FORWARDED_FOR (/home/linux/www/bizui/protected/globals.php:245)
+Stack trace:
+#0 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#1 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/linux/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#3 /home/linux/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#4 /home/linux/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#5 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/linux/www/bizui/index.php(16): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/login
+in /home/linux/www/bizui/protected/globals.php (245)
+in /home/linux/www/bizui/protected/models/LoginForm.php (107)
+in /home/linux/www/bizui/protected/controllers/SiteController.php (75)
+2013/08/09 14:12:31 [error] [php] Undefined index: HTTP_X_FORWARDED_FOR (/home/linux/www/bizui/protected/globals.php:245)
+Stack trace:
+#0 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#1 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/linux/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#3 /home/linux/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#4 /home/linux/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#5 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/linux/www/bizui/index.php(16): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/login
+in /home/linux/www/bizui/protected/globals.php (245)
+in /home/linux/www/bizui/protected/models/LoginForm.php (107)
+in /home/linux/www/bizui/protected/controllers/SiteController.php (75)
