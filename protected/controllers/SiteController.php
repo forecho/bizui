@@ -13,6 +13,8 @@ class SiteController extends Controller
 			'captcha'=>array(
 				'class'=>'CCaptchaAction',
 				'backColor'=>0xFFFFFF,
+				'minLength'=>5,      //设置最短为6位
+               	'maxLength'=>6,       //设置最长为7位,生成的code在6-7直接rand了
 			),
 			// page action renders "static" pages stored under 'protected/views/site/pages'
 			// They can be accessed via: index.php?r=site/page&view=FileName
@@ -75,6 +77,8 @@ class SiteController extends Controller
 			if($model->validate() && $model->login())
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
+
+		$this->pageTitle = t('Login','main');
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
@@ -98,7 +102,7 @@ class SiteController extends Controller
             }
         }
         
-        $this->pageTitle = t('site_signup');
+        $this->pageTitle = t('Signup','main');
         
         $this->render('signup', array('model'=>$model));
     }

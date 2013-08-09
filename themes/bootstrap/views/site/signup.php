@@ -3,15 +3,22 @@
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - ' . $this->pageTitle;
-$this->breadcrumbs=array(
-	'Sign Up',
-);
+$this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 ?>
 
-<h1>注册</h1>
+<div class="form-group">
+	<div class="col-lg-offset-2 col-lg-10">
+		<h3><?php echo t('Signup','main'); ?></h3>
+	</div>
+</div>
+</br>
+</br>
+</br>
 
-<p><?php echo t('signup_message', 'model'); ?></p>
+<div class="alert alert-danger">
+	<button type="button" class="close" data-dismiss="alert">×</button>
+	<?php echo t('signup_message', 'model'); ?>
+</div>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -21,44 +28,59 @@ $this->breadcrumbs=array(
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
+	'htmlOptions'=>array(
+		'class'=>'form-horizontal',
+	)
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'bu_name'); ?>
-		<?php echo $form->textField($model,'bu_name'); ?>
-		<?php echo $form->error($model,'bu_name'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'bu_name', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-4">
+			<?php echo $form->textField($model,'bu_name', array('class'=>'form-control')); ?>
+			<?php echo $form->error($model,'bu_name'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'bu_email'); ?>
-		<?php echo $form->textField($model,'bu_email'); ?>
-		<?php echo $form->error($model,'bu_email'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'bu_email', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-4">
+			<?php echo $form->textField($model,'bu_email', array('class'=>'form-control')); ?>
+			<?php echo $form->error($model,'bu_email'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'bu_password'); ?>
-		<?php echo $form->passwordField($model,'bu_password'); ?>
-		<?php echo $form->error($model,'bu_password'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'bu_password', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-4">
+			<?php echo $form->textField($model,'bu_password', array('class'=>'form-control')); ?>
+			<?php echo $form->error($model,'bu_password'); ?>
+		</div>
 	</div>
 
 	<?php if(CCaptcha::checkRequirements()): ?>
-		<?php echo $form->labelEx($model,'verifyCode'); ?>
-		<?php echo $form->textField($model,'verifyCode'); ?>
-		<?php echo $form->error($model,'verifyCode'); ?>
-		<p class="ml120"><?php $this->widget('CCaptcha')?></p>
+		<div class="form-group">
+		<?php echo $form->labelEx($model,'verifyCode', array('class'=>'col-lg-2 control-label')); ?>
+			<div class="col-lg-4">
+				<?php echo $form->textField($model,'verifyCode', array('class'=>'form-control')); ?>
+				<?php echo $form->error($model,'verifyCode'); ?>
+			</div>
+			<?php $this->widget('CCaptcha')?>
+		</div>
 	<?php endif; ?>
 
-	<p class="ml120">
-		<?php echo CHtml::activeCheckBox($model, 'agreement', array('id'=>'agreement', 'tabindex'=>5));?>
-		<?php echo t('agreement', 'model', array('{policyurl}'=>aurl('static/policy')));?>
-	    <?php echo $form->error($model,'agreement');?>
-    </p>
+	<div class="form-group">
+		<div class="col-lg-offset-2 col-lg-10">
+			<?php echo CHtml::activeCheckBox($model, 'agreement', array('id'=>'agreement', 'tabindex'=>5));?>
+			<?php echo t('agreement', 'model', array('{policyurl}'=>aurl('static/policy')));?>
+	    	<?php echo $form->error($model,'agreement');?>
+   		</div>
+   	</div>
 
 
-	<div class="buttons ml120">
-		<?php echo CHtml::submitButton('Login'); ?>
+	<div class="form-group">
+		<div class="col-lg-offset-2 col-lg-10">
+			<?php echo CHtml::submitButton(t('Login', 'main'), array('class'=>'btn btn-default')); ?>
+		</div>
 	</div>
 
 <?php $this->endWidget(); ?>

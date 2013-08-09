@@ -3,10 +3,7 @@
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - ' . $this->pageTitle;
-$this->breadcrumbs=array(
-	'Login',
-);
+$this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 ?>
 
 <div class="form-group">
@@ -15,7 +12,6 @@ $this->breadcrumbs=array(
 	</div>
 </div>
 </br>
-
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -56,7 +52,7 @@ $this->breadcrumbs=array(
 
 	<div class="form-group">
 		<div class="col-lg-offset-2 col-lg-10">
-			<?php echo CHtml::submitButton(t('Login','main')); ?>
+			<?php echo CHtml::submitButton(t('Login','main'), array('class'=>'btn btn-default')); ?>
 		</div>
 	</div>
 

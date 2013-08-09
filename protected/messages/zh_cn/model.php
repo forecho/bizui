@@ -50,7 +50,7 @@ return array(
     'please_input_your_verifyCode' => '请输入您的验证码',
     'please_input_your_right_nickname' => '名字只能由数字、26个英文字母或者下划线组成',
     'email_or_password_error' => '邮箱或密码错误',
-    'signup_message' => "注册时名字只能由数字、26个英文字母或者下划线组成，并且不能修改。</br></br>邮箱用于找回密码，请使用你最常用的邮箱地址。",
+    'signup_message' => "注册时，名字只能由数字、26个英文字母或者下划线组成，并且不能修改。</br></br>邮箱用于找回密码，请使用你最常用的邮箱地址。",
 
     'email_send_success' => '邮件发送成功，请查收。',
     'email_is_error' => '邮件发送失败，请检查您输入的邮箱。',
