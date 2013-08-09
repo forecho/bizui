@@ -9,7 +9,7 @@
 			<?php if (Yii::app()->user->id) {
 				$saveCount = Save::model()->countByAttributes(array('bp_id'=>$row->bc_id, 'bu_id'=>Yii::app()->user->id, 'type'=>'2'));
 				//判断是否是自己发布的
-				if ($data->bu_id==Yii::app()->user->id) {
+				if ($row->bu_id==Yii::app()->user->id) {
 			?>
 				<span style="width:12px; color:red;">*</span>
 			<?php
