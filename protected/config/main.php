@@ -60,7 +60,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=bizui',
+			'connectionString' => 'mysql:host=127.0.0.1;dbname=bizui',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
