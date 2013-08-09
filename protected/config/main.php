@@ -41,6 +41,14 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		'widgetFactory'=>array(
+            'widgets'=>array(
+                'CLinkPager'=>array(
+                    'pageSize'=>15,
+                ),
+                
+            ),
+        ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
