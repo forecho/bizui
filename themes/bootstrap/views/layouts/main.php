@@ -22,21 +22,28 @@
 			<span class="icon-bar"></span>
 	    </button>
 	    <a href="../" class="navbar-brand"><?php echo CHtml::encode(Yii::app()->name); ?></a>
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'New', 'url'=>array('/site/new')),
-				array('label'=>'Submit', 'url'=>array('/posts/create')),
-				array('label'=>'Comments', 'url'=>array('/comments/index')),
-				// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				// array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Signup', 'url'=>array('/site/signup'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>Yii::app()->user->name, 'url'=>array('/user/view', 'id'=>Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-			'htmlOptions'=>array('class'=>'nav navbar-nav'),
-		)); ?>
+		<?php 
+			$this->widget('zii.widgets.CMenu',array(
+				'items'=>array(
+					array('label'=>'Home', 'url'=>array('/site/index')),
+					array('label'=>'New', 'url'=>array('/site/new')),
+					array('label'=>'Submit', 'url'=>array('/posts/create')),
+					array('label'=>'Comments', 'url'=>array('/comments/index')),
+					// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+					// array('label'=>'Contact', 'url'=>array('/site/contact')),
+				),
+				'htmlOptions'=>array('class'=>'nav navbar-nav'),
+			)); 
+			$this->widget('zii.widgets.CMenu',array(
+				'items'=>array(
+					array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+					array('label'=>'Signup', 'url'=>array('/site/signup'), 'visible'=>Yii::app()->user->isGuest),
+					array('label'=>Yii::app()->user->name, 'url'=>array('/user/view', 'id'=>Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				),
+				'htmlOptions'=>array('class'=>'nav navbar-nav pull-right'),
+			)); 
+		?>
 	</div>
 
 </div>

@@ -15,3 +15,7 @@ body {
 ol {
 	-webkit-padding-start: 0px;
 }
+
+.bs-docs-nav .navbar-brand {
+	color: #fff;
+}
