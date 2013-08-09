@@ -3,8 +3,8 @@
 /* @var $model Comments */
 ?>
 
-<ul class="box-cell">
-	<li class="box-item">
+<div class="box-cell">
+	<div class="panel">
 		<p>
 			<?php if (Yii::app()->user->id) {
 				$saveCount = Save::model()->countByAttributes(array('bp_id'=>$row->bc_id, 'bu_id'=>Yii::app()->user->id, 'type'=>'2'));
@@ -34,7 +34,7 @@
 		|	<?php echo CHtml::link('举报', array('/')); ?>
 		</p>
 		<p class="fn_b ml5"><?php echo nl2br($row->bc_text); //保留换行?></p>
-	</li>
+	</div>
 
 	<!-- 评论 -->
 	<?php if ($row->bu_id!=Yii::app()->user->id) {?>
@@ -60,7 +60,7 @@
 	</div>
 	<?php } ?>
 
-</ul>
+</div>
 <script type="text/javascript">
 //赞
 <?php  if (Yii::app()->user->id){ ?>
