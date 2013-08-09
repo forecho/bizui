@@ -3,8 +3,8 @@
 /* @var $row Posts */
 ?>
 
-<ul class="box-cell">
-	<li class="box-item">
+<div class="box-cell">
+	<div class="panel">
 		<p>
 			<?php if (Yii::app()->user->id) {
 				$saveCount = Save::model()->countByAttributes(array('bp_id'=>$row->bp_id, 'bu_id'=>Yii::app()->user->id, 'type'=>'1'));
@@ -36,8 +36,8 @@
 		<?php echo tranTime($row->bp_create_time); ?>
 		|
 		<?php echo CHtml::link(Comments::model()->Count('bp_id='.$row->bp_id).'条评论', array('/posts/view', 'id'=>$row->bp_id)); ?></p>
-		<pre><?php echo $row->bp_content; ?></pre>
-	</li>
+		<?php echo ($row->bp_content)?'<pre>'.$row->bp_content.'</pre>':''; ?>
+	</div>
 
 	<!-- 评论 -->
 	<div class="form">
@@ -47,25 +47,34 @@
 			'clientOptions'=>array(
 				'validateOnSubmit'=>true,
 			),
+			'htmlOptions'=>array(
+				'class'=>'form-horizontal',
+			)
 		)); ?>
-			<div class="row">
-				<?php echo $form->textArea($model,'bc_text',array('rows'=>6, 'cols'=>50)); ?>
-				<?php echo $form->error($model,'bc_text'); ?>
+
+			<div class="form-group">
+				<div class="col-lg-9">
+					<?php echo $form->textArea($model,'bc_text',array('rows'=>6,'class'=>'form-control')); ?>
+					<?php echo $form->error($model,'bc_text'); ?>
+				</div>
 			</div>
 
-			<div class="row buttons">
-				<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+			<div class="form-group">
+				<div class="col-lg-9">
+					<?php echo CHtml::submitButton(t('Comments','main'), array('class'=>'btn btn-default')); ?>
+				</div>
 			</div>
+
 		<?php $this->endWidget(); ?>
 	</div>
 
-</ul>
+</div>
 
 
 <!-- 加载评论 -->
-<ul>
+<div class="panel">
 	<?php  $this->renderPartial('_comments', array('comments'=>$comments));?>
-</ul>
+</div>
 
 
 <script type="text/javascript">

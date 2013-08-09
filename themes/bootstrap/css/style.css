@@ -3,6 +3,10 @@ body {
 	padding-top: 80px;
 }
 
+pre {
+	border: none;
+}
+
 .bs-docs-nav {
 	background-color: #563d7c;
 }
@@ -26,4 +30,13 @@ span.required, .errorMessage{
 
 .ml10 {
 	margin-left: 10px;
+}
+.pl60 {
+	padding-left: 60px;
+}
+.pl90 {
+	padding-left: 90px;
+}
+.pl120 {
+	padding-left: 120px;
 }
