@@ -140,6 +140,7 @@ class User extends CActiveRecord
 				$this->bu_status = 1;
 	    		$this->bu_create_time = time();
 	    		$this->bu_reg_ip = GetIP();
+	    		$this->bu_reputation = 42;//注册送42个积分
 			}
 			return true;
 		}else {
