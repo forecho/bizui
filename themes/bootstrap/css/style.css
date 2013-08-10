@@ -40,3 +40,11 @@ span.required, .errorMessage{
 .pl120 {
 	padding-left: 120px;
 }
+
+a:visited {
+	color: #828282;
+}
+
+.pagination a {
+	color: #428bca;
+}

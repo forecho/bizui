@@ -3,7 +3,7 @@
 /* @var $data Comments */
 ?>
 
-<li class="box-item <?php echo ($index==0)?'':'mt20'; ?>">
+<div class="panel-heading <?php echo ($index==0)?'':'mt20'; ?>">
 	<p>
 		<?php if (Yii::app()->user->id) {
 			$saveCount = Save::model()->countByAttributes(array('bp_id'=>$data->bc_id, 'bu_id'=>Yii::app()->user->id, 'type'=>'2'));
@@ -32,4 +32,4 @@
 	|	来源：<?php echo CHtml::link($data->posts->bp_title, array('/posts/view', 'id'=>$data->bp_id)); ?>
 	</p>
 	<p class="fn_b ml5"><?php echo nl2br($data->bc_text); //保留换行?></p>
-</li>
+</div>

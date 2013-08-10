@@ -8,9 +8,16 @@
 	'itemView'=>'_view',
 	'emptyText'=>'暂时没有数据',  
    	'template'=>'{items}{pager}',
-   	'htmlOptions'=>array('class'=>'box'),
-    'itemsTagName'=>'ol',
+    'pager' => array(
+            'header'=>false,
+            'htmlOptions'=>array('class'=>'pagination'),
+            'selectedPageCssClass' => 'active',        
+            'hiddenPageCssClass' => 'disabled',
+        ),
+    'htmlOptions'=>array('class'=>'panel'),
+    'itemsTagName'=>'div',
     'itemsCssClass'=>'box-cell',
+    'pagerCssClass'=>'',
 )); ?>
 
 <script type="text/javascript">
