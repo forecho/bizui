@@ -9,7 +9,7 @@ require(dirname(__FILE__) . '/define.php');
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'你丫闭嘴',
 	'language' => 'zh_cn',
 	'homeUrl' => 'http://bizui.com',//网站地址
 	// preloading 'log' component
