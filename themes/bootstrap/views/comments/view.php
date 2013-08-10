@@ -36,28 +36,38 @@
 		<p class="fn_b ml5"><?php echo nl2br($row->bc_text); //保留换行?></p>
 	</div>
 
+
 	<!-- 评论 -->
 	<?php if ($row->bu_id!=Yii::app()->user->id) {?>
-	<div class="form">
-		<?php $form=$this->beginWidget('CActiveForm', array(
-			'id'=>'comments-form',
-			'enableClientValidation'=>true,
-			'clientOptions'=>array(
-				'validateOnSubmit'=>true,
-			),
-		)); ?>
-			<div class="row">
-				<?php echo $form->textArea($model,'bc_text',array('rows'=>6, 'cols'=>50)); ?>
-				<?php echo $form->error($model,'bc_text'); ?>
-			</div>
-			<?php echo $form->hiddenField($model,'bp_id',array('value'=>$row->bp_id)); ?>
-			<?php echo $form->hiddenField($model,'bc_path',array('value'=>$row->bc_path)); ?>
+		<div class="form">
+			<?php $form=$this->beginWidget('CActiveForm', array(
+				'id'=>'comments-form',
+				'enableClientValidation'=>true,
+				'clientOptions'=>array(
+					'validateOnSubmit'=>true,
+				),
+				'htmlOptions'=>array(
+					'class'=>'form-horizontal',
+				)
+			)); ?>
 
-			<div class="row buttons">
-				<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-			</div>
-		<?php $this->endWidget(); ?>
-	</div>
+				<div class="form-group">
+					<div class="col-lg-9">
+						<?php echo $form->textArea($model,'bc_text',array('rows'=>6,'class'=>'form-control')); ?>
+						<?php echo $form->error($model,'bc_text'); ?>
+					</div>
+				</div>
+				<?php echo $form->hiddenField($model,'bp_id',array('value'=>$row->bp_id)); ?>
+				<?php echo $form->hiddenField($model,'bc_path',array('value'=>$row->bc_path)); ?>
+
+				<div class="form-group">
+					<div class="col-lg-9">
+						<?php echo CHtml::submitButton(t('Comments','main'), array('class'=>'btn btn-default')); ?>
+					</div>
+				</div>
+
+			<?php $this->endWidget(); ?>
+		</div>
 	<?php } ?>
 
 </div>

@@ -72,9 +72,11 @@
 
 
 <!-- 加载评论 -->
-<div class="panel">
-	<?php  $this->renderPartial('_comments', array('comments'=>$comments));?>
-</div>
+<?php if (Comments::model()->count('bp_id='.$row->bp_id)){ ?>
+	<div class="panel">
+		<?php  $this->renderPartial('_comments', array('comments'=>$comments));?>
+	</div>
+<?php } ?>
 
 
 <script type="text/javascript">
