@@ -48,6 +48,8 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('bu_email', 'required'),
+			array('bu_email', 'unique'),
+			array('bu_email', 'email'),
 			array('password, password_current, password_again', 'required', 'on'=>'changepwd'),
 			array('password, password_again', 'required', 'on'=>'newpwd'),
 			array('password_again','compare', 'compareAttribute'=>'password', 'on'=>'changepwd,newpwd', 'message'=>t('password_no_repeat', 'model')),

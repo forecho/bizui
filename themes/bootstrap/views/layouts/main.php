@@ -51,14 +51,13 @@
 	<div class="col-lg-9"><?php echo $content; ?></div>
 	<div class="col-lg-3">
 		<?php
-			$this->beginWidget('zii.widgets.CPortlet', array(
-				'title'=>'Operations',
-			));
+
 			$this->widget('zii.widgets.CMenu', array(
 				'items'=>$this->menu,
-				'htmlOptions'=>array('class'=>'operations'),
+				'htmlOptions'=>array('class'=>'list-group'),
+				'itemCssClass'=>'list-group-item',
 			));
-			$this->endWidget();
+
 		?>
 	</div>
 </div>

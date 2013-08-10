@@ -8,33 +8,46 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-form',
+	'enableAjaxValidation'=>true,
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
+	'htmlOptions'=>array(
+		'class'=>'form-horizontal',
+	)
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'bu_name'); ?>
-		<?php echo $form->textField($model,'bu_name',array('size'=>25,'maxlength'=>25,'disabled'=>'disabled')); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'bu_name', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-4">
+			<p class="form-control-static"><?php echo $model->bu_name; ?> </p>
+			<?php  // echo $form->textField($model,'bu_name', array('class'=>'form-control')); ?>
+			<?php // echo $form->error($model,'bu_name'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'bu_email'); ?>
-		<?php echo $form->textField($model,'bu_email',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'bu_email'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'bu_email', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-4">
+			<?php echo $form->textField($model,'bu_email', array('class'=>'form-control')); ?>
+			<?php echo $form->error($model,'bu_email'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'bu_about'); ?>
-		<?php echo $form->textArea($model,'bu_about',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'bu_about'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'bu_about', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-8">
+			<?php echo $form->textArea($model,'bu_about',array('rows'=>6,'class'=>'form-control')); ?>
+			<?php echo $form->error($model,'bu_about'); ?>
+		</div>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-group">
+		<div class="col-lg-offset-2 col-lg-10">
+			<?php echo CHtml::submitButton(t('Save','main'), array('class'=>'btn btn-default')); ?>
+		</div>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -9,7 +9,12 @@
 // );
 ?>
 
-<h1>Update User <?php echo $model->bu_id; ?></h1>
+<div class="form-group">
+	<div class="col-lg-offset-2 col-lg-10">
+		<h3><?php echo t('change_password','main'); ?></h3>
+	</div>
+</div>
+</br>
 
 
 <?php if(Yii::app()->user->hasFlash('error')): ?>  
@@ -33,30 +38,40 @@
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
+	'htmlOptions'=>array(
+		'class'=>'form-horizontal',
+	)
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'password_current'); ?>
-		<?php echo $form->passwordField($model,'password_current',array('size'=>25,'maxlength'=>25)); ?>
-		<?php echo $form->error($model,'password_current'); ?>
+	
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'password_current', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-4">
+			<?php echo $form->passwordField($model,'password_current', array('class'=>'form-control')); ?>
+			<?php echo $form->error($model,'password_current'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>25,'maxlength'=>25)); ?>
-		<?php echo $form->error($model,'password'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'password', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-4">
+			<?php echo $form->passwordField($model,'password', array('class'=>'form-control')); ?>
+			<?php echo $form->error($model,'password'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password_again'); ?>
-		<?php echo $form->passwordField($model,'password_again',array('size'=>25,'maxlength'=>25)); ?>
-		<?php echo $form->error($model,'password_again'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'password_again', array('class'=>'col-lg-2 control-label')); ?>
+		<div class="col-lg-4">
+			<?php echo $form->passwordField($model,'password_again', array('class'=>'form-control')); ?>
+			<?php echo $form->error($model,'password_again'); ?>
+		</div>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-group">
+		<div class="col-lg-offset-2 col-lg-10">
+			<?php echo CHtml::submitButton(t('change_password','main'), array('class'=>'btn btn-default')); ?>
+		</div>
 	</div>
 
 <?php $this->endWidget(); ?>

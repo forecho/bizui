@@ -45,6 +45,6 @@ a:visited {
 	color: #828282;
 }
 
-.pagination a {
+.pagination a,.col-lg-3 a {
 	color: #428bca;
 }

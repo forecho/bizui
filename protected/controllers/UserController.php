@@ -6,7 +6,8 @@ class UserController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	//public $layout='//layouts/column2';
+	public $layout='//layouts/main';
 
 	/**
 	 * @return array action filters
@@ -66,8 +67,11 @@ class UserController extends Controller
 	{
 		$model=$this->loadModel(Yii::app()->user->id);
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		  	if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
+		    {
+		        echo CActiveForm::validate($model);
+		        Yii::app()->end();
+		    }
 
 		if(isset($_POST['User']))
 		{
