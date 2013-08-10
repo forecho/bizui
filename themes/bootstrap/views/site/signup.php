@@ -52,7 +52,7 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'bu_password', array('class'=>'col-lg-2 control-label')); ?>
 		<div class="col-lg-4">
-			<?php echo $form->textField($model,'bu_password', array('class'=>'form-control')); ?>
+			<?php echo $form->passwordField($model,'bu_password', array('class'=>'form-control')); ?>
 			<?php echo $form->error($model,'bu_password'); ?>
 		</div>
 	</div>
