@@ -48,3 +48,7 @@ a:visited {
 .pagination a,.col-lg-3 a {
 	color: #428bca;
 }
+
+.box-cell span img{
+	cursor: pointer;
+}
