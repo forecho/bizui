@@ -63,5 +63,6 @@
 </div>
 
 <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/bootstrap.min.js"></script>
+<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/respond.src.js"></script>
 </body>
 </html>
