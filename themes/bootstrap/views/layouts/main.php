@@ -25,10 +25,10 @@
 		<?php 
 			$this->widget('zii.widgets.CMenu',array(
 				'items'=>array(
-					array('label'=>'Home', 'url'=>array('/site/index')),
-					array('label'=>'New', 'url'=>array('/site/new')),
-					array('label'=>'Submit', 'url'=>array('/posts/create')),
-					array('label'=>'Comments', 'url'=>array('/comments/index')),
+					array('label'=>t('Home', 'main'), 'url'=>array('/site/index')),
+					array('label'=>t('New', 'main'), 'url'=>array('/site/new')),
+					array('label'=>t('Submit', 'main'), 'url'=>array('/posts/create')),
+					array('label'=>t('Comments', 'main'), 'url'=>array('/comments/index')),
 					// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 					// array('label'=>'Contact', 'url'=>array('/site/contact')),
 				),
@@ -36,10 +36,10 @@
 			)); 
 			$this->widget('zii.widgets.CMenu',array(
 				'items'=>array(
-					array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-					array('label'=>'Signup', 'url'=>array('/site/signup'), 'visible'=>Yii::app()->user->isGuest),
+					array('label'=>t('Login', 'main'), 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+					array('label'=>t('Signup', 'main'), 'url'=>array('/site/signup'), 'visible'=>Yii::app()->user->isGuest),
 					array('label'=>Yii::app()->user->name, 'url'=>array('/user/view', 'id'=>Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
-					array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					array('label'=>t('Logout', 'main'), 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 				),
 				'htmlOptions'=>array('class'=>'nav navbar-nav pull-right'),
 			)); 

@@ -20,7 +20,7 @@
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'bp_title', array('class'=>'col-lg-2 control-label')); ?>
-		<div class="col-lg-4">
+		<div class="col-lg-6">
 			<?php echo $form->textField($model,'bp_title', array('class'=>'form-control')); ?>
 			<?php echo $form->error($model,'bp_title'); ?>
 		</div>
