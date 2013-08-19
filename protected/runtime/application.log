@@ -9046,3 +9046,465 @@ REQUEST_URI=/index.php?r=user/update
 in /home/linux/www/bizui/themes/bootstrap/views/user/_form.php (30)
 in /home/linux/www/bizui/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php (47)
 in /home/linux/www/bizui/themes/bootstrap/views/user/update.php (14)
+2013/08/19 17:21:29 [error] [php] Object of class Posts could not be converted to string (/home/linux/www/bizui/protected/commands/TestCommand.php:22)
+Stack trace:
+#0 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#1 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#4 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#5 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/19 17:22:11 [error] [php] Object of class Posts could not be converted to string (/home/linux/www/bizui/protected/commands/TestCommand.php:22)
+Stack trace:
+#0 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#1 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#4 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#5 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/19 17:27:26 [error] [php] Object of class Posts could not be converted to string (/home/linux/www/bizui/protected/commands/TestCommand.php:17)
+Stack trace:
+#0 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#1 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#4 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#5 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/19 18:07:08 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.:score" is not defined.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set(':score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), 10, Array, Array)
+#4 /home/linux/www/bizui/protected/commands/TestCommand.php(16): CActiveRecord->updateByPk(10, 'bp_score=:score', Array)
+#5 [internal function]: TestCommand->actionIndex()
+#6 /home/linux/www/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(TestCommand), Array)
+#7 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#10 /home/linux/www/yii/framework/yiic.php(33): CApplication->run()
+#11 /home/linux/www/bizui/protected/yiic.php(7): require_once('/home/linux/www...')
+#12 /home/linux/www/bizui/protected/yiic(4): require_once('/home/linux/www...')
+#13 {main}
+---
+2013/08/19 18:07:14 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.:score" is not defined.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set(':score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), 10, Array, Array)
+#4 /home/linux/www/bizui/protected/commands/TestCommand.php(16): CActiveRecord->updateByPk(10, 'bp_score=:score', Array)
+#5 [internal function]: TestCommand->actionIndex()
+#6 /home/linux/www/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(TestCommand), Array)
+#7 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#10 /home/linux/www/yii/framework/yiic.php(33): CApplication->run()
+#11 /home/linux/www/bizui/protected/yiic.php(7): require_once('/home/linux/www...')
+#12 /home/linux/www/bizui/protected/yiic(4): require_once('/home/linux/www...')
+#13 {main}
+---
+2013/08/19 18:07:39 [error] [php] Invalid argument supplied for foreach() (/home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php:368)
+Stack trace:
+#0 unknown(0): TestCommand->actionIndex()
+#1 /home/linux/www/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#3 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#6 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#7 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/19 18:08:18 [error] [php] Invalid argument supplied for foreach() (/home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php:368)
+Stack trace:
+#0 unknown(0): TestCommand->actionIndex()
+#1 /home/linux/www/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#3 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#6 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#7 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/19 18:08:20 [error] [php] Invalid argument supplied for foreach() (/home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php:368)
+Stack trace:
+#0 unknown(0): TestCommand->actionIndex()
+#1 /home/linux/www/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#3 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#6 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#7 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/19 18:20:23 [error] [php] Invalid argument supplied for foreach() (/home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php:368)
+Stack trace:
+#0 unknown(0): TestCommand->actionIndex()
+#1 /home/linux/www/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#3 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#6 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#7 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/19 18:27:16 [error] [php] Invalid argument supplied for foreach() (/home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php:368)
+Stack trace:
+#0 unknown(0): TestCommand->actionIndex()
+#1 /home/linux/www/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#3 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#6 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#7 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/19 18:30:18 [error] [php] Invalid argument supplied for foreach() (/home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php:368)
+Stack trace:
+#0 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#1 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/linux/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#3 /home/linux/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#4 /home/linux/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#5 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/linux/www/bizui/index.php(16): CWebApplication->run()
+REQUEST_URI=/index.php
+in /home/linux/www/bizui/protected/controllers/SiteController.php (33)
+in /home/linux/www/bizui/index.php (16)
+2013/08/19 18:30:19 [error] [php] Invalid argument supplied for foreach() (/home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php:368)
+Stack trace:
+#0 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#1 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/linux/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#3 /home/linux/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#4 /home/linux/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#5 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/linux/www/bizui/index.php(16): CWebApplication->run()
+REQUEST_URI=/index.php
+in /home/linux/www/bizui/protected/controllers/SiteController.php (33)
+in /home/linux/www/bizui/index.php (16)
+2013/08/19 18:30:39 [error] [exception.CDbException] exception 'CDbException' with message 'table "bz_posts" 没有任何栏位将被更新.' in /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php:392
+Stack trace:
+#0 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1747): CDbCommandBuilder->createUpdateCommand(Object(CMysqlTableSchema), Array, Object(CDbCriteria))
+#1 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', Array)
+#2 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/linux/www/bizui/index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:31:40 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :sco...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:31:41 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :sco...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:32:25 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.bp_score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('bp_score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :bp_...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:32:26 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.bp_score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('bp_score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :bp_...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:32:27 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.bp_score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('bp_score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :bp_...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:33:09 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.bp_score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('bp_score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), 10, Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk(10, 'bp_score = :bp_...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:34:28 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.:score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set(':score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :sco...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:34:29 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.:score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set(':score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :sco...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:34:38 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.:score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set(':score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score =:scor...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:34:50 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.:bp_score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set(':bp_score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :bp_...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:39:59 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :sco...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:40:01 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :sco...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:40:12 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.bp_score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('bp_score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '10', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('10', 'bp_score = :bp_...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:41:48 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.bp_score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('bp_score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), 'bp_id', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('bp_id', 'bp_score = :bp_...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:41:49 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.bp_score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('bp_score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), 'bp_id', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('bp_id', 'bp_score = :bp_...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
+2013/08/19 18:41:50 [error] [exception.CException] exception 'CException' with message '属性 "CDbCriteria.bp_score" 未被定义.' in /home/linux/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/linux/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('bp_score', 10)
+#1 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 /home/linux/www/yii/framework/db/schema/CDbCommandBuilder.php(614): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/linux/www/yii/framework/db/ar/CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), 'bp_id', Array, Array)
+#4 /home/linux/www/bizui/protected/controllers/SiteController.php(33): CActiveRecord->updateByPk('bp_id', 'bp_score = :bp_...', Array)
+#5 /home/linux/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /home/linux/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/linux/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/linux/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/linux/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /home/linux/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /home/linux/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/linux/www/bizui/index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://bizui.com/
+---
