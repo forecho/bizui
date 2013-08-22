@@ -51,8 +51,11 @@ class PostsController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$row = $this->loadModel($id);
 
 		$comments = Comments::model()->findAllBySql("SELECT *, CONCAT( bc_path,  '-', bc_id ) AS bpath FROM  {{comments}} WHERE bp_id=$id ORDER BY bpath, bc_create_time");
+
+		$user=User::model()->find('bu_id='.$row->bu_id);
 
 		$model=new Comments;
 
@@ -63,19 +66,35 @@ class PostsController extends Controller
 				$this->redirect(array('site/login'));
 				Yii::app()->end();
 			}
-
+			//echo app()->user->getEmail();
 			$model->attributes=$_POST['Comments'];
 			$model->bu_id=Yii::app()->user->id;
 			$model->bp_id=$id;
 			$model->bc_parent='0';
 			$model->bc_create_time=time();
 
-			if($model->save())
+			if($model->save()){
+				if ($user['bu_email']!=app()->user->getEmail()) {
+					# code...
+					
+				    $mailer = Yii::app()->phpMailer->_mailer;
+				    $mailer->Subject = Yii::app()->user->getName().'刚刚评论了:'.$row->bp_title;
+				    $mailer->Body = '<p>Hi,'.$_POST['LoginForm']['bu_name'].'</p>
+						<p>'.Yii::app()->user->getName().'在'.CHtml::link($row->bp_title, app()->homeUrl.$this->createUrl(array('posts/view'))).' 发表评论如下:</p>
+						<pre>'.$_POST['Comments']['bc_text'].'</pre>
+						<p>你可以点击这里查看评论:</p>
+						<p>'.CHtml::link(app()->homeUrl.$this->createUrl('posts/view'), app()->homeUrl.$this->createUrl(array('posts/view'))).'</p>
+						--'.app()->name;
+				    $mailer->AddAddress($user['bu_email']);
+				    $mailer->send();
+				}
+
 				$this->redirect(array('view','id'=>$id));
+			}
 		}
 
 		$this->render('view',array(
-			'row'=>$this->loadModel($id),
+			'row'=>$row,
 			'comments'=>$comments,
 			'model'=>$model,
 		));
