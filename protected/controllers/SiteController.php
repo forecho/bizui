@@ -97,6 +97,18 @@ class SiteController extends Controller
             $model->attributes=$_POST['LoginForm'];
             if($model->validate()){
             	if($model->signup()){ 
+            		//欢迎加入 email
+            		$mailer = Yii::app()->phpMailer->_mailer;
+				    $mailer->Subject = '欢迎加入 '.app()->name;
+				    $mailer->Body = '<p>Hi,'.$_POST['LoginForm']['bu_name'].'</p>
+						<p>你在'.date('Y-m-d H:i:m',time()).'成功注册了 '.CHtml::link(app()->name, app()->homeUrl).' 的账号。</p>
+						<p>登录页面地址:<a href="'.Yii::app()->homeUrl.$this->createUrl('site/login').'">'.Yii::app()->homeUrl.$this->createUrl('site/login').'</a></p>
+						<p>如果这个请求不是由你发起的，那没问题，你不用担心，你可以安全地忽略这封邮件。</p>
+						<p>如果你有任何疑问，可以回复这封邮件向我们提问。</p>
+						--'.app()->name;
+				    $mailer->AddAddress($_POST['LoginForm']['bu_email']);
+				    $mailer->send();
+
 				   $this->redirect(array('login'));
 				}
             }
@@ -152,11 +164,11 @@ class SiteController extends Controller
 				$mailer = Yii::app()->phpMailer->_mailer;
 		        $mailer->Subject = '找回密码';
 		        $mailer->Body = '<p>Hi,</p>
-					<p>我们的系统在'.date('Y-m-d H:i:m',time()).'收到一个请求，说你希望通过电子邮件重新设置你在 你丫闭嘴 的密码。你可以在2个小时之内点击下面的链接开始重设密码：</p>
+					<p>我们的系统在'.date('Y-m-d H:i:m',time()).'收到一个请求，说你希望通过电子邮件重新设置你在 '.app()->name.' 的密码。你可以在2个小时之内点击下面的链接开始重设密码：</p>
 					<p><a href="'.Yii::app()->homeUrl.$this->createUrl('user/newpwd', array('decdata'=>$encdata)).'">'.Yii::app()->homeUrl.$this->createUrl('user/newpwd', array('decdata'=>$encdata)).'</a></p>
 					<p>如果这个请求不是由你发起的，那没问题，你不用担心，你可以安全地忽略这封邮件。</p>
 					<p>如果你有任何疑问，可以回复这封邮件向我们提问。</p>
-					--你丫闭嘴';
+					--'.app()->name;
 		        $mailer->AddAddress($address);
 		        if ($mailer->send()) {
 			        Yii::app()->user->setFlash('success', t('email_send_success', 'model'));  
