@@ -66,7 +66,7 @@ class PostsController extends Controller
 				$this->redirect(array('site/login'));
 				Yii::app()->end();
 			}
-			//echo app()->user->getEmail();
+
 			$model->attributes=$_POST['Comments'];
 			$model->bu_id=Yii::app()->user->id;
 			$model->bp_id=$id;
@@ -74,16 +74,16 @@ class PostsController extends Controller
 			$model->bc_create_time=time();
 
 			if($model->save()){
-				if ($user['bu_email']!=app()->user->getEmail()) {
+				if ($user['bu_id']!=app()->user->id) {
 					# code...
 					
 				    $mailer = Yii::app()->phpMailer->_mailer;
 				    $mailer->Subject = Yii::app()->user->getName().'刚刚评论了:'.$row->bp_title;
-				    $mailer->Body = '<p>Hi,'.$_POST['LoginForm']['bu_name'].'</p>
-						<p>'.Yii::app()->user->getName().'在'.CHtml::link($row->bp_title, app()->homeUrl.$this->createUrl(array('posts/view'))).' 发表评论如下:</p>
-						<pre>'.$_POST['Comments']['bc_text'].'</pre>
+				    $mailer->Body = '<p>Hi,'.$user['bu_name'].'</p>
+						<p>'.Yii::app()->user->getName().'在'.CHtml::link($row->bp_title, app()->homeUrl.$this->createUrl('posts/view', array('id'=>$id))).' 发表评论如下:</p>
+						<pre style="border:1px solid #ddd;padding:10px 20px;font-family:sans-serif;background:#f2f2f2;line-height:24px">'.$_POST['Comments']['bc_text'].'</pre>
 						<p>你可以点击这里查看评论:</p>
-						<p>'.CHtml::link(app()->homeUrl.$this->createUrl('posts/view'), app()->homeUrl.$this->createUrl(array('posts/view'))).'</p>
+						<p>'.CHtml::link(app()->homeUrl.$this->createUrl('posts/view', array('id'=>$id)), app()->homeUrl.$this->createUrl('posts/view', array('id'=>$id))).'</p>
 						--'.app()->name;
 				    $mailer->AddAddress($user['bu_email']);
 				    $mailer->send();
