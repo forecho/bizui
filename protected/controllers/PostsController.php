@@ -93,6 +93,8 @@ class PostsController extends Controller
 			}
 		}
 
+		$this->pageTitle = $row->bp_title.' - '.app()->name;
+
 		$this->render('view',array(
 			'row'=>$row,
 			'comments'=>$comments,
@@ -123,7 +125,8 @@ class PostsController extends Controller
 			$model->attributes=$_POST['Posts'];
 			//如果没有title 就自动抓取
 			if ($_POST['Posts']['bp_title']=='' && $_POST['Posts']['bp_url']) {
-				$model->bp_title=GetSiteMeta($_POST['Posts']['bp_url']);
+				$title=GetSiteMeta($_POST['Posts']['bp_url']);
+				$model->bp_title=str_replace('—在线播放—优酷网，视频高清在线观看', '', $title);
 			}
 			
 			if($model->save()){
