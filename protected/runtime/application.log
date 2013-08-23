@@ -9837,3 +9837,40 @@ Stack trace:
 REQUEST_URI=/index.php?r=posts/view&id=22
 in /home/linux/www/bizui/protected/controllers/PostsController.php (83)
 in /home/linux/www/bizui/index.php (16)
+2013/08/23 14:53:20 [error] [php] Undefined variable: id (/home/linux/www/bizui/protected/commands/TestCommand.php:28)
+Stack trace:
+#0 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#1 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#4 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#5 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/23 14:54:22 [error] [php] Constant RANK_G already defined (/home/linux/www/bizui/protected/commands/TestCommand.php:19)
+Stack trace:
+#0 /home/linux/www/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#2 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#5 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#6 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/23 14:55:19 [error] [php] Use of undefined constant RANK_G - assumed 'RANK_G' (/home/linux/www/bizui/protected/commands/TestCommand.php:27)
+Stack trace:
+#0 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#1 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#4 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#5 /home/linux/www/bizui/protected/yiic(4): require_once()
+
+2013/08/23 15:02:59 [error] [php] Use of undefined constant n - assumed 'n' (/home/linux/www/bizui/protected/commands/TestCommand.php:34)
+Stack trace:
+#0 /home/linux/www/yii/framework/console/CConsoleCommandRunner.php(71): TestCommand->run()
+#1 /home/linux/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /home/linux/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /home/linux/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#4 /home/linux/www/bizui/protected/yiic.php(7): require_once()
+#5 /home/linux/www/bizui/protected/yiic(4): require_once()
+
