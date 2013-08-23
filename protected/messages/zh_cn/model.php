@@ -14,7 +14,7 @@ return array(
 	
     'bu_reg_ip' => 'Bu Reg Ip',
 	'bu_last_ip' => 'Bu Last Ip',
-	'bu_last_time' => 'Bu Last Time',
+	'bu_last_time' => '最后登录时间',
 	'bp_create_time' => 'Bp Create Time',
     'bu_status' => 'Bu Status',
     'bu_create_time' => '加入时间',

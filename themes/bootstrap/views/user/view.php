@@ -23,6 +23,10 @@ $this->menu=array(
             'name'=>t('bu_create_time', 'model'),
             'value'=>date('Y-m-d H:i',$model->bu_create_time),
         ),
+        array(
+            'name'=>t('bu_last_time', 'model'),
+            'value'=>date('Y-m-d H:i',$model->bu_last_time),
+        ),
 		'bu_reputation',
 		array(
             'name'=>t('bu_about', 'model'),
