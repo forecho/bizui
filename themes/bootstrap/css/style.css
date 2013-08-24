@@ -64,7 +64,10 @@ a:visited {
 
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
 	z-index: 2;
-	color: #ffffff;
 	background-color: #428bca;
 	border-color: #428bca;
+}
+
+.list-group-item.active a {
+	color: #ffffff;
 }
