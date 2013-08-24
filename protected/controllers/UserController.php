@@ -6,8 +6,7 @@ class UserController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	//public $layout='//layouts/column2';
-	public $layout='//layouts/main';
+	public $layout='//layouts/user';
 
 	/**
 	 * @return array action filters
@@ -33,7 +32,7 @@ class UserController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','changepwd'),
+				'actions'=>array('create','update','changepwd','myposts','mycomments','likecomments','likeposts'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -140,6 +139,60 @@ class UserController extends Controller
 			'model'=>$model,
 		));
 
+	}
+
+
+	//我喜欢的文章
+	public function actionLikeposts()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$model = new Save;
+		$model->bu_id = Yii::app()->user->id;
+		$model->type = '1';
+
+		$this->render('likeposts', array(
+				'model'=>$model,
+			));
+	}
+
+
+	//我的文章
+	public function actionMyposts()
+	{
+
+		$model = new Posts;
+		$model->bu_id = Yii::app()->user->id;
+
+		$this->render('myposts', array(
+				'model'=>$model,
+			));
+	}
+
+	//我赞的评论
+	public function actionLikecomments()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$model = new Save;
+		$model->bu_id = Yii::app()->user->id;
+		$model->type = '2';
+
+		$this->render('likecomments', array(
+				'model'=>$model,
+			));
+	}
+
+	//我发布的评论
+	public function actionMycomments()
+	{
+
+		$model = new Comments;
+		$model->bu_id = Yii::app()->user->id;
+
+		$this->render('mycomments', array(
+				'model'=>$model,
+			));
 	}
 
 	/**

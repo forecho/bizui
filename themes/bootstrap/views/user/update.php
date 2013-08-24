@@ -1,14 +1,8 @@
-<?php
-/* @var $this UserController */
-/* @var $model User */
-
-// $this->breadcrumbs=array(
-// 	'Users'=>array('index'),
-// 	$model->bu_id=>array('view','id'=>$model->bu_id),
-// 	'Update',
-// );
-?>
-
-<h1>Update User <?php echo $model->bu_id; ?></h1>
+<div class="form-group">
+	<div class="col-lg-offset-2 col-lg-10">
+		<h3><?php echo t('update_user','model'); ?></h3>
+	</div>
+</div>
+</br>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

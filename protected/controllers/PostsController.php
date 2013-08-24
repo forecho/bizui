@@ -218,21 +218,6 @@ class PostsController extends Controller
 	}
 
 
-	//我喜欢的文章
-	public function actionLikeposts()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$model = new Save;
-		$model->bu_id = Yii::app()->user->id;
-		$model->type = '1';
-
-		$this->render('likeposts', array(
-				'model'=>$model,
-			));
-	}
-
-
 	/**
 	 * 更新赞和Score值
 	 */

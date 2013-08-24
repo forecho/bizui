@@ -117,31 +117,4 @@ class CommentsController extends Controller
 		}
 	}
 
-	//我发布的评论
-	public function actionMycomments()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$model = new Comments;
-		$model->bu_id = Yii::app()->user->id;
-
-		$this->render('index', array(
-				'model'=>$model,
-			));
-	}
-
-	//我赞的评论
-	public function actionLikecomments()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$model = new Save;
-		$model->bu_id = Yii::app()->user->id;
-		$model->type = '2';
-
-		$this->render('likecomments', array(
-				'model'=>$model,
-			));
-	}
-
 }

@@ -52,3 +52,11 @@ a:visited {
 .box-cell span img{
 	cursor: pointer;
 }
+
+.panel-heading {
+	margin: -15px -15px;
+	border-bottom: none;
+}
+.panel-title {
+	font-size: 15px;
+}

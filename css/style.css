@@ -70,3 +70,9 @@ ul {
 .box-item span img{
 	cursor: pointer;
 }
+
+
+#yw1 .panel-heading {
+	margin: -15px -15px;
+	border-bottom: none;
+}

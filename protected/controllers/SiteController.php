@@ -2,6 +2,7 @@
 
 class SiteController extends Controller
 {
+	public $layout='//layouts/column1';
 	public $pageTitle='';
 	/**
 	 * Declares class-based actions.
@@ -34,9 +35,11 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$model = new Posts;
 		$model->order = 'bp_score DESC, bp_create_time DESC';
+		$user = User::model()->findAll(array('order'=>'bu_reputation', 'limit'=>10));
 
 		$this->render('index', array(
 				'model'=>$model,
+				'user'=>$user,
 			));
 	}
 
@@ -49,9 +52,11 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$model = new Posts;
 		$model->order = 'bp_create_time DESC';
+		$user = User::model()->findAll(array('order'=>'bu_reputation', 'limit'=>10));
 
 		$this->render('index', array(
 				'model'=>$model,
+				'user'=>$user,
 			));
 	}
 
@@ -133,19 +138,6 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
-
-	//我的文章
-	public function actionMyposts()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$model = new Posts;
-		$model->bu_id = Yii::app()->user->id;
-
-		$this->render('index', array(
-				'model'=>$model,
-			));
-	}
 
 	//发邮件
 	public function actionReset()

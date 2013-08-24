@@ -1,13 +1,7 @@
 <?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
-?>
-<div class="col-lg-9">
-<?php
 $this->widget('zii.widgets.CListView', array(
     'dataProvider'=>$model->search(),
-    'itemView'=>'_post', 
+    'itemView'=>'_myposts', 
     'emptyText'=>'暂时没有数据',  
    	'template'=>'{items}{pager}',
     'pager' => array(
@@ -22,21 +16,6 @@ $this->widget('zii.widgets.CListView', array(
     'pagerCssClass'=>'',
 ));
 ?>
-</div>
-<div class="col-lg-3">
-    <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">
-            <h5 class="panel-title">声望总排行榜</h5>
-        </div>
-        <!-- List group -->
-        <ul class="list-group">
-            <?php foreach ($user as $key => $value) :?>
-                <li class="list-group-item"><?php echo CHtml::link($value->bu_name, array('user/view', 'id'=>$value->bu_id)); ?></li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-</div>
 <script type="text/javascript">
 //赞
 <?php  if (Yii::app()->user->id){ ?>

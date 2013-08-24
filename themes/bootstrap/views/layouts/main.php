@@ -48,18 +48,7 @@
 
 </div>
 <div class="container bs-docs-container">
-	<div class="col-lg-9"><?php echo $content; ?></div>
-	<div class="col-lg-3">
-		<?php
-
-			$this->widget('zii.widgets.CMenu', array(
-				'items'=>$this->menu,
-				'htmlOptions'=>array('class'=>'list-group'),
-				'itemCssClass'=>'list-group-item',
-			));
-
-		?>
-	</div>
+	<?php echo $content; ?>
 </div>
 
 <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/bootstrap.min.js"></script>

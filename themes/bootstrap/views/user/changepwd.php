@@ -1,14 +1,3 @@
-<?php
-/* @var $this UserController */
-/* @var $model User */
-
-// $this->breadcrumbs=array(
-// 	'Users'=>array('index'),
-// 	$model->bu_id=>array('view','id'=>$model->bu_id),
-// 	'Update',
-// );
-?>
-
 <div class="form-group">
 	<div class="col-lg-offset-2 col-lg-10">
 		<h3><?php echo t('change_password','main'); ?></h3>
