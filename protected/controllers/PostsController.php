@@ -126,8 +126,7 @@ class PostsController extends Controller
 			//如果没有title 就自动抓取
 			if ($_POST['Posts']['bp_title']=='' && $_POST['Posts']['bp_url']) {
 				$title=GetSiteMeta($_POST['Posts']['bp_url']);
-				echo $model->bp_title=str_replace('—优酷网，视频高清在线观看', '', $title);
-				exit();
+				$model->bp_title=str_replace('—优酷网，视频高清在线观看', '', $title);
 			}
 			
 			if($model->save()){
