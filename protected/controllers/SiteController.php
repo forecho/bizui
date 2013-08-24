@@ -35,7 +35,7 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$model = new Posts;
 		$model->order = 'bp_score DESC, bp_create_time DESC';
-		$user = User::model()->findAll(array('order'=>'bu_reputation', 'limit'=>10));
+		$user = User::model()->findAll(array('order'=>'bu_reputation DESC', 'limit'=>10));
 
 		$this->render('index', array(
 				'model'=>$model,
