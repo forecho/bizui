@@ -11,3 +11,8 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 </div>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php 
+
+	$vider = Yii::createComponent('application.extensions.yii-vider.CPhpVider');
+	$vider->parse = '';
+?>
