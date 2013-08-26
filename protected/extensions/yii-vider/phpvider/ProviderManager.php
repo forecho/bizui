@@ -1,6 +1,6 @@
 <?php
 
-namespace Topxia\Component\OEmbed;
+//namespace Topxia\Component\OEmbed;
 
 class ProviderManager {
     

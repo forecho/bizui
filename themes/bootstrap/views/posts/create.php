@@ -14,5 +14,6 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 <?php 
 
 	$vider = Yii::createComponent('application.extensions.yii-vider.CPhpVider');
-	$vider->parse = '';
+	$vider->parse = 'http://v.youku.com/v_show/id_XMjc0NDYzMDI4.html';
+	print_r($vider);
 ?>
