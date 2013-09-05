@@ -214,7 +214,7 @@ class VideoClass{
         $json = $json['info'];
         $r['vid'] = $json['textid'];
         $r['url'] = 'http://www.56.com/u/v_'. $json['textid'] .'.html?ref=lianyue.org';
-        $r['swf'] = 'http://player.56.com/v_'. $json['textid'] .'.swf?ref=lianyue';
+        $r['swf'] = 'http://player.56.com/v_'. $json['textid'] .'.swf';
         $r['title'] = $json['Subject'];
         $r['img']['large'] = $json['bimg'];
         $r['img']['small'] = $json['img'];
