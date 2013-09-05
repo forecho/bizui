@@ -36,6 +36,11 @@
 		<?php echo tranTime($row->bp_create_time); ?>
 		|
 		<?php echo CHtml::link(Comments::model()->Count('bp_id='.$row->bp_id).'条评论', array('/posts/view', 'id'=>$row->bp_id)); ?></p>
+		<?php if($row->bp_video_url): ?>
+			<object type="application/x-shockwave-flash" data="<?php echo $row->bp_video_url; ?>" width="100%" height="520px">
+			    <param name="movie" value="<?php echo $row->bp_video_url; ?>">
+			</object>
+		<?php endif; ?>
 		<?php echo ($row->bp_content)?'<pre>'.$row->bp_content.'</pre>':''; ?>
 	</div>
 
