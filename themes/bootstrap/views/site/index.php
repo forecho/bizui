@@ -60,7 +60,7 @@ function getScore(id,that){
 
 //显示、隐藏视频
 $(document).ready(function(){
-    $(".box-cell object").hide();
+    // $(".box-cell object").hide();
     $(".video-thumb").live("click", function(){
         $(this).parent().next().toggle();
     })

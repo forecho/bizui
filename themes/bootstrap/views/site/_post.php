@@ -44,7 +44,7 @@
 
 </li>
 <?php if($data->bp_video_url): ?>
-<object type="application/x-shockwave-flash" data="<?php echo $data->bp_video_url; ?>" width="100%" height="520px">
+<object type="application/x-shockwave-flash" data="<?php echo $data->bp_video_url; ?>" width="100%" height="520px" style="display: none;">
     <param name="movie" value="<?php echo $data->bp_video_url; ?>">
 </object>
 <?php endif; ?>
