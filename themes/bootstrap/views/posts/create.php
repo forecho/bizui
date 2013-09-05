@@ -11,3 +11,21 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 </div>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php 
+
+	// $vider = Yii::createComponent('application.extensions.yii-vider.CPhpVider');
+	// $vider->url = 'http://v.youku.com/v_show/id_XMjc0NDYzMDI4.html';
+	// $vider->type = 'parse';
+	//print_r($vider->_manager);
+
+	echo "<pre>";
+	$vider = Yii::createComponent('application.components.VideoClass');
+	$url = 'http://www.56.com/u13/v_NTg3NjQ5OTQ.html';
+	print_r( $vider_arr = call_user_func_array( array($vider, 'parse' ), array( $url ) ) );
+
+
+?>
+<div class="video-thumb">
+	<img src="<?php echo $vider_arr['img']['large']?>">
+	<i class="video-play-icon"></i>
+</div>

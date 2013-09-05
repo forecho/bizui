@@ -19,7 +19,7 @@ $this->widget('zii.widgets.CListView', array(
     'htmlOptions'=>array('class'=>'list-group'),
     'itemsTagName'=>'ol',
     'itemsCssClass'=>'box-cell',
-    'pagerCssClass'=>'',
+    'pagerCssClass'=>'pagination',
 ));
 ?>
 </div>
@@ -57,4 +57,12 @@ function getScore(id,that){
 	location.href = "<?php echo Yii::app()->createUrl('/site/login') ?>";
 };
 <?php } ?>
+
+//显示、隐藏视频
+$(document).ready(function(){
+    $(".box-cell object").hide();
+    $(".video-thumb").live("click", function(){
+        $(this).parent().next().toggle();
+    })
+});
 </script>

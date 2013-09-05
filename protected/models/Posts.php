@@ -9,6 +9,7 @@
  * @property string $bp_title
  * @property string $bp_url
  * @property string $bp_video_url
+ * @property string $bp_img_url
  * @property string $bp_content
  * @property string $bp_score
  * @property integer $bp_like
@@ -47,13 +48,13 @@ class Posts extends CActiveRecord
 		return array(
 			array('bp_url', 'required'),
 			array('bu_id, bp_like, bp_create_time', 'numerical', 'integerOnly'=>true),
-			array('bp_title, bp_url, bp_video_url, bp_content', 'length', 'max'=>255),
+			array('bp_title, bp_url, bp_video_url, bp_img_url, bp_content', 'length', 'max'=>255),
 			array('bp_score', 'length', 'max'=>20),
 			array('bp_url', 'url'),
 			array('bp_url', 'unique'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('bp_id, bu_id, bp_title, bp_url, bp_video_url, bp_content, bp_score, bp_like, bp_create_time, order', 'safe', 'on'=>'search'),
+			array('bp_id, bu_id, bp_title, bp_url, bp_video_url, bp_img_url, bp_content, bp_score, bp_like, bp_create_time, order', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -80,6 +81,7 @@ class Posts extends CActiveRecord
 			'bp_title' => '标题',
 			'bp_url' => '网页地址',
 			'bp_video_url' => 'Bp Video Url',
+			'bp_img_url' => 'Bp Img Url',
 			'bp_content' => '简介',
 			'bp_score' => 'Bp Score',
 			'bp_like' => 'Bp Like',
@@ -103,6 +105,7 @@ class Posts extends CActiveRecord
 		$criteria->compare('bp_title',$this->bp_title,true);
 		$criteria->compare('bp_url',$this->bp_url,true);
 		$criteria->compare('bp_video_url',$this->bp_video_url,true);
+		$criteria->compare('bp_img_url',$this->bp_img_url,true);
 		$criteria->compare('bp_content',$this->bp_content,true);
 		$criteria->compare('bp_score',$this->bp_score,true);
 		$criteria->compare('bp_like',$this->bp_like);

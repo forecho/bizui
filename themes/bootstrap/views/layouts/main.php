@@ -9,6 +9,7 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" />
+	<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>

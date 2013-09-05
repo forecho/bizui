@@ -71,3 +71,22 @@ a:visited {
 .list-group-item.active a {
 	color: #ffffff;
 }
+.video-thumb {
+	position: relative;
+	float: right;
+	cursor: pointer;
+}
+.video-thumb img{
+	width: 100px;
+	height: 62px;
+	border: 0;
+}
+.video-thumb .video-play-icon {
+	width: 101px;
+	height: 61px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/play-icon.png) no-repeat center;
+	opacity: .8;
+}

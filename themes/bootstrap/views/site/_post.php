@@ -4,6 +4,12 @@
 ?>
 
 <li class="list-group-item <?php echo ($index==0)?'':'mt20'; ?>">
+	<?php if ($data->bp_img_url): ?>
+		<div class="video-thumb">
+			<img src="<?php echo $data->bp_img_url?>">
+			<i class="video-play-icon"></i>
+		</div>
+	<?php endif ?>
 	<p>
 		<?php if (Yii::app()->user->id) {
 			$saveCount = Save::model()->countByAttributes(array('bp_id'=>$data->bp_id, 'bu_id'=>Yii::app()->user->id, 'type'=>'1'));
@@ -35,6 +41,7 @@
 	<?php echo tranTime($data->bp_create_time); ?>
 	|
 	<?php echo CHtml::link(Comments::model()->Count('bp_id='.$data->bp_id).'条评论', array('/posts/view', 'id'=>$data->bp_id)); ?></p>
+
 </li>
 <?php if($data->bp_video_url): ?>
 <object type="application/x-shockwave-flash" data="<?php echo $data->bp_video_url; ?>" width="100%" height="520px">

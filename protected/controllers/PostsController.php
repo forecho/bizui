@@ -138,6 +138,7 @@ class PostsController extends Controller
 			}
 			//SWF视频地址
 			$model->bp_video_url = $vider_arr['swf'];
+			$model->bp_img_url = $vider_arr['img']['large'];
 
 			if($model->save()){
 				if ($_POST['Posts']['bp_url']) {
