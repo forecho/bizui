@@ -36,3 +36,8 @@
 	|
 	<?php echo CHtml::link(Comments::model()->Count('bp_id='.$data->bp_id).'条评论', array('/posts/view', 'id'=>$data->bp_id)); ?></p>
 </li>
+<?php if($data->bp_video_url): ?>
+<object type="application/x-shockwave-flash" data="<?php echo $data->bp_video_url; ?>" width="100%" height="520px">
+    <param name="movie" value="<?php echo $data->bp_video_url; ?>">
+</object>
+<?php endif; ?>

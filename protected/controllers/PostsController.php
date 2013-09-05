@@ -123,12 +123,22 @@ class PostsController extends Controller
 			$model->bp_create_time=time();
 			$model->bp_like='1';
 			$model->attributes=$_POST['Posts'];
+			//调用视频类
+			$vider = Yii::createComponent('application.components.VideoClass');
+			$vider_arr = call_user_func_array(array($vider, 'parse'), array( $_POST['Posts']['bp_url']));
+
 			//如果没有title 就自动抓取
 			if ($_POST['Posts']['bp_title']=='' && $_POST['Posts']['bp_url']) {
-				$title=GetSiteMeta($_POST['Posts']['bp_url']);
-				$model->bp_title=str_replace('—优酷网，视频高清在线观看', '', $title);
+				if ($vider_arr['title']) {
+					$model->bp_title = $vider_arr['title'];
+				}else{
+					$title=GetSiteMeta($_POST['Posts']['bp_url']);
+					$model->bp_title=str_replace('—优酷网，视频高清在线观看', '', $title);
+				}
 			}
-			
+			//SWF视频地址
+			$model->bp_video_url = $vider_arr['swf'];
+
 			if($model->save()){
 				if ($_POST['Posts']['bp_url']) {
 					//发一个链接有5点声望
