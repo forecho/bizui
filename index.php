@@ -4,7 +4,7 @@
 $yii=dirname(__FILE__).'/../yii/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
 //加载全局函数
-$globals = dirname(__FILE__) . '/protected/globals.php';
+$globals = dirname(__FILE__).'/protected/globals.php';
 
 // remove the following lines when in production mode
 defined('YII_DEBUG') or define('YII_DEBUG',true);

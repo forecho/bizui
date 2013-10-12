@@ -58,3 +58,4 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+
