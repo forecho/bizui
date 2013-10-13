@@ -93,6 +93,49 @@ class SiteController extends Controller
 		$this->render('login',array('model'=>$model));
 	}
 
+
+	public function actionAuth($provider)
+	{
+	    // 导入OAuth2China
+	    Yii::import('ext.OAuth2China.OAuth2China');
+	    // 配置给平台参数
+
+	    $providers = array(
+	        'weibo' => array(
+	            'id' => '3152003369',
+	            'secret' => '25a8ab3d284f29d079856e7b403f82e3',
+	        ),
+	        'qq' => array(
+	            'id' => '100536677',
+	            'secret' => 'cde66a7790463de80dc7993f8af9a6a1',
+	        ),
+	        // 'douban' => array(
+	        //     'id' => 'API Key',
+	        //     'secret' => 'Secret',
+	        // ),
+	        // 'renren' => array(
+	        //     'id' => 'API key',
+	        //     'secret' => 'Secret key',
+	        // ),
+	    );
+
+	    $OAuth2China = new OAuth2China($providers);
+
+	    $provider = $OAuth2China->getProvider($provider);
+
+	    if(!isset($_GET['code']))
+	    {
+	        // 跳转到授权页面
+	        $provider->redirect();
+	    }
+	    else
+	    {
+	        $token = $provider->getAccessToken($_GET['code']);
+	        var_dump($token);
+	    }
+	}
+
+
 	//注册
  	public function actionSignup()
 	{   

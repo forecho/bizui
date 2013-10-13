@@ -23,7 +23,9 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 	'htmlOptions'=>array(
 		'class'=>'form-horizontal',
 	)
-)); ?>
+)); 
+
+?>
 	
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'bu_email', array('class'=>'col-lg-2 control-label')); ?>
@@ -58,4 +60,3 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
-
