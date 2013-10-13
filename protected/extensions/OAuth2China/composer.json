@@ -1,0 +1,17 @@
+{
+    "name": "tlikai/oauth2china",
+    "type": "yii-extension",
+    "description": "Authorize users in you application with oauth 2.0 providers",
+    "keywords": ["oauth", "yii"],
+    "license": "New BSD",
+    "authors": [
+        {
+            "name": "Likai",
+            "email": "youyuge@gmail.com",
+            "homepage": "http://youyuge.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.0"
+    }
+}
