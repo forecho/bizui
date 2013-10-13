@@ -62,7 +62,7 @@ abstract class OAuth2China_Provider_Abstract
      */
     protected $options = array(
         'authorizeUrl' => '',
-        'accessTokenUrl' => 'http://www.niyabizui.com',
+        'accessTokenUrl' => '',
     );
 
     /**
