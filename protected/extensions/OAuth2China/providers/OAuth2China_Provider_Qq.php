@@ -42,7 +42,7 @@ class OAuth2China_Provider_Qq extends OAuth2China_Provider_Abstract
             preg_match('/callback\(\s+(.+?)\s+\);/', $response, $matches);
             return json_decode($matches[1]);
         }
-        var_dump($response);exit;
+        echo $response;exit;
         $data = array();
         parse_str($response, $data);
 
