@@ -126,7 +126,7 @@ class SiteController extends Controller
 	    if(!isset($_GET['code']))
 	    {
 	        // 跳转到授权页面
-	        $provider->redirect('http://www.niyabizui.com');
+	        $provider->redirect();
 	    }
 	    else
 	    {
