@@ -121,7 +121,7 @@ class SiteController extends Controller
 
 	    $OAuth2China = new OAuth2China($providers);
 
-	    $provider = $OAuth2China->getProvider($provider);
+	    $provider = $OAuth2China->getProvider('qq');
 
 	    if(!isset($_GET['code']))
 	    {
