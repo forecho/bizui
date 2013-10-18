@@ -10,6 +10,8 @@
  * @property string $bu_password
  * @property string $bu_reg_ip
  * @property string $bu_last_ip
+ * @property string $bu_weibo
+ * @property string $bu_qq
  * @property integer $bu_last_time
  * @property integer $bu_create_time
  * @property integer $bu_status
@@ -55,13 +57,13 @@ class User extends CActiveRecord
 			array('password_again','compare', 'compareAttribute'=>'password', 'on'=>'changepwd,newpwd', 'message'=>t('password_no_repeat', 'model')),
 			array('bu_last_time, bu_create_time, bu_status, bu_reputation', 'numerical', 'integerOnly'=>true),
 			array('bu_email', 'length', 'max'=>255),
-			array('bu_name, bu_reg_ip, bu_last_ip', 'length', 'max'=>25),
+			array('bu_name, bu_reg_ip, bu_last_ip, bu_weibo, bu_qq', 'length', 'max'=>25),
 			array('password, password_again', 'length', 'min'=>6, 'max'=>50),
 			array('bu_password', 'length', 'max'=>100),
 			array('bu_about','safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('bu_id, bu_email, bu_name, bu_password, bu_reg_ip, bu_last_ip, bu_last_time, bu_create_time, bu_status, bu_reputation, bu_about', 'safe', 'on'=>'search'),
+			array('bu_id, bu_email, bu_name, bu_password, bu_reg_ip, bu_last_ip, bu_weibo, bu_qq, bu_last_time, bu_create_time, bu_status, bu_reputation, bu_about', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -91,6 +93,8 @@ class User extends CActiveRecord
 			'password_again' => t('password_again', 'model'),
 			'bu_reg_ip' => 'Bu Reg Ip',
 			'bu_last_ip' => 'Bu Last Ip',
+			'bu_weibo' => 'Bu Weibo',
+			'bu_qq' => 'Bu Qq',
 			'bu_last_time' => 'Bu Last Time',
 			'bu_create_time' => 'Bu Create Time',
 			'bu_status' => 'Bu Status',
@@ -116,6 +120,8 @@ class User extends CActiveRecord
 		$criteria->compare('bu_password',$this->bu_password,true);
 		$criteria->compare('bu_reg_ip',$this->bu_reg_ip,true);
 		$criteria->compare('bu_last_ip',$this->bu_last_ip,true);
+		$criteria->compare('bu_weibo',$this->bu_weibo,true);
+		$criteria->compare('bu_qq',$this->bu_qq,true);
 		$criteria->compare('bu_last_time',$this->bu_last_time);
 		$criteria->compare('bu_create_time',$this->bu_create_time);
 		$criteria->compare('bu_status',$this->bu_status);

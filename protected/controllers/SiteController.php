@@ -205,7 +205,6 @@ class SiteController extends Controller
           }
        }
     }
-    
 
 	//注册
  	public function actionSignup()
