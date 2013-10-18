@@ -25,8 +25,7 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 	)
 )); 
 
-?>
-	
+?>	
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'bu_email', array('class'=>'col-lg-2 control-label')); ?>
 		<div class="col-lg-4">
@@ -57,6 +56,11 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 			<?php echo CHtml::submitButton(t('Login','main'), array('class'=>'btn btn-default')); ?>
 		</div>
 	</div>
+
+	<?php $this->widget('ext.oauthLogin.OauthLogin',array(
+	           'itemView'=>'medium_login', //效果样式
+	           'back_url'=>Yii::app()->homeUrl,//login成功后返回的页面
+	 )); ?>
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
