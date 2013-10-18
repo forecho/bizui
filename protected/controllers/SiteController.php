@@ -120,7 +120,13 @@ class SiteController extends Controller
                     $userShow  = $c->getUserShow(Yii::app()->session['sinaToken']); // done
                     //查询是否有绑定账号   
                     //$user = UserBinding::model()->with('user')->find('user_bind_type = :bind_type AND user_access_token = :access_token AND user_openid=:openid',array(':bind_type' =>'sina',':access_token' =>Yii::app()->session['sinaToken']['access_token'],':openid' =>Yii::app()->session['sinaToken']['uid']));
-                    $user='';
+                    $userBingding = array();
+                    $userBingding['access_token'] = Yii::app()->session['sinaToken']['access_token'];
+                    $userBingding['openid'] = Yii::app()->session['sinaToken']['uid'];
+                    $userBingding['username'] = $userShow['screen_name'];
+                    $userBingding['bind_type'] = 'sina';
+                    $userBingding['avatar'] = $userShow['profile_image_url']; 
+                    var_dump($userBingding);
 
                     //如果没有存在则创建账号及绑定
                     if (!isset($user)){
@@ -131,7 +137,6 @@ class SiteController extends Controller
                         $userBingding['bind_type'] = 'sina';
                         $userBingding['avatar'] = $userShow['profile_image_url']; 
                         //$userBind = UserBinding::addBinding($userBingding, $_REQUEST['state']);
-                        var_dump($userBingding);
                     }else{
                         Yii::app()->user->id = $user->user_id;
                         Yii::app()->user->name = $user->user->username;
