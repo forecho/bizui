@@ -171,7 +171,14 @@ class SiteController extends Controller
                     $userShow['profile_image_url'] = $userInfo['figureurl_2'];
                     //查询是否有绑定账号   
                     // $user = UserBinding::model()->with('user')->find('user_bind_type = :bind_type and user_openid=:openid',array(':bind_type' =>'qq',':openid' =>Yii::app()->session['qqToken']['openid']));
-                    $user='';
+                    $userBingding = array();
+                    $userBingding['access_token'] = Yii::app()->session['qqToken']['access_token'];
+                    $userBingding['openid'] = Yii::app()->session['qqToken']['openid'];
+                    $userBingding['username'] = $userShow['screen_name'];
+                    $userBingding['bind_type'] = 'qq';
+                    $userBingding['avatar'] = $userShow['profile_image_url']; 
+                    //$userBind = UserBinding::addBinding($userBingding, $_REQUEST['state']);
+                	var_dump($userBingding);
 
                     //如果没有存在则创建账号及绑定
                     if (!isset($user)){
@@ -182,7 +189,6 @@ class SiteController extends Controller
                         $userBingding['bind_type'] = 'qq';
                         $userBingding['avatar'] = $userShow['profile_image_url']; 
                         //$userBind = UserBinding::addBinding($userBingding, $_REQUEST['state']);
-                    	var_dump($userBingding);
                     }else{
                         Yii::app()->user->id = $user->user_id;
                         Yii::app()->user->name = $user->user->username;
