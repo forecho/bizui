@@ -118,7 +118,7 @@ class SiteController extends Controller
                     //查询微博的账号信息
                     $c = new SaeTClientV2( WB_AKEY , WB_SKEY ,Yii::app()->session['sinaToken']['access_token']);
                     $userShow  = $c->getUserShow(Yii::app()->session['sinaToken']); // done
-                    $var_dump($userShow);
+                    var_dump($userShow);
                     //查询是否有绑定账号   
                     //$user = UserBinding::model()->with('user')->find('user_bind_type = :bind_type AND user_access_token = :access_token AND user_openid=:openid',array(':bind_type' =>'sina',':access_token' =>Yii::app()->session['sinaToken']['access_token'],':openid' =>Yii::app()->session['sinaToken']['uid']));
                     $userBingding = array();
