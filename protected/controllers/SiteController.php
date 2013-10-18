@@ -119,7 +119,9 @@ class SiteController extends Controller
                     $c = new SaeTClientV2( WB_AKEY , WB_SKEY ,Yii::app()->session['sinaToken']['access_token']);
                     $userShow  = $c->getUserShow(Yii::app()->session['sinaToken']); // done
                     //查询是否有绑定账号   
-                    $user = UserBinding::model()->with('user')->find('user_bind_type = :bind_type AND user_access_token = :access_token AND user_openid=:openid',array(':bind_type' =>'sina',':access_token' =>Yii::app()->session['sinaToken']['access_token'],':openid' =>Yii::app()->session['sinaToken']['uid']));
+                    //$user = UserBinding::model()->with('user')->find('user_bind_type = :bind_type AND user_access_token = :access_token AND user_openid=:openid',array(':bind_type' =>'sina',':access_token' =>Yii::app()->session['sinaToken']['access_token'],':openid' =>Yii::app()->session['sinaToken']['uid']));
+                    $user='';
+                    
                     //如果没有存在则创建账号及绑定
                     if (!isset($user)){
                         $userBingding = array();
@@ -128,7 +130,8 @@ class SiteController extends Controller
                         $userBingding['username'] = $userShow['screen_name'];
                         $userBingding['bind_type'] = 'sina';
                         $userBingding['avatar'] = $userShow['profile_image_url']; 
-                        $userBind = UserBinding::addBinding($userBingding, $_REQUEST['state']);
+                        //$userBind = UserBinding::addBinding($userBingding, $_REQUEST['state']);
+                        var_dump($userBingding);
                     }else{
                         Yii::app()->user->id = $user->user_id;
                         Yii::app()->user->name = $user->user->username;
@@ -167,8 +170,9 @@ class SiteController extends Controller
                     $userShow['screen_name'] = $userInfo['nickname'];
                     $userShow['profile_image_url'] = $userInfo['figureurl_2'];
                     //查询是否有绑定账号   
-                    $user = UserBinding::model()->with('user')->find('user_bind_type = :bind_type and user_openid=:openid',array(':bind_type' =>'qq',':openid' =>Yii::app()->session['qqToken']['openid']));
-                    
+                    // $user = UserBinding::model()->with('user')->find('user_bind_type = :bind_type and user_openid=:openid',array(':bind_type' =>'qq',':openid' =>Yii::app()->session['qqToken']['openid']));
+                    $user='';
+
                     //如果没有存在则创建账号及绑定
                     if (!isset($user)){
                         $userBingding = array();
@@ -177,7 +181,8 @@ class SiteController extends Controller
                         $userBingding['username'] = $userShow['screen_name'];
                         $userBingding['bind_type'] = 'qq';
                         $userBingding['avatar'] = $userShow['profile_image_url']; 
-                        $userBind = UserBinding::addBinding($userBingding, $_REQUEST['state']);
+                        //$userBind = UserBinding::addBinding($userBingding, $_REQUEST['state']);
+                    	var_dump($userBingding);
                     }else{
                         Yii::app()->user->id = $user->user_id;
                         Yii::app()->user->name = $user->user->username;
