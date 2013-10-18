@@ -121,7 +121,7 @@ class SiteController extends Controller
                     //查询是否有绑定账号   
                     //$user = UserBinding::model()->with('user')->find('user_bind_type = :bind_type AND user_access_token = :access_token AND user_openid=:openid',array(':bind_type' =>'sina',':access_token' =>Yii::app()->session['sinaToken']['access_token'],':openid' =>Yii::app()->session['sinaToken']['uid']));
                     $user='';
-                    
+
                     //如果没有存在则创建账号及绑定
                     if (!isset($user)){
                         $userBingding = array();
@@ -137,7 +137,7 @@ class SiteController extends Controller
                         Yii::app()->user->name = $user->user->username;
                     }
                         
-                    $this->redirect(Yii::app()->session['back_url']);
+                    //$this->redirect(Yii::app()->session['back_url']);
                  }  else {
                      echo '认证失败';
                  }
@@ -187,7 +187,7 @@ class SiteController extends Controller
                         Yii::app()->user->id = $user->user_id;
                         Yii::app()->user->name = $user->user->username;
                     }
-                    $this->redirect(Yii::app()->session['back_url']);
+                    //$this->redirect(Yii::app()->session['back_url']);
                 }  else {
                     echo '认证失败';
                 }
