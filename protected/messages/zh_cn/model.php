@@ -24,6 +24,10 @@ return array(
     'my_comments' => '我发布的评论',
     'my_like_posts' => '我赞过的文章',
     'my_like_comments' => '我赞过的评论',
+    'it_posts' => '他发布的文章',
+    'it_comments' => '他发布的评论',
+    'it_like_posts' => '他赞过的文章',
+    'it_like_comments' => '他赞过的评论',
     'verifyCode' => '验证码',
 
     'bc_text' => '评论',

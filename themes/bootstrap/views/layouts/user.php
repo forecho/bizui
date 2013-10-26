@@ -9,18 +9,31 @@
 		// 	'titleCssClass'=>'panel-title',
 		// 	'decorationCssClass'=>'panel-heading',
 		// ));
-		$this->widget('zii.widgets.CMenu', array(
-			'items'=>array(
-				array('label'=>t('update_user', 'model'), 'url'=>array('update')),
-				array('label'=>t('change_password', 'model'), 'url'=>array('changepwd')),
-				array('label'=>t('my_posts', 'model'), 'url'=>array('myposts')),
-				array('label'=>t('my_comments', 'model'), 'url'=>array('mycomments')),
-				array('label'=>t('my_like_posts', 'model'), 'url'=>array('likeposts')),
-				array('label'=>t('my_like_comments', 'model'), 'url'=>array('likecomments')),
-			),
-			'htmlOptions'=>array('class'=>'list-group'),
-			'itemCssClass'=>'list-group-item',
-		));
+		if (Yii::app()->user->id == $_GET['id'] || !$_GET['id']) {
+			$this->widget('zii.widgets.CMenu', array(
+				'items'=>array(
+					array('label'=>t('update_user', 'model'), 'url'=>array('update')),
+					array('label'=>t('change_password', 'model'), 'url'=>array('changepwd')),
+					array('label'=>t('my_posts', 'model'), 'url'=>array('myposts', 'id'=>$_GET['id'])),
+					array('label'=>t('my_comments', 'model'), 'url'=>array('mycomments', 'id'=>$_GET['id'])),
+					array('label'=>t('my_like_posts', 'model'), 'url'=>array('likeposts', 'id'=>$_GET['id'])),
+					array('label'=>t('my_like_comments', 'model'), 'url'=>array('likecomments', 'id'=>$_GET['id'])),
+				),
+				'htmlOptions'=>array('class'=>'list-group'),
+				'itemCssClass'=>'list-group-item',
+			));
+		} else {
+			$this->widget('zii.widgets.CMenu', array(
+				'items'=>array(
+					array('label'=>t('it_posts', 'model'), 'url'=>array('myposts', 'id'=>$_GET['id'])),
+					array('label'=>t('it_comments', 'model'), 'url'=>array('mycomments', 'id'=>$_GET['id'])),
+					array('label'=>t('it_like_posts', 'model'), 'url'=>array('likeposts', 'id'=>$_GET['id'])),
+					array('label'=>t('it_like_comments', 'model'), 'url'=>array('likecomments', 'id'=>$_GET['id'])),
+				),
+				'htmlOptions'=>array('class'=>'list-group'),
+				'itemCssClass'=>'list-group-item',
+			));
+		}
 		// $this->endWidget();
 	?>
 </div>

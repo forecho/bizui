@@ -40,7 +40,7 @@
 					array('label'=>t('Login', 'main'), 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 					array('label'=>t('Signup', 'main'), 'url'=>array('/site/signup'), 'visible'=>Yii::app()->user->isGuest),
 					array('label'=>Yii::app()->user->name, 'url'=>array('/user/view', 'id'=>Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
-					array('label'=>t('Logout', 'main'), 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest, 'class'=>'glyphicon glyphicon-off')
+					array('label'=>t('Logout', 'main'), 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 				),
 				'htmlOptions'=>array('class'=>'nav navbar-nav pull-right'),
 			)); 

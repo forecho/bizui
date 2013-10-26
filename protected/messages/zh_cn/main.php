@@ -18,4 +18,5 @@ return array(
 	'Logout' => '退出',
 	'About' => '关于本站',
 
+	'newPosts' => '最新发布',
 );

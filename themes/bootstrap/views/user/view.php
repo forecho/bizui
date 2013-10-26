@@ -23,16 +23,16 @@
 )); ?>
 
 
-<div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
 
-  <!-- List group -->
-  <ul class="list-group">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><?php echo t('newPosts', 'main'); ?></div>
+    <!-- List group -->
+    <ul class="list-group">
+    <?php foreach ($posts as $key => $value) { ?>
+        <li class="list-group-item">
+            <?php echo CHtml::link($value->bp_title, array('/posts/view','id'=>$value->bp_id), array('title'=>$value->bp_title.' '.tranTime($value->bp_create_time))); ?>
+        </li>
+    <?php  } ?>
+    </ul>
 </div>

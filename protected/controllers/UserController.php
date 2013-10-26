@@ -51,8 +51,10 @@ class UserController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$posts = Posts::model()->findAllByAttributes(array('bu_id'=>$id),array('order'=>'bp_id DESC', 'limit'=>10));
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'posts'=>$posts,
 		));
 	}
 
@@ -143,12 +145,12 @@ class UserController extends Controller
 
 
 	//我喜欢的文章
-	public function actionLikeposts()
+	public function actionLikeposts($id)
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$model = new Save;
-		$model->bu_id = Yii::app()->user->id;
+		$model->bu_id = $id;
 		$model->type = '1';
 
 		$this->render('likeposts', array(
@@ -158,11 +160,11 @@ class UserController extends Controller
 
 
 	//我的文章
-	public function actionMyposts()
+	public function actionMyposts($id)
 	{
 
 		$model = new Posts;
-		$model->bu_id = Yii::app()->user->id;
+		$model->bu_id = $id;
 
 		$this->render('myposts', array(
 				'model'=>$model,
@@ -170,12 +172,12 @@ class UserController extends Controller
 	}
 
 	//我赞的评论
-	public function actionLikecomments()
+	public function actionLikecomments($id)
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$model = new Save;
-		$model->bu_id = Yii::app()->user->id;
+		$model->bu_id = $id;
 		$model->type = '2';
 
 		$this->render('likecomments', array(
@@ -184,11 +186,11 @@ class UserController extends Controller
 	}
 
 	//我发布的评论
-	public function actionMycomments()
+	public function actionMycomments($id)
 	{
 
 		$model = new Comments;
-		$model->bu_id = Yii::app()->user->id;
+		$model->bu_id = $id;
 
 		$this->render('mycomments', array(
 				'model'=>$model,
