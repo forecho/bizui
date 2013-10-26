@@ -30,7 +30,7 @@
 					array('label'=>t('New', 'main'), 'url'=>array('/site/new')),
 					array('label'=>t('Submit', 'main'), 'url'=>array('/posts/create')),
 					array('label'=>t('Comments', 'main'), 'url'=>array('/comments/index')),
-					// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+					array('label'=>t('About', 'main'), 'url'=>array('/site/about', 'view'=>'about')),
 					// array('label'=>'Contact', 'url'=>array('/site/contact')),
 				),
 				'htmlOptions'=>array('class'=>'nav navbar-nav'),

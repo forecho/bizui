@@ -314,5 +314,12 @@ class SiteController extends Controller
         }
     }
 
+    //添加说明页面
+    public function actionAbout()
+    {
+    	$this->pageTitle = t('About','main');
+    	$this->render('about');
+    }
+
 
 }

@@ -2,7 +2,7 @@
 	foreach ($comments as $key => $data) {
 	$count = count(explode('-',$data->bc_path));
 ?>
-<div class="panel-heading <?php echo ($count!=1)?'pl'.('30'*$count):''; ?>">
+<div class="list-group-item <?php echo ($count!=1)?'pl'.('30'*$count):''; ?>">
 	<p>
 		<?php if (Yii::app()->user->id) {
 			$saveCount = Save::model()->countByAttributes(array('bp_id'=>$data->bc_id, 'bu_id'=>Yii::app()->user->id, 'type'=>'2'));
@@ -31,7 +31,7 @@
 		|
 		<?php echo CHtml::link('查看', array('/comments/view', 'id'=>$data->bc_id), array('class'=>'fn_b')); ?>
 	</p>
-	<p class="panel"><?php echo nl2br($data->bc_text); //保留换行?></p>
+	<p><?php echo nl2br($data->bc_text); //保留换行?></p>
 	<?php echo ($data->bu_id==Yii::app()->user->id)?' ':CHtml::link('回复', array('/comments/view', 'id'=>$data->bc_id), array('class'=>'fn_b')); ?>
 </div>
 <?php }?>

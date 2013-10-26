@@ -3,7 +3,7 @@
 /* @var $data Comments */
 ?>
 
-<div class="panel-heading <?php echo ($index==0)?'':'mt20'; ?>">
+<div class="list-group-item <?php echo ($index==0)?'':'mt20'; ?>">
 	<p>
 		<?php if (Yii::app()->user->id) {
 			$saveCount = Save::model()->countByAttributes(array('bp_id'=>$data->bc_id, 'bu_id'=>Yii::app()->user->id, 'type'=>'2'));

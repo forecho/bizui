@@ -66,7 +66,7 @@
 
 			<div class="form-group">
 				<div class="col-lg-9">
-					<?php echo CHtml::submitButton(t('Comments','main'), array('class'=>'btn btn-default')); ?>
+					<?php echo CHtml::submitButton(t('addComments','main'), array('class'=>'btn btn-default')); ?>
 				</div>
 			</div>
 
@@ -75,14 +75,11 @@
 
 </div>
 
-
+</br>
 <!-- 加载评论 -->
 <?php if (Comments::model()->count('bp_id='.$row->bp_id)){ ?>
-	<div class="panel">
 		<?php  $this->renderPartial('_comments', array('comments'=>$comments));?>
-	</div>
 <?php } ?>
-
 
 <script type="text/javascript">
 //赞

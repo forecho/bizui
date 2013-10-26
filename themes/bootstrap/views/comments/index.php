@@ -14,7 +14,7 @@
             'selectedPageCssClass' => 'active',        
             'hiddenPageCssClass' => 'disabled',
         ),
-    'htmlOptions'=>array('class'=>'panel'),
+    // 'htmlOptions'=>array('class'=>'panel'),
     'itemsTagName'=>'div',
     'itemsCssClass'=>'box-cell',
     'pagerCssClass'=>'',
