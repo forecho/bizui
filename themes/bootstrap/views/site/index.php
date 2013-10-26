@@ -36,6 +36,19 @@ $this->widget('zii.widgets.CListView', array(
             <?php endforeach; ?>
         </ul>
     </div>
+
+    <script type="text/javascript">
+         document.write('<a style="display:none!important" id="tanx-a-mm_23898038_3412681_14486275"></a>');
+         tanx_s = document.createElement("script");
+         tanx_s.type = "text/javascript";
+         tanx_s.charset = "gbk";
+         tanx_s.id = "tanx-s-mm_23898038_3412681_14486275";
+         tanx_s.async = true;
+         tanx_s.src = "http://p.tanx.com/ex?i=mm_23898038_3412681_14486275";
+         tanx_h = document.getElementsByTagName("head")[0];
+         if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+    </script>
+
 </div>
 <script type="text/javascript">
 //赞
