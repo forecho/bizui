@@ -127,10 +127,10 @@ class PostsController extends Controller
 			$vider = Yii::createComponent('application.components.VideoClass');
 			
 			$vider_arr = call_user_func_array(array($vider, 'parse'), array( $_POST['Posts']['bp_url']));
-			var_dump($vider_arr);
-			echo "<hr>";
-			print_r($vider_arr);
-			exit();
+			// var_dump($vider_arr);
+			// echo "<hr>";
+			// print_r($vider_arr);
+			// exit();
 			//如果没有title 就自动抓取
 			if ($_POST['Posts']['bp_title']=='' && $_POST['Posts']['bp_url']) {
 				if ($vider_arr['title']) {

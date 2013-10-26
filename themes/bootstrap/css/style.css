@@ -17,7 +17,7 @@ pre {
 .navbar-inverse .navbar-nav>li>a{
 	color: #fff;
 }
-.bs-docs-nav .navbar-nav > .active > a, .bs-docs-nav .navbar-nav > .active > a:hover {
+.bs-docs-nav .navbar-nav > .active > a, .bs-docs-nav .navbar-nav > a:hover {
 	color: #1ABC9C;
 	background-color: #fff;
 }
@@ -66,7 +66,7 @@ a:visited {
 }
 
 .box-cell .panel-heading {
-	
+
 }
 /*.panel-heading {
 	margin: -15px -15px;
