@@ -154,4 +154,30 @@ class User extends CActiveRecord
 		}
 	}
 
+	//没有绑定Oauth，创建账号及绑定
+	public static function addOauth($userBingding,$salt)
+	{
+		$model=new User;
+        $user = array();
+        $user['bu_name'] = $userBingding['domain'];
+        $user['salt'] = $salt;
+        $user['counts'] = 1;
+        $user['created'] = time();
+        $user['updated'] = time();
+        $model->attributes=$user;
+		
+        if($model->save()){
+            $user_id = $model->id;
+            Yii::app()->user->id = $user_id;
+            Yii::app()->user->name = $userBingding['domain'];
+            $bind = array();
+            $bind['user_id'] = $user_id;
+            $bind['user_access_token'] = $userBingding['access_token'];
+            $BindModel = new UserBinding;
+            $BindModel->attributes=$bind;
+            return $BindModel->save();
+        }
+		
+	}
+
 }

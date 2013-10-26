@@ -86,8 +86,8 @@ class VideoClass{
         $json = $json['data'][0];
 
         $r['vid'] = $json['vidEncoded'];
-        $r['url'] = 'http://v.youku.com/v_show/id_'. $json['vidEncoded'] .'.html?f=http://www.lianyue.org/';
-        $r['swf'] = 'http://player.youku.com/player.php/sid/'. $json['vidEncoded'] .'/lianyue.swf';
+        $r['url'] = 'http://v.youku.com/v_show/id_'. $json['vidEncoded'] .'.html';
+        $r['swf'] = 'http://player.youku.com/player.php/sid/'. $json['vidEncoded'] .'/.swf';
         $r['title'] = $json['title'];
         $r['img']['large'] = $json['logo'];
         $r['img']['small'] = str_replace( '.com/11', '.com/01', $json['logo'] );
@@ -130,8 +130,8 @@ class VideoClass{
             return false;
         }
         $r['vid'] = $arr['code'];
-        $r['url'] = 'http://www.tudou.com/programs/view/'. $arr['code'] .'/?FR=http://www.lianyue.org/';
-        $r['swf'] = 'http://www.tudou.com/v/'. $arr['code'] .'/lianyue.swf';
+        $r['url'] = 'http://www.tudou.com/programs/view/'. $arr['code'] .'/';
+        $r['swf'] = 'http://www.tudou.com/v/'. $arr['code'] .'/.swf';
         $r['title'] = $arr['title'];
         $r['img']['large'] = $arr['snap_pic'];
         $r['img']['small'] = str_replace( array( '/w.jpg', 'ykimg.com/11' ), array( '/p.jpg', 'ykimg.com/01' ), $arr['snap_pic'] );
@@ -213,7 +213,7 @@ class VideoClass{
         }
         $json = $json['info'];
         $r['vid'] = $json['textid'];
-        $r['url'] = 'http://www.56.com/u/v_'. $json['textid'] .'.html?ref=lianyue.org';
+        $r['url'] = 'http://www.56.com/u/v_'. $json['textid'];
         $r['swf'] = 'http://player.56.com/v_'. $json['textid'] .'.swf';
         $r['title'] = $json['Subject'];
         $r['img']['large'] = $json['bimg'];
@@ -252,7 +252,7 @@ class VideoClass{
                 $uid = $match[2];
                 $token = empty( $match[3] ) ? '' : $match[3];
                 if ( $uid != 1 ) {
-                    $url = 'http://video.sina.com.cn/v/b/'. $vid .'-'. $uid .'.html?ref=lianyue.org';
+                    $url = 'http://video.sina.com.cn/v/b/'. $vid .'-'. $uid .'.html';
                 }
             } else {
                 return false;
@@ -344,8 +344,8 @@ class VideoClass{
             $res -= $m;
         }
         $r['vid'] = $xml['vid'];
-        $r['url'] = 'http://v.qq.com/page/t/u/h/'. $xml['vid'] .'.html?ref=lianyue.org';
-        $r['swf'] = 'http://static.video.qq.com/TPout.swf?vid='. $xml['vid'] .'&ref=lianyue.org';
+        $r['url'] = 'http://v.qq.com/page/t/u/h/'. $xml['vid'] .'.html';
+        $r['swf'] = 'http://static.video.qq.com/TPout.swf?vid='. $xml['vid'];
         $r['title'] = $xml['ti'];
         $r['img']['large'] = 'http://vpic.video.qq.com/'. $res .'/'. $xml['vid'] .'.png';
         $r['img']['small'] = 'http://vpic.video.qq.com/'. $res .'/'. $xml['vid'] .'_160_90_2.jpg';
@@ -398,7 +398,7 @@ class VideoClass{
     *
     *   返回值 false array
     **/
-    function sohu( $vid ) {
+function sohu( $vid ) {
         if ( !$vid ) {
             return false;
         }

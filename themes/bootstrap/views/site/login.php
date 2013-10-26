@@ -57,10 +57,11 @@ $this->pageTitle=$this->pageTitle. ' - ' . Yii::app()->name ;
 		</div>
 	</div>
 
-	<?php $this->widget('ext.oauthLogin.OauthLogin',array(
+<!-- 暂时关闭第三方登录，待完善 -->
+<!-- 	<?php $this->widget('ext.oauthLogin.OauthLogin',array(
 	           'itemView'=>'medium_login', //效果样式
 	           'back_url'=>Yii::app()->homeUrl,//login成功后返回的页面
-	 )); ?>
+	 )); ?> -->
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
