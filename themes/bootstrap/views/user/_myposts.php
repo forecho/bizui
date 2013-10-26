@@ -10,21 +10,21 @@
 			//判断是否是自己发布的
 			if ($data->bu_id==Yii::app()->user->id) {
 		?>
-			<span style="width:12px; color:red;">*</span>
+			<span style="width:13px; color:red;">*</span>
 		<?php
 			//判断是否是已经收藏的
 			}elseif ($saveCount==1) {
 		?>
-			<span><img src="<?php echo tbu();?>images/s.gif" width="12"></span>
+			<span><img src="<?php echo tbu();?>images/s.gif" width="13"></span>
 		<?php
 			}else{
 		?>
-			<span onclick="getScore('<?php echo $data->bp_id; ?>',this)"><img src="<?php echo tbu();?>images/grayarrow.png" width="12" title="赞"></span>
+			<span onclick="getScore('<?php echo $data->bp_id; ?>',this)"><img src="<?php echo tbu();?>images/grayarrow.png" width="13" title="赞"></span>
 		<?php
 			}
 		}else{
 		?>
-			<span onclick="getScore('<?php echo $data->bp_id; ?>',this)"><img src="<?php echo tbu();?>images/grayarrow.png" width="12" title="赞"></span>
+			<span onclick="getScore('<?php echo $data->bp_id; ?>',this)"><img src="<?php echo tbu();?>images/grayarrow.png" width="13" title="赞"></span>
 		<?php } ?>
 		
 		<?php echo CHtml::link($data->bp_title, $data->bp_url, array('target'=>'_blank', 'class'=>'post-title'));?>

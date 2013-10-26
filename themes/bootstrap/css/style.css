@@ -17,7 +17,7 @@ pre {
 .navbar-inverse .navbar-nav>li>a{
 	color: #fff;
 }
-.bs-docs-nav .navbar-nav > .active > a, .bs-docs-nav .navbar-nav > a:hover {
+.bs-docs-nav .navbar-nav > .active > a, .bs-docs-nav .navbar-nav > .active > a:hover,.bs-docs-nav .navbar-nav li a:hover {
 	color: #1ABC9C;
 	background-color: #fff;
 }
