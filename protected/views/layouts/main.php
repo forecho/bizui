@@ -61,5 +61,11 @@
 
 </div><!-- page -->
 
+<div style="display:none">
+	<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc6de6825b8c6b0d07f741a3cc72e303e' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
 </body>
 </html>
