@@ -48,7 +48,7 @@
 				<span onclick="getScore('<?php echo $data->bp_id; ?>',this)" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-thumbs-up"></i>点赞</span>
 			<?php } ?>
 
-			<a href="http://v.t.sina.com.cn/share/share.php?title=快来看『<?php echo $data->bp_title; ?>』链接地址是： <?php echo $_SERVER["SCRIPT_NAME"].'?r=posts/view%26id='.$data->bp_id; ?>	" target="_blank" class="btn btn-default">分享到微博</a>
+			<a href="http://v.t.sina.com.cn/share/share.php?title=快来围观『<?php echo $data->bp_title; ?>』链接地址是： <?php echo Yii::app()->request->hostInfo.'/index.php?r=posts/view%26id='.$data->bp_id; ?>%20 %28 %40蔡正海%20 %29" target="_blank" class="btn btn-default">分享到微博</a>
 		<!-- 	<a href="javascript:(function(){window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+ encodeURIComponent(location.href)+ '&title='+encodeURIComponent(document.title),'_blank');})()" title="分享到QQ空间" class="btn btn-default">
 				QQ空间
 			</a> -->
