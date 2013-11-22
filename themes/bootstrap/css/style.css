@@ -36,8 +36,22 @@ span.required, .errorMessage{
 	color: red;
 }
 
+.h370 {
+	height: 370px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
 .ml10 {
 	margin-left: 10px;
+}
+.mt10 {
+	margin-top: 10px;
+}
+.mt20 {
+	margin-top: 20px;
 }
 .pl60 {
 	padding-left: 60px;
@@ -49,7 +63,7 @@ span.required, .errorMessage{
 	padding-left: 120px;
 }
 
-a:visited {
+.caption a:visited {
 	color: #828282;
 }
 
@@ -88,26 +102,28 @@ a:visited {
 }
 .video-thumb {
 	position: relative;
-	float: right;
 	cursor: pointer;
+	width: 388px;
+	height: 215px;
 }
 .video-thumb img{
-	width: 100px;
-	height: 62px;
-	border: 0;
+	width: 388px;
+	position:absolute;
+	clip:rect(0 388px 215px 0);
 }
+
 .video-thumb .video-play-icon {
-	width: 101px;
+	width: 70px;
 	height: 61px;
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	left: 0;
 	background: url(../images/play-icon.png) no-repeat center;
 	opacity: .8;
 }
 
 /*变直角*/
-.panel,.btn,.form-control{
+.panel,.btn,.form-control,.thumbnail {
 	border-radius:0px;
 }
 .list-group-item:first-child{
@@ -125,4 +141,18 @@ a:visited {
 .pagination>li:last-child>a, .pagination>li:last-child>span{
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
+}
+
+.modal-dialog{
+	width: 860px;
+}
+
+.glyphicon {
+	position: relative;
+	top: 2px;
+	right: 3px;
+}
+
+.caption{
+	height: 98px;
 }

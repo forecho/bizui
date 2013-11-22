@@ -9912,3 +9912,45 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/
 ---
+2013/11/22 14:57:48 [error] [exception.CException] exception 'CException' with message '属性 "User.bu_weibo" 未被定义.' in F:\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('bu_weibo')
+#1 F:\yii\framework\validators\CStringValidator.php(79): CActiveRecord->__get('bu_weibo')
+#2 F:\yii\framework\validators\CValidator.php(213): CStringValidator->validateAttribute(Object(User), 'bu_weibo')
+#3 F:\yii\framework\base\CModel.php(159): CValidator->validate(Object(User), NULL)
+#4 F:\yii\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 F:\bizui\protected\models\LoginForm.php(108): CActiveRecord->save()
+#6 F:\bizui\protected\controllers\SiteController.php(82): LoginForm->login()
+#7 F:\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 F:\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 F:\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 F:\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 F:\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 F:\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 F:\bizui\index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
+2013/11/22 14:57:58 [error] [exception.CException] exception 'CException' with message '属性 "User.bu_weibo" 未被定义.' in F:\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('bu_weibo')
+#1 F:\yii\framework\validators\CStringValidator.php(79): CActiveRecord->__get('bu_weibo')
+#2 F:\yii\framework\validators\CValidator.php(213): CStringValidator->validateAttribute(Object(User), 'bu_weibo')
+#3 F:\yii\framework\base\CModel.php(159): CValidator->validate(Object(User), NULL)
+#4 F:\yii\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 F:\bizui\protected\models\LoginForm.php(108): CActiveRecord->save()
+#6 F:\bizui\protected\controllers\SiteController.php(82): LoginForm->login()
+#7 F:\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 F:\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 F:\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 F:\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 F:\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 F:\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 F:\bizui\index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://bizui.com/index.php?r=site/login
+---
