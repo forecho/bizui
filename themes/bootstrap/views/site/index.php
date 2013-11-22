@@ -62,8 +62,7 @@ function getScore(id,that){
         success: function(msg){
         	$(that).parent().prev().children('p').eq(1).children('span').html(msg);
         	$(that).removeAttr("onclick");
-            $(that).children("i").removeClass("glyphicon-thumbs-up");
-            $(that).children("i").addClass("glyphicon-star");
+            $(that).html('<i class="glyphicon glyphicon-star"></i>已赞');
             $(that).removeClass("btn-primary");
             $(that).addClass("btn-danger");
 		}
