@@ -9,6 +9,7 @@ $this->widget('zii.widgets.CListView', array(
     'dataProvider'=>$model->search(),
     'itemView'=>'_post', 
     'emptyText'=>'暂时没有数据',  
+    'ajaxUpdate'=> false,//这样就不会AJAX翻页
    	'template'=>'{items}{pager}',
     'pager' => array(
             'header'=>false,
@@ -17,8 +18,8 @@ $this->widget('zii.widgets.CListView', array(
             'hiddenPageCssClass' => 'disabled',
         ),
     'htmlOptions'=>array('class'=>'list-group'),
-    'itemsTagName'=>'ol',
-    'itemsCssClass'=>'box-cell',
+    'itemsTagName'=>'div',
+    'itemsCssClass'=>'row',
     'pagerCssClass'=>'pagination',
 ));
 ?>
@@ -59,9 +60,11 @@ function getScore(id,that){
         url: "<?php echo Yii::app()->createUrl('/posts/ajaxGetScore/') ?>",
         data:"id="+id,
         success: function(msg){
-        	$(that).parent().next().children('span').html(msg);
+        	$(that).parent().prev().children('p').eq(1).children('span').html(msg);
         	$(that).removeAttr("onclick");
-        	$(that).children('img').attr('src','<?php echo tbu();?>images/s.gif');
+            $(that).html('<i class="glyphicon glyphicon-star"></i>已赞');
+            $(that).removeClass("btn-primary");
+            $(that).addClass("btn-danger");
 		}
     });
 };
@@ -70,12 +73,4 @@ function getScore(id,that){
 	location.href = "<?php echo Yii::app()->createUrl('/site/login') ?>";
 };
 <?php } ?>
-
-//显示、隐藏视频
-$(document).ready(function(){
-    // $(".box-cell object").hide();
-    $(".video-thumb").live("click", function(){
-        $(this).parent().next().toggle();
-    })
-});
 </script>
