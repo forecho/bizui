@@ -1,3 +1,6 @@
 assets/
 protected/runtime/
-/nbproject/private/
+nbproject/
+.idea/
+bizui.esproj/
+untitled.sublime-workspace
