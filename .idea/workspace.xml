@@ -1,7 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2790b3c9-446c-42a4-991c-5d2b0a0299c0" name="Default" comment="" />
+    <list default="true" id="2790b3c9-446c-42a4-991c-5d2b0a0299c0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bizui.esproj/Project.espressostorage" afterPath="$PROJECT_DIR$/bizui.esproj/Project.espressostorage" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/themes/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/themes/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/themes/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/play-icon.png" afterPath="$PROJECT_DIR$/images/play-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/images/play-icon.png" afterPath="$PROJECT_DIR$/themes/bootstrap/images/play-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/assets/images/qq_logo.png" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/assets/images/qq_logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/assets/images/sina_logo.png" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/assets/images/sina_logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bizui.esproj/user.caicai.espressostorage" afterPath="$PROJECT_DIR$/bizui.esproj/user.caicai.espressostorage" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/.name" afterPath="$PROJECT_DIR$/python/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/OauthLogin.php" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/OauthLogin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/README.md" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/commands/TestCommand.php" afterPath="$PROJECT_DIR$/protected/commands/TestCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/VideoClass.php" afterPath="$PROJECT_DIR$/protected/components/VideoClass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/user/_mycomments.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/user/_mycomments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/site/about.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/site/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="$PROJECT_DIR$/protected/runtime/application.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/views/big_login.php" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/views/big_login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bizui.iml" afterPath="$PROJECT_DIR$/.idea/bizui.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/data/bizui_2013-10-16.sql" afterPath="$PROJECT_DIR$/protected/data/bizui_2013-10-16.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/themes/bootstrap/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/themes/bootstrap/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/encodings.xml" afterPath="$PROJECT_DIR$/python/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/getUrl.py" afterPath="$PROJECT_DIR$/python/getUrl.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/getUrl2.py" afterPath="$PROJECT_DIR$/python/getUrl2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/themes/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/config/main.php" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/views/medium_login.php" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/views/medium_login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/misc.xml" afterPath="$PROJECT_DIR$/python/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/modules.xml" afterPath="$PROJECT_DIR$/python/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/user/mycomments.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/user/mycomments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/user/myposts.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/user/myposts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/assets/css/oauth_login_yii.css" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/assets/css/oauth_login_yii.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/other.xml" afterPath="$PROJECT_DIR$/python/.idea/other.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.xml" afterPath="$PROJECT_DIR$/nbproject/project.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/python.iml" afterPath="$PROJECT_DIR$/python/.idea/python.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/qq/qqConnect.php" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/qq/qqConnect.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/python/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/sina/sinaWeibo.php" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/sina/sinaWeibo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/oauthLogin/views/small_login.php" afterPath="$PROJECT_DIR$/protected/extensions/oauthLogin/views/small_login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/testrunner.xml" afterPath="$PROJECT_DIR$/python/.idea/testrunner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/layouts/user.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/layouts/user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/vcs.xml" afterPath="$PROJECT_DIR$/python/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/.idea/workspace.xml" afterPath="$PROJECT_DIR$/python/.idea/workspace.xml" />
+    </list>
     <ignored path="bizui.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +85,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="330">
+            <state line="16" column="0" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -35,7 +94,7 @@
       <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+            <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
@@ -44,9 +103,9 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/site/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="2" selection-start="651" selection-end="651" vertical-scroll-proportion="0.52352047" vertical-offset="0" max-vertical-offset="1290">
+            <state line="24" column="2" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1215">
               <folding>
-                <marker date="1382778102000" expanded="false" signature="1239:1261" placeholder="..." />
+                <marker date="1389801405000" expanded="false" signature="1274:1296" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -65,6 +124,13 @@
   <component name="GitLogSettings">
     <option name="myDateState">
       <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/themes/bootstrap/views/site/index.php" />
+      </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
@@ -108,96 +174,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bizui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -205,6 +181,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/workspace/php/yupe" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
@@ -270,35 +247,58 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="2" selection-start="651" selection-end="651" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1290">
+          <folding>
+            <marker date="1389801405000" expanded="false" signature="1274:1296" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
@@ -312,9 +312,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="2" selection-start="651" selection-end="651" vertical-scroll-proportion="0.52352047" vertical-offset="0" max-vertical-offset="1290">
+        <state line="24" column="2" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1215">
           <folding>
-            <marker date="1382778102000" expanded="false" signature="1239:1261" placeholder="..." />
+            <marker date="1389801405000" expanded="false" signature="1274:1296" placeholder="..." />
           </folding>
         </state>
       </provider>

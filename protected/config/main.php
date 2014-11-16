@@ -25,14 +25,14 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		
+
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123456',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		
+
 	),
 
 	// application components
@@ -46,7 +46,7 @@ return array(
                 'CLinkPager'=>array(
                     'pageSize'=>15,
                 ),
-                
+
             ),
         ),
 		// uncomment the following to enable URLs in path-format
@@ -66,7 +66,7 @@ return array(
 		),
 		*/
 		// uncomment the following to use a MySQL database
-		
+
 		'db'=>array(
 			'connectionString' => 'mysql:host=127.0.0.1;dbname=bizui',
 			'emulatePrepare' => true,
@@ -75,11 +75,11 @@ return array(
 			'charset' => 'utf8',
 			'tablePrefix'=>'bz_',//指表前缀，需要的自行添加
 			//开启debug
-			'enableProfiling'=>true,  
-			'enableParamLogging'=>true,  
+			'enableProfiling'=>true,
+			'enableParamLogging'=>true,
 
 		),
-		
+
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
@@ -92,10 +92,10 @@ return array(
 					'levels'=>'error, warning',
 				),
 				//开启debug
-				array(  
-	               'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',  
-	               'ipFilters'=>array('127.0.0.1','192.168.1.215'),  
-	           	),  
+				array(
+	               'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+	               'ipFilters'=>array('127.0.0.1','192.168.1.215'),
+	           	),
 
 				// uncomment the following to show log messages on web pages
 				/*
