@@ -4,3 +4,4 @@ nbproject/
 .idea/
 bizui.esproj/
 untitled.sublime-workspace
+!protected/extensions/oauthLogin/assets/
