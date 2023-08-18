@@ -1,7 +1,5 @@
 #Yiibolg
 
-http://www.niyabizui.com
-
  * 进入项目根目录 mkdir assets
  * 下载 yii-1.1.14 版本 
  * 查看 index.php 文件导入的路径是否匹配
